@@ -1,0 +1,15 @@
+{
+  "navigation": {
+    "home": "Início",
+    "projects": "Projetos",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "actions": {
+    "downloadCv": "Baixar CV"
+  },
+  "footer": {
+    "creating": "Criado com Next.js, React, TypeScript e Tailwind CSS",
+    "viewCv": "Ver CV"
+  }
+}
