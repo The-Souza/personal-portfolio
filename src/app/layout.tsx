@@ -21,7 +21,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <I18NextProvider>
-            <GradientBackground className="absolute inset-0 -z-50 flex items-center justify-center rounded-xl" />
+            <GradientBackground className="absolute inset-0 -z-50 flex items-center justify-center" />
             <Header />
             <main className="pt-17 flex-1 px-6 pb-6 flex flex-col items-center">
               {children}

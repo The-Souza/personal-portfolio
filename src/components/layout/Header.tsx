@@ -7,6 +7,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { CodeXml, FileDown } from "lucide-react";
 import Link from "next/link";
@@ -40,10 +41,10 @@ const { t, i18n } = useTranslation();
             <NavigationMenuList>
               {["home", "projects", "about", "contact"].map((item) => (
                 <NavigationMenuItem key={item}>
-                  <NavigationMenuLink asChild>
+                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                     <Link
                       href={item === "home" ? "/" : `/${item}`}
-                      className="hover:text-primary"
+                      className="border bg-background shadow-xs hover:bg-accent hover:text-primary dark:bg-input/30 dark:border-input dark:hover:bg-input/50"
                     >
                       {t(`navigation.${item}`)}
                     </Link>
@@ -58,7 +59,7 @@ const { t, i18n } = useTranslation();
         <div className="flex items-center gap-2">
           <ToggleTheme />
 
-          <Button size="icon" variant="outline" onClick={toggleLanguage}>
+          <Button size="icon" variant="outline" onClick={toggleLanguage} className="hover:text-primary transition-transform">
             {i18n.language?.toUpperCase()}
           </Button>
 
