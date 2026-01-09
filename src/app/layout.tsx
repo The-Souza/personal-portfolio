@@ -3,6 +3,7 @@ import { I18NextProvider } from "@/providers/I18NextProvider";
 import { Header } from "@/components/layout/Header";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
+import { GradientBackground } from "@/components/animate-ui/components/backgrounds/gradient";
 
 export default function RootLayout({
   children,
@@ -20,6 +21,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <I18NextProvider>
+            <GradientBackground className="absolute inset-0 -z-50 flex items-center justify-center rounded-xl" />
             <Header />
             <main className="pt-17 flex-1 px-6 pb-6 flex flex-col items-center">
               {children}
