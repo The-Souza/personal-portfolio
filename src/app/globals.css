@@ -47,6 +47,7 @@
   --color-gradient-from: var(--gradient-from);
   --color-gradient-via: var(--gradient-via);
   --color-gradient-to: var(--gradient-to);
+  --color-header: var(--header);
 }
 
 :root {
@@ -74,7 +75,7 @@
   --chart-3: oklch(0.541 0.281 293.009);
   --chart-4: oklch(0.491 0.27 292.581);
   --chart-5: oklch(0.432 0.232 292.759);
-  --sidebar: oklch(0.985 0 0);
+  --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.141 0.005 285.823);
   --sidebar-primary: oklch(0.541 0.281 293.009);
   --sidebar-primary-foreground: oklch(0.969 0.016 293.756);
@@ -85,6 +86,7 @@
   --gradient-from: oklch(0.811 0.111 293.571);
   --gradient-via: var(--primary);
   --gradient-to: oklch(0.967 0.001 286.375);
+  --header: oklch(1 0 0);
 }
 
 .dark {
@@ -111,7 +113,7 @@
   --chart-3: oklch(0.541 0.281 293.009);
   --chart-4: oklch(0.491 0.27 292.581);
   --chart-5: oklch(0.432 0.232 292.759);
-  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar: oklch(21.15% 0.020 281deg);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.606 0.25 292.717);
   --sidebar-primary-foreground: oklch(0.969 0.016 293.756);
@@ -122,6 +124,7 @@
   --gradient-from: oklch(0.606 0.25 292.717);
   --gradient-via: oklch(0.38 0.189 293.745);
   --gradient-to: oklch(0.21 0.006 285.885);
+  --header: oklch(21.15% 0.020 281deg);
 }
 
 @layer base {
@@ -130,5 +133,10 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 }
