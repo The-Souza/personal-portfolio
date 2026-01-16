@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import { Background } from "@/components/layout/Backgound";
 import { IntroGate } from "@/components/layout/IntroGate";
 import { IntroProvider } from "@/providers/IntroProvider";
+import { inter, poppins } from "./fonts";
 
 export default async function RootLayout({
   children,
@@ -20,9 +21,13 @@ export default async function RootLayout({
   const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${inter.variable} ${poppins.variable} antialiased`}
+    >
       <head />
-      <body className="min-h-screen flex flex-col relative overflow-x-hidden">
+      <body className="min-h-screen flex flex-col relative overflow-x-hidden font-sans antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

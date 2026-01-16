@@ -22,7 +22,7 @@ export function HeroSection() {
           animation="blurInUp"
           by="word"
           once
-          className="text-4xl md:text-5xl lg:text-6xl font-bold"
+          className="text-4xl md:text-5xl lg:text-5xl font-bold font-heading"
         >
           {t("home.head")}
         </TextAnimate>
@@ -41,7 +41,7 @@ export function HeroSection() {
         </div>
 
         {/* DESCRIPTION */}
-        <div className="z-1 flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed">
+        <div className="z-1 flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed font-heding">
           <p>{t("home.description.part1")}</p>
 
           <p>{t("home.description.part2")}</p>

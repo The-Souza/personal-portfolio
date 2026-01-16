@@ -9,7 +9,7 @@ import {
 export function TerminalLoading() {
   return (
     <Terminal className="w-full sm:w-200 h-auto shadow-sm shadow-primary">
-      <TypingAnimation>&gt; pnpm install portfolio</TypingAnimation>
+      <TypingAnimation>&gt; npm install portfolio</TypingAnimation>
 
       <AnimatedSpan className="text-green-500">
         ✔ Initializing project
