@@ -8,8 +8,19 @@
   "actions": {
     "downloadCv": "Baixar CV"
   },
-  "footer": {
-    "creating": "Criado com Next.js, React, TypeScript e Tailwind CSS",
-    "viewCv": "Ver CV"
+  "viewCv": "Ver CV",
+  "viewProjects": "Ver Projetos",
+  "home": {
+    "head": "Desenvolvedor Frontend",
+    "description": {
+      "part1": "Desenvolvedor Frontend com foco em interfaces modernas, responsivas e bem estruturadas.",
+      "part2": "Experiência com Next.js, React, TypeScript, integração frontend–backend em projetos fullstack, modernização de sistemas web e aplicação de boas práticas como Clean Code, SRP e arquitetura em camadas."
+    },
+    "viewProjects": "Ver Projetos"
+  },
+  "notFound": {
+    "title": "Página Não Encontrada",
+    "description": "Você chegou a um beco sem saída. Esta página não existe.",
+    "goBackButton": "Voltar para Início"
   }
 }

@@ -111,7 +111,7 @@ export function MobileSidebar() {
             className="group flex items-center gap-2 transition-colors hover:text-primary"
           >
             <FileText className="w-4 h-4 transition-transform group-hover:scale-105" />
-            {t("footer.viewCv")}
+            {t("viewCv")}
           </Link>
         </div>
         <span className="text-xs opacity-70 mt-2">© 2026 Guilherme Souza</span>
