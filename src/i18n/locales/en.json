@@ -8,8 +8,19 @@
   "actions": {
     "downloadCv": "Download CV"
   },
-  "footer": {
-    "creating": "Build with Next.js, React, TypeScript & Tailwind CSS",
-    "viewCv": "View CV"
+  "viewCv": "View CV",
+  "viewProjects": "View Projects",
+  "home": {
+    "head": "Frontend Developer",
+    "description": {
+      "part1": "Frontend Developer focused on building modern, responsive, and well-structured interfaces.",
+      "part2": "Experience with Next.js, React, and TypeScript, frontend–backend integration in fullstack projects, web system modernization, and applying best practices such as Clean Code, SRP, and layered architecture."
+    },
+    "viewProjects": "View Projects"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "You've reached a dead end. This page doesn't exist.",
+    "goBackButton": "Return to Home"
   }
 }

@@ -44,10 +44,8 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-  --color-gradient-from: var(--gradient-from);
-  --color-gradient-via: var(--gradient-via);
-  --color-gradient-to: var(--gradient-to);
-  --color-header: var(--header);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
 }
 
 :root {
@@ -75,7 +73,7 @@
   --chart-3: oklch(0.541 0.281 293.009);
   --chart-4: oklch(0.491 0.27 292.581);
   --chart-5: oklch(0.432 0.232 292.759);
-  --sidebar: oklch(1 0 0);
+  --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.141 0.005 285.823);
   --sidebar-primary: oklch(0.541 0.281 293.009);
   --sidebar-primary-foreground: oklch(0.969 0.016 293.756);
@@ -83,10 +81,6 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.702 0.183 293.541);
-  --gradient-from: oklch(0.811 0.111 293.571);
-  --gradient-via: var(--primary);
-  --gradient-to: oklch(0.967 0.001 286.375);
-  --header: oklch(1 0 0);
 }
 
 .dark {
@@ -113,7 +107,7 @@
   --chart-3: oklch(0.541 0.281 293.009);
   --chart-4: oklch(0.491 0.27 292.581);
   --chart-5: oklch(0.432 0.232 292.759);
-  --sidebar: oklch(21.15% 0.020 281deg);
+  --sidebar: oklch(0.21 0.006 285.885);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.606 0.25 292.717);
   --sidebar-primary-foreground: oklch(0.969 0.016 293.756);
@@ -121,10 +115,6 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.38 0.189 293.745);
-  --gradient-from: oklch(0.606 0.25 292.717);
-  --gradient-via: oklch(0.38 0.189 293.745);
-  --gradient-to: oklch(0.21 0.006 285.885);
-  --header: oklch(21.15% 0.020 281deg);
 }
 
 @layer base {
@@ -138,5 +128,17 @@
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
   }
 }
