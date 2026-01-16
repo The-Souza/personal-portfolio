@@ -27,7 +27,7 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full px-6 py-4 bg-header backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 z-50 w-full h-17.5 px-6 py-4 backdrop-blur border-b border-border">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex gap-2 items-center">
@@ -44,7 +44,7 @@ export function Header() {
           <Button asChild variant="hover">
             <Link
               href="/"
-              className="flex items-center gap-2 font-semibold lg:hover:scale-105 transition-transform"
+              className="flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
             >
               <CodeXml className="w-5 h-5 opacity-80" />
               Guilherme Campos
@@ -72,7 +72,7 @@ export function Header() {
                     >
                       <Link
                         href={item.url}
-                        className="border hover:scale-105 hover:bg-accent dark:bg-input/30 border-input dark:hover:bg-input/50"
+                        className="border active:scale-[0.97] hover:scale-105 hover:bg-accent dark:bg-input/30 border-input dark:hover:bg-input/50"
                       >
                         {t(`navigation.${item.title}`)}
                       </Link>
@@ -93,7 +93,7 @@ export function Header() {
               size="icon"
               variant="outline"
               onClick={toggleLanguage}
-              className="hover:scale-105 transition-transform"
+              className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
               {i18n.language?.toUpperCase()}
             </Button>
@@ -102,7 +102,7 @@ export function Header() {
           <Button asChild>
             <Link
               href="/Guilherme_Campos_Frontend_Jr.pdf"
-              className="hover:scale-105 transition-transform"
+              className="hover:scale-105 transition-transform active:scale-[0.97]"
               download
             >
               <FileDown className="w-4 h-4" />
