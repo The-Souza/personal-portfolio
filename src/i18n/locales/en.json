@@ -22,5 +22,41 @@
     "title": "Page Not Found",
     "description": "You've reached a dead end. This page doesn't exist.",
     "goBackButton": "Return to Home"
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "Solutions focused on performance, scalability and clean architecture.",
+    "data": {
+      "frontendDevelopment": {
+        "title": "Frontend Development",
+        "label": "UI / UX",
+        "description": "Creating modern and responsive interfaces using the latest technologies and best market practices."
+      },
+      "backendIntegration": {
+        "title": "APIs & Integration",
+        "label": "Backend",
+        "description": "Development and integration of REST APIs with authentication, validation, and CRUD operations."
+      },
+      "projectsFullstack": {
+        "title": "Fullstack Projects",
+        "label": "End-to-End",
+        "description": "Building complete applications integrating frontend and backend with a product vision."
+      },
+      "metodologi": {
+        "title": "Clean Code & Architecture",
+        "label": "Best Practices",
+        "description": "Organized code following SRP, layered architecture, and maintainability best practices."
+      },
+      "performanceOptimization": {
+        "title": "Next.js Performance",
+        "label": "Next.js",
+        "description": "Optimized applications using SSR, SSG, and best loading practices."
+      },
+      "integration": {
+        "title": "Systems Integration",
+        "label": "Integration",
+        "description": "Integration between internal and external systems, ensuring consistency and reliability."
+      }
+    }
   }
 }

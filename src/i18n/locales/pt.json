@@ -22,5 +22,41 @@
     "title": "Página Não Encontrada",
     "description": "Você chegou a um beco sem saída. Esta página não existe.",
     "goBackButton": "Voltar para Início"
+  },
+  "services": {
+    "title": "Meus Serviços",
+    "subtitle": "Soluções focadas em performance, escalabilidade e arquitetura limpa.",
+    "data": {
+      "frontendDevelopment": {
+        "title": "Desenvolvimento Frontend",
+        "label": "UI / UX",
+        "description": "Criação de interfaces modernas e responsivas utilizando as mais recentes tecnologias e melhores práticas do mercado."
+      },
+      "backendIntegration": {
+        "title": "APIs & Integração",
+        "label": "Backend",
+        "description": "Desenvolvimento e integração de APIs REST com autenticação, validação e operações CRUD."
+      },
+      "projectsFullstack": {
+        "title": "Projetos Fullstack",
+        "label": "End-to-End",
+        "description": "Construção de aplicações completas integrando frontend e backend com visão de produto."
+      },
+      "metodologi": {
+        "title": "Clean Code & Arquitetura",
+        "label": "Boas Práticas",
+        "description": "Código organizado seguindo SRP, arquitetura em camadas e boas práticas de manutenção."
+      },
+      "performanceOptimization": {
+        "title": "Performance Next.js",
+        "label": "Next.js",
+        "description": "Aplicações otimizadas utilizando SSR, SSG e boas práticas de carregamento."
+      },
+      "integration": {
+        "title": "Integração de Sistemas",
+        "label": "Integração",
+        "description": "Integração entre sistemas internos e externos, garantindo consistência e confiabilidade."
+      }
+    }
   }
 }
