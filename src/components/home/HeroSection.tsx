@@ -4,16 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { TextAnimate } from "@/components/ui/text-animate";
+import { TextAnimate } from "@/components/effects/text-animate";
 import { Github, Linkedin, FileText, Briefcase } from "lucide-react";
-import { BlurFade } from "@/components/ui/blur-fade";
+import { BlurFade } from "@/components/effects/blur-fade";
 import { useTranslation } from "react-i18next";
 
 export function HeroSection() {
   const { t, i18n } = useTranslation();
 
   return (
-    <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[70vh] w-full max-w-6xl flex flex-col-reverse xl:flex-row items-center justify-between mt-6 gap-6 sm:gap-12">
+    <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full max-w-6xl flex flex-col-reverse xl:flex-row items-center justify-between py-14 md:py-20 gap-6 sm:gap-12">
       {/* LEFT — CONTENT */}
       <div className="w-auto flex flex-col gap-6 text-center xl:text-left">
         <TextAnimate
@@ -22,7 +22,7 @@ export function HeroSection() {
           animation="blurInUp"
           by="word"
           once
-          className="text-4xl md:text-5xl lg:text-5xl font-bold font-heading"
+          className="text-4xl md:text-5xl font-bold font-heading"
         >
           {t("home.head")}
         </TextAnimate>
@@ -33,7 +33,7 @@ export function HeroSection() {
             <Badge
               key={tech}
               variant="outline"
-              className="transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-background"
+              className="transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
             >
               {tech}
             </Badge>
@@ -41,7 +41,7 @@ export function HeroSection() {
         </div>
 
         {/* DESCRIPTION */}
-        <div className="z-1 flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed font-heding">
+        <div className="z-1 flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed text-lg">
           <p>{t("home.description.part1")}</p>
 
           <p>{t("home.description.part2")}</p>
