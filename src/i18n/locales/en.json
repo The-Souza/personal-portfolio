@@ -58,5 +58,27 @@
         "description": "Integration between internal and external systems, ensuring consistency and reliability."
       }
     }
+  },
+  "process": {
+    "title": "My Process",
+    "subtitle": "How I plan, build, and deliver digital solutions with quality and predictability.",
+    "data": {
+      "planning": {
+        "title": "Planning",
+        "description": "Understanding the problem, defining requirements, technical scope, and aligning expectations clearly."
+      },
+      "architecture": {
+        "title": "Architecture",
+        "description": "Application structuring with layered architecture, focusing on SRP, Clean Code, and scalability."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Implementation using React, Next.js, and Node.js, following best practices, versioning, and testing."
+      },
+      "delivery": {
+        "title": "Delivery",
+        "description": "Deployment, final validations, and delivery with clear documentation for maintenance and future evolution."
+      }
+    }
   }
 }

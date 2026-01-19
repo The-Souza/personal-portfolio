@@ -58,5 +58,27 @@
         "description": "Integração entre sistemas internos e externos, garantindo consistência e confiabilidade."
       }
     }
+  },
+  "process": {
+    "title": "Meu Processo",
+    "subtitle": "Como eu organizo, desenvolvo e entrego soluções digitais com qualidade e previsibilidade.",
+    "data": {
+      "planning": {
+        "title": "Planejamento",
+        "description": "Entendimento do problema, definição de requisitos, escopo técnico e alinhamento de expectativas com foco em resultados."
+      },
+      "architecture": {
+        "title": "Arquitetura",
+        "description": "Estruturação da aplicação com arquitetura em camadas, aplicando SRP, Clean Code e foco em escalabilidade."
+      },
+      "development": {
+        "title": "Desenvolvimento",
+        "description": "Implementação com React, Next.js e Node.js, seguindo boas práticas, versionamento e testes."
+      },
+      "delivery": {
+        "title": "Entrega",
+        "description": "Deploy, validações finais e entrega com documentação clara para manutenção e evolução."
+      }
+    }
   }
 }
