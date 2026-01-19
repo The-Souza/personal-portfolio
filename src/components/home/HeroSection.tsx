@@ -99,7 +99,7 @@ export function HeroSection() {
       </div>
 
       {/* RIGHT — AVATAR */}
-      <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden bg-background shadow-lg shadow-primary transition-transform duration-300 hover:scale-[1.03] hover:border-primary hover:border-4 animate-[float_6s_ease-in-out_infinite]">
+      <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden bg-background shadow-md hover:shadow-primary transition-transform duration-300 hover:scale-[1.03] border-2 border-primary animate-[float_6s_ease-in-out_infinite]">
         <BlurFade delay={0.25} inView className="w-full h-full relative">
           <Image
             src="/profile.jpeg"

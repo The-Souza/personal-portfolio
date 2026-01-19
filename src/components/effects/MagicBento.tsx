@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
-import { BentoItem } from "@/components/home/Service.data";
+import { BentoItem } from "@/constants/service.data";
 import { gsap } from "gsap";
 
 export interface BentoCardProps {
@@ -667,12 +667,12 @@ const MagicBento: React.FC<BentoProps> = ({
 
                   <div className="card__content flex flex-col relative">
                     <h3
-                      className={`card__title font-heading leading-tight mb-2 text-base lg:text-lg transition-colors duration-300 group-hover:text-primary ${textAutoHide ? "text-clamp-1" : ""}`}
+                      className={`card__title font-heading leading-tight mb-2 lg:text-lg transition-colors duration-300 group-hover:text-primary ${textAutoHide ? "text-clamp-1" : ""}`}
                     >
                       {card.titleKey}
                     </h3>
                     <p
-                      className={`card__description text-xs lg:text-sm leading-relaxed ${textAutoHide ? "text-clamp-3" : ""}`}
+                      className={`card__description text-xs lg:text-sm leading-relaxed text-muted-foreground ${textAutoHide ? "text-clamp-3" : ""}`}
                     >
                       {card.descriptionKey}
                     </p>
