@@ -1,0 +1,51 @@
+"use client";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { VideoIcon, AlignLeftIcon } from "lucide-react";
+import { FeaturedProject } from "@/constants/featured-projects.data";
+import { ProjectVideo } from "./ProjectVideo";
+import { ProjectDescription } from "./ProjectDescription";
+import { useTranslation } from "react-i18next";
+
+interface ProjectContentTabsProps {
+  project: FeaturedProject;
+}
+
+export function ProjectContentTabs({ project }: ProjectContentTabsProps) {
+  const { media } = project;
+  const { t } = useTranslation();
+
+  const hasVideo = Boolean(media?.video);
+
+  return (
+    <Tabs
+      defaultValue={hasVideo ? "video" : "description"}
+      className="w-full flex flex-col"
+    >
+      <TabsList className="shrink-0">
+        {hasVideo && (
+          <TabsTrigger value="video">
+            <VideoIcon className="h-4 w-4" />
+            {t("featured.video")}
+          </TabsTrigger>
+        )}
+        <TabsTrigger value="description">
+          <AlignLeftIcon className="h-4 w-4" />
+          {t("featured.description")}
+        </TabsTrigger>
+      </TabsList>
+
+      <div className="flex-1 overflow-hidden">
+        {hasVideo && (
+          <TabsContent value="video" className="h-full">
+            <ProjectVideo src={media!.video!} />
+          </TabsContent>
+        )}
+
+        <TabsContent value="description" className="h-full overflow-y-auto">
+          <ProjectDescription project={project} />
+        </TabsContent>
+      </div>
+    </Tabs>
+  );
+}

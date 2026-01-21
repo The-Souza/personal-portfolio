@@ -80,5 +80,74 @@
         "description": "Deploy, validações finais e entrega com documentação clara para manutenção e evolução."
       }
     }
+  },
+  "featured": {
+    "title": "Projetos em Destaque",
+    "subtitle": "Alguns projetos que demonstram minha forma de pensar, arquitetar e desenvolver aplicações.",
+    "previewProject": "Visualizar",
+    "description": "Descrição",
+    "video": "Vídeo",
+    "liveDemo": "Demo Ao Vivo",
+    "techStack": "Tecnologias Utilizadas",
+    "technicalDecisions": "Decisões Técnicas",
+    "keyFeatures": "Funcionalidades Principais",
+    "data": {
+      "portfolio": {
+        "title": "Portfólio Pessoal",
+        "description": "Portfólio desenvolvido com foco em performance, animações e arquitetura limpa.",
+        "longDescription": "Aplicação construída com Next.js, com foco em UI moderna, animações avançadas, internacionalização e boas práticas de Clean Code.",
+
+        "highlights": {
+          "frontend": "Frontend",
+          "next": "Next.js",
+          "i18n": "Internacionalização",
+          "responsive": "Responsivo",
+          "production": "Em Produção"
+        },
+
+        "features": {
+          "i18n": "Internacionalização (i18n)",
+          "responsive": "Layout responsivo com abordagem mobile-first",
+          "components": "Arquitetura de componentes reutilizáveis",
+          "media": "Carregamento de mídia otimizado e performático"
+        },
+
+        "architecture": {
+          "components": "Arquitetura orientada a componentes",
+          "srp": "Princípio da Responsabilidade Única (SRP)",
+          "separation": "Separação clara entre UI, dados e lógica"
+        }
+      },
+
+      "account": {
+        "title": "Account Management",
+        "description": "Sistema fullstack para gerenciamento de contas financeiras.",
+        "longDescription": "Projeto fullstack com autenticação, CRUD completo, integração frontend-backend e arquitetura em camadas.",
+
+        "highlights": {
+          "fullstack": "Fullstack",
+          "clean": "Arquitetura Limpa",
+          "jwt": "JWT",
+          "dashboard": "Dashboard",
+          "production": "Em Produção"
+        },
+
+        "features": {
+          "auth": "Autenticação de usuários com JWT",
+          "dashboard": "Dashboard financeiro com gráficos interativos",
+          "crud": "CRUD de contas com paginação e filtros",
+          "theme": "Suporte a tema claro e escuro",
+          "mobile": "Experiência mobile-first"
+        },
+
+        "architecture": {
+          "clean": "Arquitetura Limpa (camadas Controller / Service)",
+          "serverless": "Backend serverless (Vercel)",
+          "jwt": "Fluxo de autenticação baseado em JWT",
+          "context": "Gerenciamento de estado global com Context API",
+          "supabase": "Supabase para banco de dados e autenticação"
+        }
+      }
+    }
   }
 }

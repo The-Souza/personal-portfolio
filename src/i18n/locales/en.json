@@ -80,5 +80,74 @@
         "description": "Deployment, final validations, and delivery with clear documentation for maintenance and future evolution."
       }
     }
+  },
+  "featured": {
+    "title": "Featured Projects",
+    "subtitle": "Some projects that showcase how I think, architect, and build applications.",
+    "previewProject": "Preview",
+    "description": "Description",
+    "video": "Video",
+    "liveDemo": "Live Demo",
+    "techStack": "Tech Stack",
+    "technicalDecisions": "Technical Decisions",
+    "keyFeatures": "Key Features",
+    "data": {
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "description": "Portfolio built with focus on performance, animations and clean architecture.",
+        "longDescription": "Application built with Next.js, focusing on modern UI, advanced animations, internationalization and clean code practices.",
+
+        "highlights": {
+          "frontend": "Frontend",
+          "next": "Next.js",
+          "i18n": "i18n",
+          "responsive": "Responsive",
+          "production": "Production Ready"
+        },
+
+        "features": {
+          "i18n": "Internationalization (i18n)",
+          "responsive": "Responsive layout with mobile-first approach",
+          "components": "Reusable and scalable component architecture",
+          "media": "Optimized media loading and performance"
+        },
+
+        "architecture": {
+          "components": "Component-driven architecture",
+          "srp": "Single Responsibility Principle (SRP)",
+          "separation": "Clear separation between UI, data and logic"
+        }
+      },
+
+      "account": {
+        "title": "Account Management",
+        "description": "Fullstack system for financial account management.",
+        "longDescription": "Fullstack project with authentication, complete CRUD, frontend-backend integration and layered architecture.",
+
+        "highlights": {
+          "fullstack": "Fullstack",
+          "clean": "Clean Architecture",
+          "jwt": "JWT",
+          "dashboard": "Dashboard",
+          "production": "Production Ready"
+        },
+
+        "features": {
+          "auth": "User authentication with JWT",
+          "dashboard": "Financial dashboard with interactive charts",
+          "crud": "Accounts CRUD with pagination and filters",
+          "theme": "Light and Dark theme support",
+          "mobile": "Mobile-first experience"
+        },
+
+        "architecture": {
+          "clean": "Clean Architecture (Controller / Service layers)",
+          "serverless": "Serverless backend architecture (Vercel)",
+          "jwt": "JWT-based authentication flow",
+          "context": "Global state management with Context API",
+          "supabase": "Supabase for database and authentication"
+        }
+      }
+    }
   }
 }
