@@ -665,9 +665,9 @@ const MagicBento: React.FC<BentoProps> = ({
                     </span>
                   </div>
 
-                  <div className="card__content flex flex-col relative">
+                  <div className="card__content flex flex-col gap-2 relative">
                     <h3
-                      className={`card__title font-heading leading-tight mb-2 lg:text-lg transition-colors duration-300 group-hover:text-primary ${textAutoHide ? "text-clamp-1" : ""}`}
+                      className={`card__title font-heading leading-tight lg:text-lg transition-colors duration-300 group-hover:text-primary ${textAutoHide ? "text-clamp-1" : ""}`}
                     >
                       {card.titleKey}
                     </h3>
@@ -802,9 +802,9 @@ const MagicBento: React.FC<BentoProps> = ({
                     {card.labelKey}
                   </span>
                 </div>
-                <div className="card__content flex flex-col relative">
+                <div className="card__content flex flex-col gap-2 relative">
                   <h3
-                    className={`card__title font-heading leading-tight mb-2 text-base lg:text-lg ${textAutoHide ? "text-clamp-1" : ""}`}
+                    className={`card__title font-heading leading-tight text-base lg:text-lg ${textAutoHide ? "text-clamp-1" : ""}`}
                   >
                     {card.titleKey}
                   </h3>

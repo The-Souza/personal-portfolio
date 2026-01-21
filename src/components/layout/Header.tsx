@@ -101,7 +101,7 @@ export function Header() {
 
           <Button asChild>
             <Link
-              href="/Guilherme_Campos_Frontend_Jr.pdf"
+              href="/doc/Guilherme_Campos_Frontend_Jr.pdf"
               className="hover:scale-105 transition-transform active:scale-[0.97]"
               download
             >

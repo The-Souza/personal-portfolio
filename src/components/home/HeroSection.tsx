@@ -54,7 +54,7 @@ export function HeroSection() {
               href="https://linkedin.com/in/guilherme-campos-frontend"
               target="_blank"
               rel="noopener noreferrer"
-              className="lg:hover:scale-105 transition-transform active:scale-[0.97]"
+              className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
               <Linkedin className="mr-2 h-4 w-4" />
               LinkedIn
@@ -66,7 +66,7 @@ export function HeroSection() {
               href="https://github.com/The-Souza"
               target="_blank"
               rel="noopener noreferrer"
-              className="lg:hover:scale-105 transition-transform active:scale-[0.97]"
+              className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
               <Github className="mr-2 h-4 w-4" />
               GitHub
@@ -77,7 +77,7 @@ export function HeroSection() {
             <Link
               href="/projects"
               target="_blank"
-              className="lg:hover:scale-105 transition-transform active:scale-[0.97]"
+              className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
               <Briefcase className="mr-2 h-4 w-4" />
               {t("viewProjects")}
@@ -86,10 +86,10 @@ export function HeroSection() {
 
           <Button asChild variant="secondary">
             <Link
-              href="/Guilherme_Campos_Frontend_Jr.pdf"
+              href="/doc/Guilherme_Campos_Frontend_Jr.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="lg:hover:scale-105 transition-transform active:scale-[0.97]"
+              className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
               <FileText className="mr-2 h-4 w-4" />
               {t("viewCv")}
@@ -102,7 +102,7 @@ export function HeroSection() {
       <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden bg-background shadow-md hover:shadow-primary transition-transform duration-300 hover:scale-[1.03] border-2 border-primary animate-[float_6s_ease-in-out_infinite]">
         <BlurFade delay={0.25} inView className="w-full h-full relative">
           <Image
-            src="/profile.jpeg"
+            src="/images/profile.jpeg"
             alt="Foto de Guilherme Campos"
             fill
             priority

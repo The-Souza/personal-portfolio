@@ -49,7 +49,7 @@ export function MobileSidebar() {
           </Button>
 
           <Button asChild>
-            <Link href="/Guilherme_Campos_Frontend_Jr.pdf" download>
+            <Link href="/doc/Guilherme_Campos_Frontend_Jr.pdf" download>
               <FileDown className="w-4 h-4" />
               {t("actions.downloadCv")}
             </Link>
@@ -105,7 +105,7 @@ export function MobileSidebar() {
           </Link>
 
           <Link
-            href="/Guilherme_Campos_Frontend_Jr.pdf"
+            href="/doc/Guilherme_Campos_Frontend_Jr.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-2 transition-colors hover:text-primary"

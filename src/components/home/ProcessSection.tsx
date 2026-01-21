@@ -15,7 +15,7 @@ export function ProcessSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-12">
+    <section className="w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader
         title={t("process.title")}
         subtitle={t("process.subtitle")}
@@ -34,8 +34,8 @@ export function ProcessSection() {
                 <span className="font-semibold text-primary">{step.step}</span>
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <CardTitle className="text-lg font-heading mb-2">
+            <CardContent className="flex flex-col gap-2">
+              <CardTitle className="text-lg font-heading">
                 {t(step.titleKey)}
               </CardTitle>
 
