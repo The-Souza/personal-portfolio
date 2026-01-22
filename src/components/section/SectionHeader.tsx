@@ -22,7 +22,7 @@ export function SectionHeader({
   return (
     <header
       className={cn(
-        "w-full max-w-2xl flex flex-col gap-4",
+        "w-full max-w-4xl flex flex-col gap-4",
         alignmentClasses,
         className
       )}

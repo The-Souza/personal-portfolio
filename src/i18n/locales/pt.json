@@ -149,5 +149,11 @@
         }
       }
     }
+  },
+  "cta": {
+    "title": "Vamos construir algo sólido?",
+    "description": "Se você gostou da forma como eu penso, estruturo e desenvolvo aplicações, vamos conversar sobre o seu próximo projeto.",
+    "primary": "Entrar em contato",
+    "secondary": "Ver projetos"
   }
 }

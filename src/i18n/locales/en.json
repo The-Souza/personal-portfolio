@@ -149,5 +149,11 @@
         }
       }
     }
+  },
+  "cta": {
+    "title": "Ready to build something solid?",
+    "description": "If you like how I design, structure, and build applications, let’s talk about how I can help with your next project.",
+    "primary": "Contact me",
+    "secondary": "View projects"
   }
 }

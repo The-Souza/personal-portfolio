@@ -76,7 +76,6 @@ export function HeroSection() {
           <Button asChild variant="secondary">
             <Link
               href="/projects"
-              target="_blank"
               className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
               <Briefcase className="mr-2 h-4 w-4" />
