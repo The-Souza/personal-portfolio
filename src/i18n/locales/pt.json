@@ -22,5 +22,138 @@
     "title": "Página Não Encontrada",
     "description": "Você chegou a um beco sem saída. Esta página não existe.",
     "goBackButton": "Voltar para Início"
+  },
+  "services": {
+    "title": "Meus Serviços",
+    "subtitle": "Soluções focadas em performance, escalabilidade e arquitetura limpa.",
+    "data": {
+      "frontendDevelopment": {
+        "title": "Desenvolvimento Frontend",
+        "label": "UI / UX",
+        "description": "Criação de interfaces modernas e responsivas utilizando as mais recentes tecnologias e melhores práticas do mercado."
+      },
+      "backendIntegration": {
+        "title": "APIs & Integração",
+        "label": "Backend",
+        "description": "Desenvolvimento e integração de APIs REST com autenticação, validação e operações CRUD."
+      },
+      "projectsFullstack": {
+        "title": "Projetos Fullstack",
+        "label": "End-to-End",
+        "description": "Construção de aplicações completas integrando frontend e backend com visão de produto."
+      },
+      "metodologi": {
+        "title": "Clean Code & Arquitetura",
+        "label": "Boas Práticas",
+        "description": "Código organizado seguindo SRP, arquitetura em camadas e boas práticas de manutenção."
+      },
+      "performanceOptimization": {
+        "title": "Performance Next.js",
+        "label": "Next.js",
+        "description": "Aplicações otimizadas utilizando SSR, SSG e boas práticas de carregamento."
+      },
+      "integration": {
+        "title": "Integração de Sistemas",
+        "label": "Integração",
+        "description": "Integração entre sistemas internos e externos, garantindo consistência e confiabilidade."
+      }
+    }
+  },
+  "process": {
+    "title": "Meu Processo",
+    "subtitle": "Como eu organizo, desenvolvo e entrego soluções digitais com qualidade e previsibilidade.",
+    "data": {
+      "planning": {
+        "title": "Planejamento",
+        "description": "Entendimento do problema, definição de requisitos, escopo técnico e alinhamento de expectativas com foco em resultados."
+      },
+      "architecture": {
+        "title": "Arquitetura",
+        "description": "Estruturação da aplicação com arquitetura em camadas, aplicando SRP, Clean Code e foco em escalabilidade."
+      },
+      "development": {
+        "title": "Desenvolvimento",
+        "description": "Implementação com React, Next.js e Node.js, seguindo boas práticas, versionamento e testes."
+      },
+      "delivery": {
+        "title": "Entrega",
+        "description": "Deploy, validações finais e entrega com documentação clara para manutenção e evolução."
+      }
+    }
+  },
+  "featured": {
+    "title": "Projetos em Destaque",
+    "subtitle": "Alguns projetos que demonstram minha forma de pensar, arquitetar e desenvolver aplicações.",
+    "previewProject": "Visualizar",
+    "description": "Descrição",
+    "video": "Vídeo",
+    "liveDemo": "Demo Ao Vivo",
+    "techStack": "Tecnologias Utilizadas",
+    "technicalDecisions": "Decisões Técnicas",
+    "keyFeatures": "Funcionalidades Principais",
+    "data": {
+      "portfolio": {
+        "title": "Portfólio Pessoal",
+        "description": "Portfólio desenvolvido com foco em performance, animações e arquitetura limpa.",
+        "longDescription": "Aplicação construída com Next.js, com foco em UI moderna, animações avançadas, internacionalização e boas práticas de Clean Code.",
+
+        "highlights": {
+          "frontend": "Frontend",
+          "next": "Next.js",
+          "i18n": "Internacionalização",
+          "responsive": "Responsivo",
+          "production": "Em Produção"
+        },
+
+        "features": {
+          "i18n": "Internacionalização (i18n)",
+          "responsive": "Layout responsivo com abordagem mobile-first",
+          "components": "Arquitetura de componentes reutilizáveis",
+          "media": "Carregamento de mídia otimizado e performático"
+        },
+
+        "architecture": {
+          "components": "Arquitetura orientada a componentes",
+          "srp": "Princípio da Responsabilidade Única (SRP)",
+          "separation": "Separação clara entre UI, dados e lógica"
+        }
+      },
+
+      "account": {
+        "title": "Account Management",
+        "description": "Sistema fullstack para gerenciamento de contas financeiras.",
+        "longDescription": "Projeto fullstack com autenticação, CRUD completo, integração frontend-backend e arquitetura em camadas.",
+
+        "highlights": {
+          "fullstack": "Fullstack",
+          "clean": "Arquitetura Limpa",
+          "jwt": "JWT",
+          "dashboard": "Dashboard",
+          "production": "Em Produção"
+        },
+
+        "features": {
+          "auth": "Autenticação de usuários com JWT",
+          "dashboard": "Dashboard financeiro com gráficos interativos",
+          "crud": "CRUD de contas com paginação e filtros",
+          "theme": "Suporte a tema claro e escuro",
+          "mobile": "Experiência mobile-first"
+        },
+
+        "architecture": {
+          "clean": "Arquitetura Limpa (camadas Controller / Service)",
+          "serverless": "Backend serverless (Vercel)",
+          "jwt": "Fluxo de autenticação baseado em JWT",
+          "context": "Gerenciamento de estado global com Context API",
+          "supabase": "Supabase para banco de dados e autenticação"
+        }
+      }
+    }
+  },
+  "cta": {
+    "title": "Vamos construir algo sólido?",
+    "description": "Se você gostou da forma como eu penso, estruturo e desenvolvo aplicações, vamos conversar sobre o seu próximo projeto.",
+    "primary": "Entrar em contato",
+    "secondary": "Ver projetos"
   }
 }

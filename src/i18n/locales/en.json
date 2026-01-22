@@ -22,5 +22,138 @@
     "title": "Page Not Found",
     "description": "You've reached a dead end. This page doesn't exist.",
     "goBackButton": "Return to Home"
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "Solutions focused on performance, scalability and clean architecture.",
+    "data": {
+      "frontendDevelopment": {
+        "title": "Frontend Development",
+        "label": "UI / UX",
+        "description": "Creating modern and responsive interfaces using the latest technologies and best market practices."
+      },
+      "backendIntegration": {
+        "title": "APIs & Integration",
+        "label": "Backend",
+        "description": "Development and integration of REST APIs with authentication, validation, and CRUD operations."
+      },
+      "projectsFullstack": {
+        "title": "Fullstack Projects",
+        "label": "End-to-End",
+        "description": "Building complete applications integrating frontend and backend with a product vision."
+      },
+      "metodologi": {
+        "title": "Clean Code & Architecture",
+        "label": "Best Practices",
+        "description": "Organized code following SRP, layered architecture, and maintainability best practices."
+      },
+      "performanceOptimization": {
+        "title": "Next.js Performance",
+        "label": "Next.js",
+        "description": "Optimized applications using SSR, SSG, and best loading practices."
+      },
+      "integration": {
+        "title": "Systems Integration",
+        "label": "Integration",
+        "description": "Integration between internal and external systems, ensuring consistency and reliability."
+      }
+    }
+  },
+  "process": {
+    "title": "My Process",
+    "subtitle": "How I plan, build, and deliver digital solutions with quality and predictability.",
+    "data": {
+      "planning": {
+        "title": "Planning",
+        "description": "Understanding the problem, defining requirements, technical scope, and aligning expectations clearly."
+      },
+      "architecture": {
+        "title": "Architecture",
+        "description": "Application structuring with layered architecture, focusing on SRP, Clean Code, and scalability."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Implementation using React, Next.js, and Node.js, following best practices, versioning, and testing."
+      },
+      "delivery": {
+        "title": "Delivery",
+        "description": "Deployment, final validations, and delivery with clear documentation for maintenance and future evolution."
+      }
+    }
+  },
+  "featured": {
+    "title": "Featured Projects",
+    "subtitle": "Some projects that showcase how I think, architect, and build applications.",
+    "previewProject": "Preview",
+    "description": "Description",
+    "video": "Video",
+    "liveDemo": "Live Demo",
+    "techStack": "Tech Stack",
+    "technicalDecisions": "Technical Decisions",
+    "keyFeatures": "Key Features",
+    "data": {
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "description": "Portfolio built with focus on performance, animations and clean architecture.",
+        "longDescription": "Application built with Next.js, focusing on modern UI, advanced animations, internationalization and clean code practices.",
+
+        "highlights": {
+          "frontend": "Frontend",
+          "next": "Next.js",
+          "i18n": "i18n",
+          "responsive": "Responsive",
+          "production": "Production Ready"
+        },
+
+        "features": {
+          "i18n": "Internationalization (i18n)",
+          "responsive": "Responsive layout with mobile-first approach",
+          "components": "Reusable and scalable component architecture",
+          "media": "Optimized media loading and performance"
+        },
+
+        "architecture": {
+          "components": "Component-driven architecture",
+          "srp": "Single Responsibility Principle (SRP)",
+          "separation": "Clear separation between UI, data and logic"
+        }
+      },
+
+      "account": {
+        "title": "Account Management",
+        "description": "Fullstack system for financial account management.",
+        "longDescription": "Fullstack project with authentication, complete CRUD, frontend-backend integration and layered architecture.",
+
+        "highlights": {
+          "fullstack": "Fullstack",
+          "clean": "Clean Architecture",
+          "jwt": "JWT",
+          "dashboard": "Dashboard",
+          "production": "Production Ready"
+        },
+
+        "features": {
+          "auth": "User authentication with JWT",
+          "dashboard": "Financial dashboard with interactive charts",
+          "crud": "Accounts CRUD with pagination and filters",
+          "theme": "Light and Dark theme support",
+          "mobile": "Mobile-first experience"
+        },
+
+        "architecture": {
+          "clean": "Clean Architecture (Controller / Service layers)",
+          "serverless": "Serverless backend architecture (Vercel)",
+          "jwt": "JWT-based authentication flow",
+          "context": "Global state management with Context API",
+          "supabase": "Supabase for database and authentication"
+        }
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to build something solid?",
+    "description": "If you like how I design, structure, and build applications, let’s talk about how I can help with your next project.",
+    "primary": "Contact me",
+    "secondary": "View projects"
   }
 }

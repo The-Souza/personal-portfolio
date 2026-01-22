@@ -1,6 +1,6 @@
 "use client";
 
-import PixelBlast from "@/components/ui/PixelBlast";
+import PixelBlast from "@/components/effects/PixelBlast";
 
 export function Background() {
   return (

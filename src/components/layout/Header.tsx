@@ -27,7 +27,7 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full h-17.5 px-6 py-4 backdrop-blur border-b border-border">
+    <header className="fixed top-0 left-0 z-50 w-full h-17.5 px-6 py-4 backdrop-blur-md border-b border-border">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex gap-2 items-center">
@@ -72,7 +72,7 @@ export function Header() {
                     >
                       <Link
                         href={item.url}
-                        className="border active:scale-[0.97] hover:scale-105 hover:bg-accent dark:bg-input/30 border-input dark:hover:bg-input/50"
+                        className="border active:scale-[0.97] bg-sidebar hover:scale-105 hover:bg-accent border-input"
                       >
                         {t(`navigation.${item.title}`)}
                       </Link>
@@ -101,7 +101,7 @@ export function Header() {
 
           <Button asChild>
             <Link
-              href="/Guilherme_Campos_Frontend_Jr.pdf"
+              href="/doc/Guilherme_Campos_Frontend_Jr.pdf"
               className="hover:scale-105 transition-transform active:scale-[0.97]"
               download
             >

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import FuzzyText from "@/components/ui/FuzzyText";
+import FuzzyText from "@/components/effects/FuzzyText";
 import { useTheme } from "next-themes";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useEffect, useState } from "react";
