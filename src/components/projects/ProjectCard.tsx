@@ -1,3 +1,5 @@
+"use client"
+
 import { Project } from "@/constants/projects.data";
 import {
   Card,

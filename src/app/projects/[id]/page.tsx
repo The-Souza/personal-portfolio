@@ -1,10 +1,6 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/constants/projects.data";
-import { ProjectHero } from "@/components/projects/ProjectHero";
-import { ProjectDetails } from "@/components/projects/ProjectDetails";
-import { ProjectVideo } from "@/components/projects/ProjectVideo";
-import { ProjectOutcome } from "@/components/projects/ProjectOutcome";
-import ProjectNavigation from "@/components/projects/ProjectNavigation";
+import { ProjectHero, ProjectDetails, ProjectVideo, ProjectOutcome, ProjectNavigation } from "@/components/projects";
 
 interface ProjectPageProps {
   params: Promise<{
