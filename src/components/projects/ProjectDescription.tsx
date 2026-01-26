@@ -1,12 +1,13 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { FeaturedProject } from "@/constants/featured-projects.data";
+import { Project } from "@/constants/projects.data";
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 interface ProjectDescriptionProps {
-  project: FeaturedProject;
+  project: Project;
 }
 
 export function ProjectDescription({ project }: ProjectDescriptionProps) {
@@ -23,7 +24,7 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
         <section className="space-y-2 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col gap-2">
             <h4 className="text-sm font-semibold uppercase text-muted-foreground">
-              {t("featured.keyFeatures")}
+              {t("projects.keyFeatures")}
             </h4>
             <ul className="list-disc space-y-1 pl-4 text-sm">
               {project.features.map((feature) => (
@@ -34,7 +35,7 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
 
           <div className="flex flex-col gap-2">
             <h4 className="text-sm font-semibold uppercase text-muted-foreground">
-              {t("featured.technicalDecisions")}
+              {t("projects.technicalDecisions")}
             </h4>
             <ul className="list-disc space-y-1 pl-4 text-sm">
               {project.architecture.map((item) => (
@@ -47,12 +48,12 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
 
       <section className="space-y-2">
         <h4 className="text-sm font-semibold uppercase text-muted-foreground">
-          {t("featured.techStack")}
+          {t("projects.techStack")}
         </h4>
         <div className="flex flex-wrap gap-2">
           {project.techs.map((tech) => (
             <Badge key={tech} variant="secondary">
-              {t(tech)}
+              {tech}
             </Badge>
           ))}
         </div>
@@ -61,17 +62,27 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
       <div className="flex gap-3 pt-2">
         {project.links?.demo && (
           <Button asChild>
-            <a href={project.links.demo} target="_blank" rel="noreferrer">
-              Live Demo
-            </a>
+            <Link
+              href={project.links.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-105 transition-transform active:scale-[0.97]"
+            >
+              {t("projects.liveDemo")}
+            </Link>
           </Button>
         )}
 
         {project.links?.github && (
-          <Button variant="outline" asChild>
-            <a href={project.links.github} target="_blank" rel="noreferrer">
+          <Button asChild variant="outline">
+            <Link
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-105 transition-transform active:scale-[0.97]"
+            >
               GitHub
-            </a>
+            </Link>
           </Button>
         )}
       </div>

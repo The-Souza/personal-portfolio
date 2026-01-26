@@ -10,13 +10,13 @@
   },
   "viewCv": "View CV",
   "viewProjects": "View Projects",
+  "previewProject": "Preview",
   "home": {
     "head": "Frontend Developer",
     "description": {
       "part1": "Frontend Developer focused on building modern, responsive, and well-structured interfaces.",
       "part2": "Experience with Next.js, React, and TypeScript, frontend–backend integration in fullstack projects, web system modernization, and applying best practices such as Clean Code, SRP, and layered architecture."
-    },
-    "viewProjects": "View Projects"
+    }
   },
   "notFound": {
     "title": "Page Not Found",
@@ -81,10 +81,11 @@
       }
     }
   },
-  "featured": {
-    "title": "Featured Projects",
-    "subtitle": "Some projects that showcase how I think, architect, and build applications.",
-    "previewProject": "Preview",
+  "projects": {
+    "featuredTitle": "Featured Projects",
+    "featuredSubtitle": "Some projects that showcase how I think, architect, and build applications.",
+    "title": "Developed Projects",
+    "subtitle": "Solutions created with focus on performance, clean architecture, and user experience.",
     "description": "Description",
     "video": "Video",
     "liveDemo": "Live Demo",
@@ -93,10 +94,14 @@
     "keyFeatures": "Key Features",
     "data": {
       "portfolio": {
+        "status": {
+          "inDevelopment": "In Development",
+          "completed": "Completed",
+          "inMaintenance": "In Maintenance"
+        },
         "title": "Personal Portfolio",
         "description": "Portfolio built with focus on performance, animations and clean architecture.",
         "longDescription": "Application built with Next.js, focusing on modern UI, advanced animations, internationalization and clean code practices.",
-
         "highlights": {
           "frontend": "Frontend",
           "next": "Next.js",
@@ -104,26 +109,27 @@
           "responsive": "Responsive",
           "production": "Production Ready"
         },
-
         "features": {
           "i18n": "Internationalization (i18n)",
           "responsive": "Responsive layout with mobile-first approach",
           "components": "Reusable and scalable component architecture",
           "media": "Optimized media loading and performance"
         },
-
         "architecture": {
           "components": "Component-driven architecture",
           "srp": "Single Responsibility Principle (SRP)",
           "separation": "Clear separation between UI, data and logic"
         }
       },
-
-      "account": {
+      "account-management": {
+        "status": {
+          "inDevelopment": "In Development",
+          "completed": "Completed",
+          "inMaintenance": "In Maintenance"
+        },
         "title": "Account Management",
         "description": "Fullstack system for financial account management.",
         "longDescription": "Fullstack project with authentication, complete CRUD, frontend-backend integration and layered architecture.",
-
         "highlights": {
           "fullstack": "Fullstack",
           "clean": "Clean Architecture",
@@ -131,7 +137,6 @@
           "dashboard": "Dashboard",
           "production": "Production Ready"
         },
-
         "features": {
           "auth": "User authentication with JWT",
           "dashboard": "Financial dashboard with interactive charts",
@@ -139,13 +144,20 @@
           "theme": "Light and Dark theme support",
           "mobile": "Mobile-first experience"
         },
-
         "architecture": {
           "clean": "Clean Architecture (Controller / Service layers)",
           "serverless": "Serverless backend architecture (Vercel)",
           "jwt": "JWT-based authentication flow",
           "context": "Global state management with Context API",
           "supabase": "Supabase for database and authentication"
+        },
+        "outcome": {
+          "contextTitle": "Context",
+          "solutionTitle": "Solution",
+          "resultTitle": "Result",
+          "context": "I have always enjoyed working with dashboards and data management. I previously used Power BI and Excel for this purpose, but wanted to go beyond ready-made tools. I used real household expenses as a real-world scenario to build a fully coded solution.",
+          "solution": "I developed a fullstack application focused on financial data visualization and management, building custom dashboard components without relying on UI libraries. The solution was designed for clarity, reusability, and performance.",
+          "result": "After publishing the demo, I allowed family members to use the system in their daily routine and collect real user feedback. This led to improvements in UX, data organization, and application flow."
         }
       }
     }
@@ -153,7 +165,6 @@
   "cta": {
     "title": "Ready to build something solid?",
     "description": "If you like how I design, structure, and build applications, let’s talk about how I can help with your next project.",
-    "primary": "Contact me",
-    "secondary": "View projects"
+    "primary": "Contact me"
   }
 }

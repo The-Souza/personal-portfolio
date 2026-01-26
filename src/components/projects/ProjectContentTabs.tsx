@@ -2,13 +2,13 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { VideoIcon, AlignLeftIcon } from "lucide-react";
-import { FeaturedProject } from "@/constants/featured-projects.data";
+import { Project } from "@/constants/projects.data";
 import { ProjectVideo } from "./ProjectVideo";
 import { ProjectDescription } from "./ProjectDescription";
 import { useTranslation } from "react-i18next";
 
 interface ProjectContentTabsProps {
-  project: FeaturedProject;
+  project: Project;
 }
 
 export function ProjectContentTabs({ project }: ProjectContentTabsProps) {
@@ -26,12 +26,12 @@ export function ProjectContentTabs({ project }: ProjectContentTabsProps) {
         {hasVideo && (
           <TabsTrigger value="video">
             <VideoIcon className="h-4 w-4" />
-            {t("featured.video")}
+            {t("projects.video")}
           </TabsTrigger>
         )}
         <TabsTrigger value="description">
           <AlignLeftIcon className="h-4 w-4" />
-          {t("featured.description")}
+          {t("projects.description")}
         </TabsTrigger>
       </TabsList>
 

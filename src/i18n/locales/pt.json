@@ -10,13 +10,13 @@
   },
   "viewCv": "Ver CV",
   "viewProjects": "Ver Projetos",
+  "previewProject": "Visualizar",
   "home": {
     "head": "Desenvolvedor Frontend",
     "description": {
       "part1": "Desenvolvedor Frontend com foco em interfaces modernas, responsivas e bem estruturadas.",
       "part2": "Experiência com Next.js, React, TypeScript, integração frontend–backend em projetos fullstack, modernização de sistemas web e aplicação de boas práticas como Clean Code, SRP e arquitetura em camadas."
-    },
-    "viewProjects": "Ver Projetos"
+    }
   },
   "notFound": {
     "title": "Página Não Encontrada",
@@ -81,10 +81,11 @@
       }
     }
   },
-  "featured": {
-    "title": "Projetos em Destaque",
-    "subtitle": "Alguns projetos que demonstram minha forma de pensar, arquitetar e desenvolver aplicações.",
-    "previewProject": "Visualizar",
+  "projects": {
+    "featuredTitle": "Projetos em Destaque",
+    "featuredSubtitle": "Alguns projetos que demonstram minha forma de pensar, arquitetar e desenvolver aplicações.",
+    "title": "Projetos Desenvolvidos",
+    "subtitle": "Soluções criadas com foco em performance, arquitetura limpa e experiência do usuário.",
     "description": "Descrição",
     "video": "Vídeo",
     "liveDemo": "Demo Ao Vivo",
@@ -93,10 +94,14 @@
     "keyFeatures": "Funcionalidades Principais",
     "data": {
       "portfolio": {
+        "status": {
+          "inDevelopment": "Em Desenvolvimento",
+          "completed": "Concluído",
+          "inMaintenance": "Em Manutenção"
+        },
         "title": "Portfólio Pessoal",
         "description": "Portfólio desenvolvido com foco em performance, animações e arquitetura limpa.",
         "longDescription": "Aplicação construída com Next.js, com foco em UI moderna, animações avançadas, internacionalização e boas práticas de Clean Code.",
-
         "highlights": {
           "frontend": "Frontend",
           "next": "Next.js",
@@ -104,26 +109,27 @@
           "responsive": "Responsivo",
           "production": "Em Produção"
         },
-
         "features": {
           "i18n": "Internacionalização (i18n)",
           "responsive": "Layout responsivo com abordagem mobile-first",
           "components": "Arquitetura de componentes reutilizáveis",
           "media": "Carregamento de mídia otimizado e performático"
         },
-
         "architecture": {
           "components": "Arquitetura orientada a componentes",
           "srp": "Princípio da Responsabilidade Única (SRP)",
           "separation": "Separação clara entre UI, dados e lógica"
         }
       },
-
-      "account": {
+      "account-management": {
+        "status": {
+          "inDevelopment": "Em Desenvolvimento",
+          "completed": "Concluído",
+          "inMaintenance": "Em Manutenção"
+        },
         "title": "Account Management",
         "description": "Sistema fullstack para gerenciamento de contas financeiras.",
         "longDescription": "Projeto fullstack com autenticação, CRUD completo, integração frontend-backend e arquitetura em camadas.",
-
         "highlights": {
           "fullstack": "Fullstack",
           "clean": "Arquitetura Limpa",
@@ -131,7 +137,6 @@
           "dashboard": "Dashboard",
           "production": "Em Produção"
         },
-
         "features": {
           "auth": "Autenticação de usuários com JWT",
           "dashboard": "Dashboard financeiro com gráficos interativos",
@@ -139,13 +144,20 @@
           "theme": "Suporte a tema claro e escuro",
           "mobile": "Experiência mobile-first"
         },
-
         "architecture": {
           "clean": "Arquitetura Limpa (camadas Controller / Service)",
           "serverless": "Backend serverless (Vercel)",
           "jwt": "Fluxo de autenticação baseado em JWT",
           "context": "Gerenciamento de estado global com Context API",
           "supabase": "Supabase para banco de dados e autenticação"
+        },
+        "outcome": {
+          "contextTitle": "Contexto",
+          "solutionTitle": "Solução",
+          "resultTitle": "Resultado",
+          "context": "Sempre gostei de trabalhar com dashboards e gestão de dados. Já utilizava Power BI e Excel para esse tipo de controle, mas queria ir além das ferramentas prontas. Usei as despesas reais de casa como cenário para criar uma solução própria, totalmente programada.",
+          "solution": "Desenvolvi uma aplicação fullstack focada em visualização e gestão de dados financeiros, criando meus próprios componentes de dashboard, sem depender de bibliotecas prontas. A aplicação foi pensada para clareza, reutilização e performance.",
+          "result": "Após publicar a demo, disponibilizei o sistema para familiares utilizarem no dia a dia e coletarem feedback real. Com isso, evoluí a experiência do usuário, organização dos dados e fluxos da aplicação."
         }
       }
     }
@@ -153,7 +165,6 @@
   "cta": {
     "title": "Vamos construir algo sólido?",
     "description": "Se você gostou da forma como eu penso, estruturo e desenvolvo aplicações, vamos conversar sobre o seu próximo projeto.",
-    "primary": "Entrar em contato",
-    "secondary": "Ver projetos"
+    "primary": "Entrar em contato"
   }
 }

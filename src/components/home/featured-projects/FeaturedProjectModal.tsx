@@ -6,12 +6,12 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { FeaturedProject } from "@/constants/featured-projects.data";
+import { Project } from "@/constants/projects.data";
 import { ProjectContentTabs } from "@/components/projects/ProjectContentTabs";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 interface FeaturedProjectModalProps {
-  project: FeaturedProject | null;
+  project: Project | null;
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
