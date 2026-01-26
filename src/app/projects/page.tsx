@@ -1,7 +1,9 @@
+import { ProjectsSection } from "@/components/projects/ProjectsSection";
+
 export default function Projects() {
   return (
-    <div className="flex items-center justify-center w-full max-h-screen">
-      Welcome to Projects
+    <div className="flex flex-col flex-1 gap-14 md:gap-20 items-center">
+      <ProjectsSection />
     </div>
   );
 }

@@ -30,7 +30,7 @@ export function CallToActionSection() {
             className="hover:scale-105 transition-transform active:scale-[0.97]"
           >
             <Briefcase className="mr-2 h-4 w-4" />
-            {t("cta.secondary")}
+            {t("viewProjects")}
           </Link>
         </Button>
       </div>
