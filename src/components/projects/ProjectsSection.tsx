@@ -5,6 +5,7 @@ import { ProjectCard } from "./ProjectCard";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/navigation";
 import { TextAnimate } from "../effects/text-animate";
+import { GlassCard } from "@/components/ui/glass-card";
 
 export function ProjectsSection() {
   const { t, i18n } = useTranslation();
@@ -23,7 +24,11 @@ export function ProjectsSection() {
         >
           {t("projects.title")}
         </TextAnimate>
-        <p className="z-1 text-lg leading-relaxed">{t("projects.subtitle")}</p>
+        <GlassCard>
+          <p className="text-lg leading-relaxed">
+            {t("projects.subtitle")}
+          </p>
+        </GlassCard>
       </div>
 
       <div className="grid w-full justify-center gap-4 md:grid-cols-2">

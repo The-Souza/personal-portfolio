@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { TextAnimate } from "@/components/effects/text-animate";
 import { Github, Linkedin, FileText, Briefcase } from "lucide-react";
 import { BlurFade } from "@/components/effects/blur-fade";
+import { GlassCard } from "@/components/ui/glass-card";
 import { useTranslation } from "react-i18next";
 
 export function HeroSection() {
@@ -41,11 +42,13 @@ export function HeroSection() {
         </div>
 
         {/* DESCRIPTION */}
-        <div className="z-1 flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed text-lg">
-          <p>{t("home.description.part1")}</p>
+        <GlassCard>
+          <div className="flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed text-lg">
+            <p>{t("home.description.part1")}</p>
 
-          <p>{t("home.description.part2")}</p>
-        </div>
+            <p>{t("home.description.part2")}</p>
+          </div>
+        </GlassCard>
 
         {/* CTA BUTTONS */}
         <div className="z-1 flex flex-wrap justify-center xl:justify-start gap-4 pt-4">
