@@ -8,10 +8,11 @@ import { TextAnimate } from "@/components/effects/text-animate";
 import { Github, Linkedin, FileText, Briefcase } from "lucide-react";
 import { BlurFade } from "@/components/effects/blur-fade";
 import { GlassCard } from "@/components/ui/glass-card";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export function HeroSection() {
   const { t, i18n } = useTranslation();
+  const Highlight = <span className="text-primary font-semibold" />;
 
   return (
     <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full max-w-6xl flex flex-col-reverse xl:flex-row items-center justify-between py-14 md:py-20 gap-6 sm:gap-12">
@@ -46,7 +47,13 @@ export function HeroSection() {
           <div className="flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed text-lg">
             <p>{t("home.description.part1")}</p>
 
-            <p>{t("home.description.part2")}</p>
+            <p>
+              <Trans
+                key={i18n.language}
+                i18nKey="home.description.part2"
+                components={{ strong: Highlight }}
+              />
+            </p>
           </div>
         </GlassCard>
 

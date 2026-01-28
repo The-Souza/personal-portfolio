@@ -15,7 +15,7 @@
     "head": "Desenvolvedor Frontend",
     "description": {
       "part1": "Desenvolvedor Frontend com foco em interfaces modernas, responsivas e bem estruturadas.",
-      "part2": "Experiência com Next.js, React, TypeScript, integração frontend–backend em projetos fullstack, modernização de sistemas web e aplicação de boas práticas como Clean Code, SRP e arquitetura em camadas."
+      "part2": "Experiência com <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, integração frontend–backend em projetos <strong>fullstack</strong>, modernização de sistemas web e aplicação de boas práticas como <strong>Clean Code</strong>, <strong>SRP</strong> e <strong>arquitetura em camadas</strong>."
     }
   },
   "notFound": {
@@ -166,5 +166,13 @@
     "title": "Vamos construir algo sólido?",
     "description": "Se você gostou da forma como eu penso, estruturo e desenvolvo aplicações, vamos conversar sobre o seu próximo projeto.",
     "primary": "Entrar em contato"
+  },
+  "about": {
+    "title": "Oi, eu sou o Guilherme",
+    "text": {
+      "part1": "Sou um <strong>Desenvolvedor Frontend</strong> com foco em <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, criando interfaces claras, performáticas e bem estruturadas.",
+      "part2": "Gosto de pensar em <strong>arquitetura</strong>, <strong>acessibilidade</strong> e <strong>experiência do usuário</strong> desde o primeiro componente.",
+      "part3": "Tenho perfil organizado, comunicação clara e busco evoluir constantemente, aplicando <strong>boas práticas</strong> e atenção aos detalhes em cada projeto."
+    }
   }
 }
