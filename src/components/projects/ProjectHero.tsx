@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { TextAnimate } from "@/components/effects/text-animate";
+import { GlassCard } from "@/components/ui/glass-card";
 import Link from "next/link";
 
 interface ProjectHeroProps {
@@ -28,12 +29,20 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           {t(project.titleKey)}
         </TextAnimate>
 
-        <p className="z-1 text-lg leading-relaxed">{t(project.longDescriptionKey)}</p>
+        <GlassCard>
+          <p className="text-lg leading-relaxed">
+            {t(project.longDescriptionKey)}
+          </p>
+        </GlassCard>
       </div>
 
       <div className="z-1 flex flex-wrap gap-2 items-center justify-center">
         {project.techs.map((tech) => (
-          <Badge key={tech} variant="secondary">
+          <Badge
+            key={tech}
+            variant="secondary"
+            className="transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
+          >
             {tech}
           </Badge>
         ))}

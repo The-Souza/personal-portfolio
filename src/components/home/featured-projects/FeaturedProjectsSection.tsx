@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { SectionHeader } from "@/components/section/SectionHeader";
-import { ProjectCard } from "@/components/projects/ProjectCard";
+import { ProjectCard } from "@/components/projects";
 import { FeaturedProjectModal } from "./FeaturedProjectModal";
 import { projects, Project } from "@/constants/projects.data";
 import { useTranslation } from "react-i18next";

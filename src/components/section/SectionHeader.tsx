@@ -2,6 +2,7 @@
 
 import ScrollReveal from "@/components/effects/ScrollReveal";
 import { cn } from "@/lib/utils";
+import { GlassCard } from "../ui/glass-card";
 
 interface SectionHeaderProps {
   title: string;
@@ -24,14 +25,14 @@ export function SectionHeader({
       className={cn(
         "w-full max-w-4xl flex flex-col gap-4",
         alignmentClasses,
-        className
+        className,
       )}
     >
       <h2 className="font-heading text-4xl md:text-5xl leading-tight">
         <ScrollReveal
           baseOpacity={0.1}
           enableBlur={true}
-          baseRotation={3}
+          baseRotation={0}
           blurStrength={4}
         >
           {title}
@@ -39,16 +40,18 @@ export function SectionHeader({
       </h2>
 
       {subtitle && (
-        <p className="text-lg leading-relaxed">
-          <ScrollReveal
-            baseOpacity={0.1}
-            enableBlur={true}
-            baseRotation={3}
-            blurStrength={4}
-          >
-            {subtitle}
-          </ScrollReveal>
-        </p>
+        <GlassCard>
+          <p className="text-lg leading-relaxed">
+            <ScrollReveal
+              baseOpacity={0.1}
+              enableBlur={true}
+              baseRotation={0}
+              blurStrength={4}
+            >
+              {subtitle}
+            </ScrollReveal>
+          </p>
+        </GlassCard>
       )}
     </header>
   );

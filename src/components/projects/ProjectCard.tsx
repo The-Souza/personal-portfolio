@@ -1,3 +1,5 @@
+"use client"
+
 import { Project } from "@/constants/projects.data";
 import {
   Card,
@@ -45,7 +47,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
         <CardTitle className="font-heading flex items-center gap-2">
           {t(project.titleKey)}
           {project.role && (
-            <Badge variant="outline" className="text-xs">
+            <Badge variant="outline" className="border-border py-1 px-3">
               {project.role}
             </Badge>
           )}
@@ -55,7 +57,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
         {project.highlights && (
           <div className="flex flex-wrap gap-2">
             {project.highlights.map((badge) => (
-              <Badge key={badge} variant="secondary" className="text-xs">
+              <Badge key={badge} variant="secondary" className="border-border py-1 px-3">
                 {t(badge)}
               </Badge>
             ))}
@@ -67,7 +69,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
 
       <CardFooter className="flex items-center justify-between">
         {project.status && (
-          <Badge variant={statusConfig[project.status].variant}>
+          <Badge variant={statusConfig[project.status].variant} className="border-border py-1 px-3">
             {t(`projects.data.${project.id}.status.${project.status}`)}
           </Badge>
         )}

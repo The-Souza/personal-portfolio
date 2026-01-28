@@ -6,7 +6,7 @@ import { getProjectNavigation } from "@/utils/projects.utils";
 import { Project } from "@/constants/projects.data";
 import { ChevronsRight, ChevronsLeft } from "lucide-react";
 
-export default function ProjectNavigation({
+export function ProjectNavigation({
   projects,
   id,
 }: {

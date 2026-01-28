@@ -2,6 +2,7 @@
 
 import { Project } from "@/constants/projects.data";
 import { useTranslation } from "react-i18next";
+import { GlassCard } from "@/components/ui/glass-card";
 
 interface ProjectOutcomeProps {
   project: Project;
@@ -18,27 +19,31 @@ export function ProjectOutcome({ project }: ProjectOutcomeProps) {
         <h3 className="z-1 text-xl sm:text-2xl font-semibold uppercase">
           {t(`projects.data.${project.id}.outcome.contextTitle`)}
         </h3>
-        <p className="z-1 text-lg leading-relaxed">
-          {t(project.outcome.context)}
-        </p>
+        <GlassCard>
+          <p className="text-lg leading-relaxed">
+            {t(project.outcome.context)}
+          </p>
+        </GlassCard>
       </div>
 
       <div className="flex flex-col gap-2">
         <h3 className="z-1 text-xl sm:text-2xl font-semibold uppercase">
           {t(`projects.data.${project.id}.outcome.solutionTitle`)}
         </h3>
-        <p className="z-1 text-lg leading-relaxed">
-          {t(project.outcome.solution)}
-        </p>
+        <GlassCard>
+          <p className="text-lg leading-relaxed">
+            {t(project.outcome.solution)}
+          </p>
+        </GlassCard>
       </div>
 
       <div className="flex flex-col gap-2">
         <h3 className="z-1 text-xl sm:text-2xl font-semibold uppercase">
           {t(`projects.data.${project.id}.outcome.resultTitle`)}
         </h3>
-        <p className="z-1 text-lg leading-relaxed">
-          {t(project.outcome.result)}
-        </p>
+        <GlassCard>
+          <p className="text-lg leading-relaxed">{t(project.outcome.result)}</p>
+        </GlassCard>
       </div>
     </section>
   );

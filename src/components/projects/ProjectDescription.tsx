@@ -52,7 +52,7 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
         </h4>
         <div className="flex flex-wrap gap-2">
           {project.techs.map((tech) => (
-            <Badge key={tech} variant="secondary">
+            <Badge key={tech} variant="secondary" className="border-border py-1 px-3">
               {tech}
             </Badge>
           ))}
