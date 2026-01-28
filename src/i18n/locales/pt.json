@@ -180,6 +180,23 @@
       "backend": "Backend",
       "database": "Banco de Dados",
       "tools": "Ferramentas"
+    },
+    "experience": {
+      "title": "Minhas Experiências",
+      "crea-sp": {
+        "place": "CREA-SP – Conselho Regional de Engenharia e Agronomia do Estado de São Paulo",
+        "position": "Estagiário",
+        "period": "Jun/2025 - Dez/2025",
+        "responsibilities": {
+          "modernization": "Atuação na modernização incremental de sistema web institucional de grande porte",
+          "components": "Desenvolvimento de páginas e componentes com TypeScript, Tailwind CSS e Vite",
+          "integration": "Integração do frontend moderno com C# ASP.NET Web Forms",
+          "architecture": "Organização de código com partials, SRP e separação de responsabilidades",
+          "testing": "Escrita e manutenção de testes unitários para componentes",
+          "api": "Integração com APIs internas e banco de dados DB2",
+          "versioning": "Versionamento de código com Git e Azure DevOps"
+        }
+      }
     }
   }
 }

@@ -180,6 +180,23 @@
       "backend": "Backend",
       "database": "Database",
       "tools": "Tools"
+    },
+    "experience": {
+      "title": "My Experience",
+      "crea-sp": {
+        "place": "CREA-SP – Regional Council of Engineering and Agronomy of São Paulo State",
+        "position": "Intern",
+        "period": "Jun/2025 – Dec/2025",
+        "responsibilities": {
+          "modernization": "Worked on the incremental modernization of a large-scale institutional web system",
+          "components": "Developed pages and components using TypeScript, Tailwind CSS, and Vite",
+          "integration": "Integrated modern frontend solutions with legacy C# ASP.NET Web Forms",
+          "architecture": "Organized code using partials, SRP, and clear separation of responsibilities",
+          "testing": "Wrote and maintained unit tests for frontend components",
+          "api": "Integrated internal APIs and DB2 database",
+          "versioning": "Managed source code using Git and Azure DevOps"
+        }
+      }
     }
   }
 }
