@@ -173,6 +173,13 @@
       "part1": "I’m a <strong>Frontend Developer</strong> focused on <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, building clear, performant, and well-structured interfaces.",
       "part2": "I like to think about <strong>architecture</strong>, <strong>accessibility</strong>, and <strong>user experience</strong> from the very first component.",
       "part3": "I have an organized mindset, clear communication, and I’m constantly evolving, applying <strong>best practices</strong> and attention to detail in every project."
+    },
+    "stacks": "My Stacks",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "tools": "Tools"
     }
   }
 }

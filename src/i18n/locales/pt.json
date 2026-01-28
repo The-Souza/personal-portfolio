@@ -173,6 +173,13 @@
       "part1": "Sou um <strong>Desenvolvedor Frontend</strong> com foco em <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, criando interfaces claras, performáticas e bem estruturadas.",
       "part2": "Gosto de pensar em <strong>arquitetura</strong>, <strong>acessibilidade</strong> e <strong>experiência do usuário</strong> desde o primeiro componente.",
       "part3": "Tenho perfil organizado, comunicação clara e busco evoluir constantemente, aplicando <strong>boas práticas</strong> e atenção aos detalhes em cada projeto."
+    },
+    "stacks": "Minhas Stacks",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Banco de Dados",
+      "tools": "Ferramentas"
     }
   }
 }
