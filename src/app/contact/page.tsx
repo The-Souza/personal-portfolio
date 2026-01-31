@@ -1,7 +1,9 @@
-export default function Contact() {
+import { ContactSection } from "@/components/contact/ContactSection";
+
+export default function ContactPage() {
   return (
-    <div className="flex items-center justify-center w-full max-h-screen">
-      Welcome to Contact
-    </div>
+    <section className="w-full max-w-6xl flex flex-col items-center gap-12">
+      <ContactSection />
+    </section>
   );
 }

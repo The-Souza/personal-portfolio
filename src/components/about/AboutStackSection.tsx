@@ -18,7 +18,7 @@ export function AboutStackSection() {
     <section className="w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader title={t("about.stacks")} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 z-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 z-1 w-full lg:w-auto">
         {entries.map(([category, stacks]) => {
           const meta = CATEGORY_META[category];
 

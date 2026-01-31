@@ -11,6 +11,7 @@ import { Background } from "@/components/layout/Backgound";
 import { IntroGate } from "@/components/layout/IntroGate";
 import { IntroProvider } from "@/providers/IntroProvider";
 import { inter, poppins } from "./fonts";
+import { Toaster } from "@/components/ui/sonner";
 
 export default async function RootLayout({
   children,
@@ -41,6 +42,7 @@ export default async function RootLayout({
                 <SidebarProvider defaultOpen={defaultOpen}>
                   <MobileSidebar />
                   <Header />
+                  <Toaster />
                   <main className="pt-17.5 flex-1 px-6 pb-6 sm:px-10 flex flex-col items-center">
                     {children}
                   </main>
