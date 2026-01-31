@@ -182,7 +182,7 @@
       "tools": "Tools"
     },
     "experience": {
-      "title": "My Experience",
+      "title": "My Experiences",
       "crea-sp": {
         "place": "CREA-SP – Regional Council of Engineering and Agronomy of São Paulo State",
         "position": "Intern",
@@ -197,6 +197,39 @@
           "versioning": "Managed source code using Git and Azure DevOps"
         }
       }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "mail": "Email",
+    "text": "Want to talk about an opportunity, project, or idea? Feel free to reach out — I’ll get back to you as soon as possible.",
+    "form": {
+      "schema": {
+        "name": "Name is required",
+        "email": {
+          "noneEmpty": "Email is required",
+          "message": "Invalid email address"
+        },
+        "message": {
+          "noneEmpty": "Message is required",
+          "min": "The message must be at least 20 characters long",
+          "max": "The message must be less than 250 characters"
+        }
+      },
+      "name": "Name",
+      "email": "Email",
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message"
+      }
+    },
+    "toast": {
+      "success": "Message sent successfully!",
+      "error": "Failed to send the message."
+    },
+    "buttons": {
+      "reset": "Reset",
+      "submit": "Submit"
     }
   }
 }

@@ -198,5 +198,35 @@
         }
       }
     }
+  },
+  "contact": {
+    "title": "Contato",
+    "mail": "Email",
+    "text": "Quer conversar sobre uma oportunidade, projeto ou ideia? Fique à vontade para me chamar — respondo o mais rápido possível.",
+    "form": {
+      "schema": {
+        "name": "Nome é necessário",
+        "email": {
+          "noneEmpty": "Email é necessário",
+          "message": "Endereço de email inválido"
+        },
+        "message": {
+          "noneEmpty": "Mensagem é necessário",
+          "min": "A mensagem deve ser maior que 20 caracteres",
+          "max": "A mensagem tem que ser menor que 250 caracteres"
+        }
+      },
+      "name": "Nome",
+      "email": "Email",
+      "message": { "label": "Mensagem", "placeholder": "Escreva sua mensagem" }
+    },
+    "toast": {
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Erro ao enviar a mensagem."
+    },
+    "buttons": {
+      "reset": "Limpar",
+      "submit": "Enviar"
+    }
   }
 }
