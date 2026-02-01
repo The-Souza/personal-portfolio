@@ -3,6 +3,13 @@ import {
   AboutStackSection,
   AboutExperienceSection,
 } from "@/components/about";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sobre mim",
+  description:
+    "Conheça Guilherme Campos, Frontend Developer especializado em React, Next.js e TypeScript. Experiência, stack e trajetória profissional.",
+};
 
 export default function AboutPage() {
   return (

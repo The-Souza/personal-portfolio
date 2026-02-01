@@ -9,6 +9,7 @@ export type ProjectRole = "Frontend" | "Fullstack";
 
 export interface Project {
   id: string;
+  nameProject: string;
   titleKey: string;
   descriptionKey: string;
   longDescriptionKey: string;
@@ -38,6 +39,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "portfolio",
+    nameProject: "Portfólio",
     featured: true,
 
     titleKey: "projects.data.portfolio.title",
@@ -82,6 +84,7 @@ export const projects: Project[] = [
 
   {
     id: "account-management",
+    nameProject: "Account Management",
     featured: true,
 
     titleKey: "projects.data.account-management.title",

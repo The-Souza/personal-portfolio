@@ -1,4 +1,11 @@
 import { ContactSection } from "@/components/contact/ContactSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contato",
+  description:
+    "Entre em contato com Guilherme Campos para oportunidades como Frontend Developer, projetos freelancers ou parcerias.",
+};
 
 export default function ContactPage() {
   return (
