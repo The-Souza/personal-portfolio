@@ -108,9 +108,9 @@ export function MobileSidebar() {
             href="/doc/Guilherme_Campos_Frontend_Jr.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 transition-colors hover:text-primary"
+            className="flex items-center gap-2 hover:text-primary"
           >
-            <FileText className="w-4 h-4 transition-transform group-hover:scale-105" />
+            <FileText className="w-4 h-4" />
             {t("viewCv")}
           </Link>
         </div>
