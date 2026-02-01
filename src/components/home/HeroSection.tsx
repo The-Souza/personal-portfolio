@@ -15,7 +15,7 @@ export function HeroSection() {
   const Highlight = <span className="text-primary font-semibold" />;
 
   return (
-    <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full max-w-6xl flex flex-col-reverse xl:flex-row items-center justify-between py-14 md:py-20 gap-6 sm:gap-12">
+    <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full flex flex-col-reverse xl:flex-row items-center justify-between py-14 md:py-20 gap-6 sm:gap-12">
       {/* LEFT — CONTENT */}
       <div className="w-auto flex flex-col gap-6 text-center xl:text-left">
         <TextAnimate
@@ -30,12 +30,12 @@ export function HeroSection() {
         </TextAnimate>
 
         {/* STACKS */}
-        <div className="z-1 flex flex-wrap justify-center xl:justify-start gap-2">
+        <div className="flex flex-wrap justify-center xl:justify-start gap-2">
           {["React", "Next.js", "TypeScript", "Tailwind CSS"].map((tech) => (
             <Badge
               key={tech}
               variant="outline"
-              className="transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
+              className="z-1 transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
             >
               {tech}
             </Badge>
@@ -58,13 +58,13 @@ export function HeroSection() {
         </GlassCard>
 
         {/* CTA BUTTONS */}
-        <div className="z-1 flex flex-wrap justify-center xl:justify-start gap-4 pt-4">
+        <div className="flex flex-wrap justify-center xl:justify-start gap-4 pt-4">
           <Button asChild>
             <Link
               href="https://linkedin.com/in/guilherme-campos-frontend"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97]"
+              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
             >
               <Linkedin className="mr-2 h-4 w-4" />
               LinkedIn
@@ -76,7 +76,7 @@ export function HeroSection() {
               href="https://github.com/The-Souza"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97]"
+              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
             >
               <Github className="mr-2 h-4 w-4" />
               GitHub
@@ -86,7 +86,7 @@ export function HeroSection() {
           <Button asChild variant="secondary">
             <Link
               href="/projects"
-              className="hover:scale-105 transition-transform active:scale-[0.97]"
+              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
             >
               <Briefcase className="mr-2 h-4 w-4" />
               {t("viewProjects")}
@@ -98,7 +98,7 @@ export function HeroSection() {
               href="/doc/Guilherme_Campos_Frontend_Jr.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97]"
+              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
             >
               <FileText className="mr-2 h-4 w-4" />
               {t("viewCv")}

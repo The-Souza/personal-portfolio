@@ -15,7 +15,7 @@ export function AboutExperienceSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-12">
+    <section className="w-full py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader title={t("about.experience.title")} />
 
       {EXPERIENCES.map((works: Works) => (

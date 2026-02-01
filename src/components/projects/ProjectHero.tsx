@@ -16,7 +16,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
   const { t, i18n } = useTranslation();
 
   return (
-    <section className="w-full max-w-6xl flex flex-col gap-6 items-center">
+    <section className="w-full flex flex-col gap-6 items-center">
       <div className="flex flex-col gap-4 text-center">
         <TextAnimate
           key={i18n.language}

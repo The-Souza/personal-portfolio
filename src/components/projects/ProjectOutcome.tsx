@@ -14,7 +14,7 @@ export function ProjectOutcome({ project }: ProjectOutcomeProps) {
   if (!project.outcome) return null;
 
   return (
-    <section className="w-full max-w-6xl flex flex-col gap-8">
+    <section className="w-full flex flex-col gap-8">
       <div className="flex flex-col gap-2">
         <h3 className="z-1 text-xl sm:text-2xl font-semibold uppercase">
           {t(`projects.data.${project.id}.outcome.contextTitle`)}
