@@ -21,8 +21,8 @@ import {
   LinkedinIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { ToggleTheme } from "../ui/themeToggle";
-import { Button } from "../ui/button";
+import { ToggleTheme } from "@/components/ui/themeToggle";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
 import { items } from "@/constants/menu-items";
