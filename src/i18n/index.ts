@@ -12,8 +12,8 @@ if (!i18n.isInitialized) {
       pt: { translation: pt },
       en: { translation: en },
     },
-    lng: "en",
-    fallbackLng: "en",
+    lng: "pt",
+    fallbackLng: "pt",
     interpolation: {
       escapeValue: false,
     },
