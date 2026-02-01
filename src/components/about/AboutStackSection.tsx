@@ -2,7 +2,7 @@
 
 import { SectionHeader } from "@/components/section/SectionHeader";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
-import { CATEGORY_META } from "@/constants/stackCategory";
+import { CATEGORY_META } from "@/constants/stack-category";
 import { STACKS } from "@/constants/stacks";
 import { useTranslation } from "react-i18next";
 

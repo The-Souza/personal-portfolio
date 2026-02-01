@@ -2,7 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { VideoIcon, AlignLeftIcon } from "lucide-react";
-import { Project } from "@/constants/projects.data";
+import { Project } from "@/constants/projects-data";
 import { ProjectVideo } from "./ProjectVideo";
 import { ProjectDescription } from "./ProjectDescription";
 import { useTranslation } from "react-i18next";

@@ -6,7 +6,7 @@ import {
   CodeHeader,
 } from "@/components/animate-ui/components/animate/code";
 import { GlassCard } from "@/components/ui/glass-card";
-import { developerCode } from "@/constants/developer.code";
+import { developerCode } from "@/constants/developer-code";
 import { Trans, useTranslation } from "react-i18next";
 import { TextAnimate } from "@/components/effects/text-animate";
 import { TypeScriptIcon } from "@/icons/TypeScriptIcon";

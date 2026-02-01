@@ -1,7 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { Project } from "@/constants/projects.data";
+import { Project } from "@/constants/projects-data";
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
 import Link from "next/link";

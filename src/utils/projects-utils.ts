@@ -1,4 +1,4 @@
-import { Project } from "@/constants/projects.data";
+import { Project } from "@/constants/projects-data";
 
 export function getProjectNavigation(projects: Project[], currentId: string) {
   const index = projects.findIndex((p) => p.id === currentId);

@@ -6,7 +6,7 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Project } from "@/constants/projects.data";
+import { Project } from "@/constants/projects-data";
 import { ProjectContentTabs } from "@/components/projects";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 

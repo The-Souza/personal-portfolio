@@ -14,7 +14,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useSidebar } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
-import { items } from "@/constants/menuItems";
+import { items } from "@/constants/menu-items";
 
 export function Header() {
   const { t, i18n } = useTranslation();

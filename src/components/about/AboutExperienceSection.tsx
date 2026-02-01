@@ -2,7 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/section/SectionHeader";
-import { EXPERIENCES, Works } from "@/constants/experience.data";
+import { EXPERIENCES, Works } from "@/constants/experience-data";
 import {
   Card,
   CardHeader,

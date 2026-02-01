@@ -3,7 +3,7 @@
 import MagicBento from "@/components/effects/MagicBento";
 import { SectionHeader } from "@/components/section/SectionHeader";
 import { useTranslation } from "react-i18next";
-import { services } from "@/constants/service.data";
+import { services } from "@/constants/service-data";
 
 export function ServicesSection() {
   const { t } = useTranslation();

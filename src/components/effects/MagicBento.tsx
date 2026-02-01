@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
-import { BentoItem } from "@/constants/service.data";
+import { BentoItem } from "@/constants/service-data";
 import { gsap } from "gsap";
 
 export interface BentoCardProps {

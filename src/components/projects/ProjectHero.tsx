@@ -1,6 +1,6 @@
 "use client";
 
-import { Project } from "@/constants/projects.data";
+import { Project } from "@/constants/projects-data";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";

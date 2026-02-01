@@ -25,7 +25,7 @@ import { ToggleTheme } from "../ui/themeToggle";
 import { Button } from "../ui/button";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
-import { items } from "@/constants/menuItems";
+import { items } from "@/constants/menu-items";
 
 export function MobileSidebar() {
   const { t, i18n } = useTranslation();

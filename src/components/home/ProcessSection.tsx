@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { SectionHeader } from "@/components/section/SectionHeader";
 import { useTranslation } from "react-i18next";
-import { processSteps } from "@/constants/process.data";
+import { processSteps } from "@/constants/process-data";
 
 export function ProcessSection() {
   const { t } = useTranslation();
