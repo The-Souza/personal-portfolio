@@ -15,6 +15,11 @@ import { useTranslation } from "react-i18next";
 import { useSidebar } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import { items } from "@/constants/menu-items";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export function Header() {
   const { t, i18n } = useTranslation();
@@ -41,15 +46,22 @@ export function Header() {
             <Menu className="w-5 h-5" />
           </Button>
 
-          <Button asChild variant="hover">
-            <Link
-              href="/"
-              className="flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
-            >
-              <CodeXml className="w-5 h-5 opacity-80" />
-              Guilherme Campos
-            </Link>
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button asChild variant="hover">
+                <Link
+                  href="/"
+                  className="flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
+                >
+                  <CodeXml className="w-5 h-5 opacity-80" />
+                  Guilherme Campos
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="leading-relaxed">{t(`navigation.button`)}</p>
+            </TooltipContent>
+          </Tooltip>
         </div>
 
         {/* Navigation */}

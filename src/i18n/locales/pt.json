@@ -3,7 +3,8 @@
     "home": "Início",
     "projects": "Projetos",
     "about": "Sobre",
-    "contact": "Contato"
+    "contact": "Contato",
+    "button": "Voltar para a página inicial"
   },
   "actions": {
     "downloadCv": "Baixar CV"
