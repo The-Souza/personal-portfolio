@@ -17,7 +17,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
         {/* Features */}
         {project.features && (
           <div className="flex flex-col gap-2">
-            <h4 className="z-1 text-xl sm:text-2xl font-semibold uppercase">
+            <h4 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
               {t("projects.keyFeatures")}
             </h4>
             <GlassCard>
@@ -33,7 +33,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
         {/* Architecture */}
         {project.architecture && (
           <div className="flex flex-col gap-2">
-            <h4 className="z-1 text-xl sm:text-2xl font-semibold uppercase">
+            <h4 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
               {t("projects.technicalDecisions")}
             </h4>
             <GlassCard>

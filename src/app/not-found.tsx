@@ -51,7 +51,7 @@ export default function NotFound() {
 
       {/* Message */}
       <GlassCard>
-        <p className="w-auto text-base sm:text-lg md:text-xl">
+        <p className="w-auto text-base sm:text-lg md:text-xl leading-relaxed">
           {t("notFound.description")}
         </p>
       </GlassCard>
