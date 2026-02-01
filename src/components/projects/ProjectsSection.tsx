@@ -12,7 +12,7 @@ export function ProjectsSection() {
   const router = useRouter();
 
   return (
-    <section className="w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-12">
+    <section className="w-full py-14 md:py-20 flex flex-col items-center gap-12">
       <div className="flex flex-col gap-4 text-center">
         <TextAnimate
           key={i18n.language}

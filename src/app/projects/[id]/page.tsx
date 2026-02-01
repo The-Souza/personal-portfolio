@@ -18,11 +18,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className="flex flex-col flex-1 gap-14 md:gap-20 items-center py-14 md:py-20">
+    <div className="w-full max-w-6xl flex flex-col flex-1 gap-14 md:gap-20 items-center py-14 md:py-20">
       <ProjectHero project={project} />
 
       {project.media?.video && (
-        <section className="w-full max-w-6xl">
+        <section className="w-full">
           <ProjectVideo src={project.media.video} />
         </section>
       )}

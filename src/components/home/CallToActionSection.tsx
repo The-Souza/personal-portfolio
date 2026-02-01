@@ -10,7 +10,7 @@ export function CallToActionSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="min-h-[60vh] sm:min-h-[65vh] w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-12">
+    <section className="min-h-[60vh] sm:min-h-[65vh] w-full py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader title={t("cta.title")} subtitle={t("cta.description")} />
 
       <div className="z-1 flex justify-center gap-4">

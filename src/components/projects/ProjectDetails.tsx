@@ -12,7 +12,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full max-w-6xl flex flex-col gap-6 items-center">
+    <section className="w-full flex flex-col gap-6 items-center">
       <div className="flex flex-col sm:flex-row justify-between gap-6 w-full">
         {/* Features */}
         {project.features && (

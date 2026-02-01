@@ -17,7 +17,7 @@ export function ProjectNavigation({
   const navigation = getProjectNavigation(projects, id);
 
   return (
-    <nav className="w-full max-w-6xl flex gap-4">
+    <nav className="w-full flex gap-4">
       {(navigation.previous || navigation.next) && (
         <div className="w-full z-1 flex flex-col gap-4 sm:flex-row sm:justify-between">
           {navigation.previous ? (

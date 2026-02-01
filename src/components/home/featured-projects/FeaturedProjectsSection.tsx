@@ -13,7 +13,7 @@ export function FeaturedProjectsSection() {
   const featuredProjects = projects.filter((project) => project.featured);
 
   return (
-    <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-12">
+    <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader
         title={t("projects.featuredTitle")}
         subtitle={t("projects.featuredSubtitle")}

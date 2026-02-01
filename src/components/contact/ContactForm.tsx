@@ -148,7 +148,6 @@ export function ContactForm() {
             type="submit"
             form="form-contact"
             disabled={!form.formState.isValid || isSubmitting}
-            className="disabled:cursor-not-allowed"
           >
             {t("contact.buttons.submit")}
           </Button>
