@@ -28,12 +28,12 @@ export function AboutExperienceSection() {
               {t(experience.placeKey)}
             </CardTitle>
 
-            <CardDescription className="text-md text-foreground flex gap-2">
+            <CardDescription className="text-md text-foreground flex gap-2 leading-relaxed">
               {t(experience.positionKey)} <span>•</span> {t(experience.period)}
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <ul className="list-disc space-y-2 pl-4 text-md text-muted-foreground" role="list">
+            <ul className="list-disc flex flex-col gap-2 pl-4 text-md text-muted-foreground" role="list">
               {experience.responsibilitiesKey.map((key) => (
                 <li key={key}>{t(key)}</li>
               ))}
