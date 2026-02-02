@@ -66,7 +66,7 @@ export function HeroSection() {
               rel="noopener noreferrer"
               className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
             >
-              <Linkedin className="mr-2 h-4 w-4" />
+              <Linkedin className="h-4 w-4" />
               LinkedIn
             </Link>
           </Button>
@@ -78,7 +78,7 @@ export function HeroSection() {
               rel="noopener noreferrer"
               className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
             >
-              <Github className="mr-2 h-4 w-4" />
+              <Github className="h-4 w-4" />
               GitHub
             </Link>
           </Button>
@@ -88,7 +88,7 @@ export function HeroSection() {
               href="/projects"
               className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
             >
-              <Briefcase className="mr-2 h-4 w-4" />
+              <Briefcase className="h-4 w-4" />
               {t("viewProjects")}
             </Link>
           </Button>
@@ -104,7 +104,7 @@ export function HeroSection() {
               rel="noopener noreferrer"
               className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
             >
-              <FileText className="mr-2 h-4 w-4" />
+              <FileText className="h-4 w-4" />
               {t("viewCv")}
             </Link>
           </Button>

@@ -19,7 +19,7 @@ export function CallToActionSection() {
             href="/contact"
             className="hover:scale-105 transition-transform active:scale-[0.97]"
           >
-            <Mail className="mr-2 h-4 w-4" />
+            <Mail className="h-4 w-4" />
             {t("cta.primary")}
           </Link>
         </Button>
@@ -29,7 +29,7 @@ export function CallToActionSection() {
             href="/projects"
             className="hover:scale-105 transition-transform active:scale-[0.97]"
           >
-            <Briefcase className="mr-2 h-4 w-4" />
+            <Briefcase className="h-4 w-4" />
             {t("viewProjects")}
           </Link>
         </Button>

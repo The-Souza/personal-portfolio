@@ -13,7 +13,7 @@ export function ContactLinks() {
           rel="noopener noreferrer"
           className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
         >
-          <Linkedin className="mr-2 h-4 w-4" />
+          <Linkedin className="h-4 w-4" />
           LinkedIn
         </Link>
       </Button>
@@ -25,7 +25,7 @@ export function ContactLinks() {
           rel="noopener noreferrer"
           className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
         >
-          <Github className="mr-2 h-4 w-4" />
+          <Github className="h-4 w-4" />
           GitHub
         </Link>
       </Button>
@@ -37,7 +37,7 @@ export function ContactLinks() {
           rel="noopener noreferrer"
           className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
         >
-          <Mail className="mr-2 h-4 w-4" />
+          <Mail className="h-4 w-4" />
           Email
         </Link>
       </Button>
