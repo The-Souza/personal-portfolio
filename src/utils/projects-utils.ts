@@ -1,4 +1,4 @@
-import { Project } from "@/constants/projects-data";
+import { Project } from "@/constants/projects/types";
 
 interface ProjectNavigation {
   previous: Project | null;

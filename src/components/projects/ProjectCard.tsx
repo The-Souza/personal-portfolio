@@ -1,6 +1,6 @@
 "use client";
 
-import { Project } from "@/constants/projects-data";
+import { Project } from "@/constants/projects/types";
 import {
   Card,
   CardContent,

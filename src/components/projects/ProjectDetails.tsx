@@ -1,6 +1,6 @@
 "use client";
 
-import { Project } from "@/constants/projects-data";
+import { Project } from "@/constants/projects/types";
 import { useTranslation } from "react-i18next";
 import { GlassCard } from "@/components/ui/glass-card";
 

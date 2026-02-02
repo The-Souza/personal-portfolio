@@ -3,7 +3,7 @@
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import { getProjectNavigation } from "@/utils/projects-utils";
-import { Project } from "@/constants/projects-data";
+import { Project } from "@/constants/projects/types";
 import { ChevronsRight, ChevronsLeft } from "lucide-react";
 
 export function ProjectNavigation({

@@ -1,6 +1,6 @@
 "use client";
 
-import { projects } from "@/constants/projects-data";
+import { projects } from "@/constants/projects";
 import { ProjectCard } from "./ProjectCard";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/navigation";

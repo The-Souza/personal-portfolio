@@ -4,8 +4,9 @@ import { useState } from "react";
 import { SectionHeader } from "@/components/section/SectionHeader";
 import { ProjectCard } from "@/components/projects";
 import { FeaturedProjectModal } from "./FeaturedProjectModal";
-import { projects, Project } from "@/constants/projects-data";
+import { projects } from "@/constants/projects";
 import { useTranslation } from "react-i18next";
+import { Project } from "@/constants/projects/types";
 
 export function FeaturedProjectsSection() {
   const { t } = useTranslation();
