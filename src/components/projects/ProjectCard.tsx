@@ -48,7 +48,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
           />
         )}
       </div>
-      <CardContent className="flex flex-col gap-3">
+      <CardContent className="flex flex-col gap-3 flex-1">
         <CardTitle className="font-heading flex items-center gap-2">
           {t(project.titleKey)}
           {project.role && (
