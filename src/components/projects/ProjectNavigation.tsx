@@ -19,12 +19,12 @@ export function ProjectNavigation({
   return (
     <nav className="w-full flex gap-4">
       {(navigation.previous || navigation.next) && (
-        <div className="w-full z-1 flex flex-col gap-4 sm:flex-row sm:justify-between">
+        <div className="w-full flex flex-col gap-4 sm:flex-row sm:justify-between">
           {navigation.previous ? (
             <Link
               aria-label={`Previous project ${t(navigation.previous.titleKey)}`}
               href={`/projects/${navigation.previous.id}`}
-              className="text-lg underline flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
+              className="text-lg underline z-1 flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
             >
               <ChevronsLeft className="w-7 h-7" />
               {t(navigation.previous.titleKey)}

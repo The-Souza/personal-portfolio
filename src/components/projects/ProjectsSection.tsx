@@ -4,7 +4,7 @@ import { projects } from "@/constants/projects-data";
 import { ProjectCard } from "./ProjectCard";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/navigation";
-import { TextAnimate } from "../effects/text-animate";
+import { TextAnimate } from "@/components/effects/text-animate";
 import { GlassCard } from "@/components/ui/glass-card";
 
 export function ProjectsSection() {

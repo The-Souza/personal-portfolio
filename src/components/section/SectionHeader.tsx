@@ -2,7 +2,7 @@
 
 import ScrollReveal from "@/components/effects/ScrollReveal";
 import { cn } from "@/lib/utils";
-import { GlassCard } from "../ui/glass-card";
+import { GlassCard } from "@/components/ui/glass-card";
 
 interface SectionHeaderProps {
   title: string;

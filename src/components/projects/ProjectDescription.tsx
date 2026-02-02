@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Project } from "@/constants/projects-data";
 import { useTranslation } from "react-i18next";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 interface ProjectDescriptionProps {
