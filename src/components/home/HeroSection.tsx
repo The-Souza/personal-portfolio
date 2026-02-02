@@ -116,7 +116,7 @@ export function HeroSection() {
         <BlurFade delay={0.25} inView className="w-full h-full relative">
           <Image
             src="/images/profile.jpeg"
-            alt="Foto de Guilherme Campos"
+            alt="Foto de Guilherme Campos, Desenvolvedor Frontend"
             fill
             priority
             sizes="(max-width: 768px) 256px, 384px"

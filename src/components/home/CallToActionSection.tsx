@@ -13,11 +13,11 @@ export function CallToActionSection() {
     <section className="min-h-[60vh] sm:min-h-[65vh] w-full py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader title={t("cta.title")} subtitle={t("cta.description")} />
 
-      <div className="z-1 flex justify-center gap-4">
+      <div className="flex justify-center gap-4">
         <Button asChild>
           <Link
             href="/contact"
-            className="hover:scale-105 transition-transform active:scale-[0.97]"
+            className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
           >
             <Mail className="h-4 w-4" />
             {t("cta.primary")}
@@ -27,7 +27,7 @@ export function CallToActionSection() {
         <Button asChild variant="secondary">
           <Link
             href="/projects"
-            className="hover:scale-105 transition-transform active:scale-[0.97]"
+            className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
           >
             <Briefcase className="h-4 w-4" />
             {t("viewProjects")}
