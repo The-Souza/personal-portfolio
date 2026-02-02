@@ -1,4 +1,4 @@
-export interface Works {
+export interface Experience {
   id: string;
   placeKey: string;
   positionKey: string;
@@ -6,7 +6,7 @@ export interface Works {
   responsibilitiesKey: string[];
 }
 
-export const EXPERIENCES: Works[] = [
+export const EXPERIENCES: Experience[] = [
   {
     id: "crea-sp",
     placeKey: "about.experience.crea-sp.place",

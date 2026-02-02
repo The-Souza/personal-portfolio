@@ -35,7 +35,7 @@ const developer: Developer = {
   name: 'Guilherme Campos',
   role: 'Frontend Developer',
   stack: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
-  principles: [['Clean Code', 'SRP', 'Accessibility by default'],
+  principles: ['Clean Code', 'SRP', 'Accessibility by default'],
   mindset: 'Clear interfaces for users, clean code for developers',
   focus: ['UI/UX', 'Performance', 'Maintainability'],
   learning: true,

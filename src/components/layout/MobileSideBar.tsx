@@ -20,7 +20,7 @@ import { ToggleTheme } from "@/components/ui/themeToggle";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
-import { items } from "@/constants/menu-items";
+import { menuItems } from "@/constants/menu-items";
 
 export function MobileSidebar() {
   const { t, i18n } = useTranslation();
@@ -64,7 +64,7 @@ export function MobileSidebar() {
           <SidebarGroupLabel>Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
+              {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
                     asChild

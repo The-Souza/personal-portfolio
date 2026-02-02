@@ -5,7 +5,7 @@ import {
   Mail,
 } from "lucide-react";
 
-export const items = [
+export const menuItems = [
   {
     title: "home",
     url: "/",

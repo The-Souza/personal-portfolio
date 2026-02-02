@@ -14,7 +14,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useSidebar } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
-import { items } from "@/constants/menu-items";
+import { menuItems } from "@/constants/menu-items";
 import {
   Tooltip,
   TooltipContent,
@@ -71,7 +71,7 @@ export function Header() {
         >
           <NavigationMenu>
             <NavigationMenuList>
-              {items.map((item) => {
+              {menuItems.map((item) => {
                 const isActive = pathname === item.url;
 
                 return (
