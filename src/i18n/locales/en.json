@@ -43,7 +43,7 @@
         "label": "End-to-End",
         "description": "Building complete applications integrating frontend and backend with a product vision."
       },
-      "metodologi": {
+      "methodology": {
         "title": "Clean Code & Architecture",
         "label": "Best Practices",
         "description": "Organized code following SRP, layered architecture, and maintainability best practices."
@@ -171,7 +171,7 @@
   "about": {
     "title": "Hi, I'm Guilherme",
     "text": {
-      "part1": "I’m a <strong>Frontend Developer</strong> focused on <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, building clear, performant, and well-structured interfaces.",
+      "part1": "I’m a <strong>Frontend Developer</strong> focused on <strong>Next.js</strong>, <strong>React</strong> and <strong>TypeScript</strong>, building clear, performant, and well-structured interfaces.",
       "part2": "I like to think about <strong>architecture</strong>, <strong>accessibility</strong>, and <strong>user experience</strong> from the very first component.",
       "part3": "I have an organized mindset, clear communication, and I’m constantly evolving, applying <strong>best practices</strong> and attention to detail in every project."
     },

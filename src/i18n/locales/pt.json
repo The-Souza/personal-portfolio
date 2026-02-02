@@ -43,7 +43,7 @@
         "label": "End-to-End",
         "description": "Construção de aplicações completas integrando frontend e backend com visão de produto."
       },
-      "metodologi": {
+      "methodology": {
         "title": "Clean Code & Arquitetura",
         "label": "Boas Práticas",
         "description": "Código organizado seguindo SRP, arquitetura em camadas e boas práticas de manutenção."
@@ -212,9 +212,9 @@
           "message": "Endereço de email inválido"
         },
         "message": {
-          "noneEmpty": "Mensagem é necessário",
+          "noneEmpty": "Mensagem é necessária",
           "min": "A mensagem deve ser maior que 20 caracteres",
-          "max": "A mensagem tem que ser menor que 250 caracteres"
+          "max": "A mensagem deve ter menos de 250 caracteres"
         }
       },
       "name": "Nome",

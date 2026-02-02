@@ -34,9 +34,9 @@ export const services: BentoItem[] = [
     icon: Layers,
   },
   {
-    titleKey: "services.data.metodologi.title",
-    labelKey: "services.data.metodologi.label",
-    descriptionKey: "services.data.metodologi.description",
+    titleKey: "services.data.methodology.title",
+    labelKey: "services.data.methodology.label",
+    descriptionKey: "services.data.methodology.description",
     icon: Workflow,
   },
   {
