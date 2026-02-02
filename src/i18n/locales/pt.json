@@ -223,7 +223,8 @@
     },
     "toast": {
       "success": "Mensagem enviada com sucesso!",
-      "error": "Erro ao enviar a mensagem."
+      "error": "Erro ao enviar a mensagem.",
+      "loading": "Carregando..."
     },
     "buttons": {
       "reset": "Limpar",

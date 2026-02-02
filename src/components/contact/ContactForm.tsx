@@ -44,14 +44,19 @@ export function ContactForm() {
     const sendPromise = sendContactEmail(data);
 
     toast.promise(sendPromise, {
-      loading: "Loading...",
+      loading: t("contact.toast.loading"),
       success: t("contact.toast.success"),
       error: t("contact.toast.error"),
       position: "top-left",
     });
 
     try {
-      await sendPromise;
+      const result = await sendPromise;
+
+      if (!result.success) {
+        return;
+      }
+
       form.reset();
     } finally {
       setIsSubmitting(false);
@@ -116,6 +121,7 @@ export function ContactForm() {
                       id={field.name}
                       placeholder={t("contact.form.message.placeholder")}
                       className="min-h-24 resize-none"
+                      maxLength={250}
                       aria-invalid={fieldState.invalid}
                     />
                     <InputGroupAddon align="block-end">

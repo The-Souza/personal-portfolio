@@ -15,14 +15,25 @@ export async function sendContactEmail(data: unknown) {
   const parsed = contactSchema.safeParse(data);
 
   if (!parsed.success) {
-    throw new Error("Invalid form data");
+    return {
+      success: false,
+      error: "INVALID_DATA",
+    };
+  }
+
+  if (!process.env.CONTACT_EMAIL) {
+    console.error("CONTACT_EMAIL is not defined");
+    return {
+      success: false,
+      error: "SERVER_CONFIG_ERROR",
+    };
   }
 
   const { name, email, message } = parsed.data;
 
   await resend.emails.send({
     from: "Portfolio <onboarding@resend.dev>",
-    to: process.env.CONTACT_EMAIL!,
+    to: process.env.CONTACT_EMAIL,
     subject: `Novo contato — ${name}`,
     replyTo: email,
     html: `
@@ -32,4 +43,6 @@ export async function sendContactEmail(data: unknown) {
       ${message}
     `,
   });
+
+  return { success: true };
 }

@@ -226,7 +226,8 @@
     },
     "toast": {
       "success": "Message sent successfully!",
-      "error": "Failed to send the message."
+      "error": "Failed to send the message.",
+      "loading": "Loading..."
     },
     "buttons": {
       "reset": "Reset",
