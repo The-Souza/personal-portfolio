@@ -8,7 +8,7 @@ import {
 
 export function TerminalLoading() {
   return (
-    <Terminal className="w-full sm:w-200 h-auto shadow-sm shadow-primary">
+    <Terminal className="w-full sm:w-200 h-auto shadow-sm shadow-primary" aria-label="Loading portfolio">
       <TypingAnimation>&gt; npm install portfolio</TypingAnimation>
 
       <AnimatedSpan className="text-green-500">
