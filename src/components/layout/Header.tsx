@@ -113,7 +113,11 @@ export function Header() {
 
           <Button asChild>
             <Link
-              href="/doc/Guilherme_Campos_Frontend_Jr.pdf"
+              href={
+                i18n.language === "pt"
+                  ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
+                  : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
+              }
               className="hover:scale-105 transition-transform active:scale-[0.97]"
               download
             >

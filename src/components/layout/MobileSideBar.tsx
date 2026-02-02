@@ -14,12 +14,7 @@ import {
   SidebarSeparator,
   useSidebar,
 } from "@/components/ui/sidebar";
-import {
-  FileDown,
-  FileText,
-  Github,
-  LinkedinIcon,
-} from "lucide-react";
+import { FileDown, FileText, Github, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
 import { ToggleTheme } from "@/components/ui/themeToggle";
 import { Button } from "@/components/ui/button";
@@ -49,7 +44,14 @@ export function MobileSidebar() {
           </Button>
 
           <Button asChild>
-            <Link href="/doc/Guilherme_Campos_Frontend_Jr.pdf" download>
+            <Link
+              href={
+                i18n.language === "pt"
+                  ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
+                  : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
+              }
+              download
+            >
               <FileDown className="w-4 h-4" />
               {t("actions.downloadCv")}
             </Link>
