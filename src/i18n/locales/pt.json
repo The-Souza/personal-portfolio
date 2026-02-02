@@ -104,22 +104,24 @@
         "description": "Portfólio desenvolvido com foco em performance, animações e arquitetura limpa.",
         "longDescription": "Aplicação construída com Next.js, com foco em UI moderna, animações avançadas, internacionalização e boas práticas de Clean Code.",
         "highlights": {
-          "frontend": "Frontend",
           "next": "Next.js",
           "i18n": "Internacionalização",
           "responsive": "Responsivo",
+          "cleanCode": "Clean Code",
           "production": "Em Produção"
         },
         "features": {
           "i18n": "Internacionalização (i18n)",
           "responsive": "Layout responsivo com abordagem mobile-first",
           "components": "Arquitetura de componentes reutilizáveis",
-          "media": "Carregamento de mídia otimizado e performático"
+          "animations": "Animações e microinterações",
+          "seo": "SEO e metadata configurados"
         },
         "architecture": {
           "components": "Arquitetura orientada a componentes",
           "srp": "Princípio da Responsabilidade Única (SRP)",
-          "separation": "Separação clara entre UI, dados e lógica"
+          "separation": "Separação clara entre UI, dados e lógica",
+          "dataDriven": "Conteúdo desacoplado e orientado a dados"
         }
       },
       "account-management": {
@@ -132,7 +134,7 @@
         "description": "Sistema fullstack para gerenciamento de contas financeiras.",
         "longDescription": "Projeto fullstack com autenticação, CRUD completo, integração frontend-backend e arquitetura em camadas.",
         "highlights": {
-          "fullstack": "Fullstack",
+          "react": "React",
           "clean": "Arquitetura Limpa",
           "jwt": "JWT",
           "dashboard": "Dashboard",

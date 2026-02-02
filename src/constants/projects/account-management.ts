@@ -19,7 +19,7 @@ export const accountManagementProject: Project = {
   },
 
   highlights: [
-    "projects.data.account-management.highlights.fullstack",
+    "projects.data.account-management.highlights.react",
     "projects.data.account-management.highlights.clean",
     "projects.data.account-management.highlights.jwt",
     "projects.data.account-management.highlights.dashboard",
