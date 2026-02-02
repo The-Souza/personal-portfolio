@@ -1,6 +1,14 @@
 import { Project } from "@/constants/projects-data";
 
-export function getProjectNavigation(projects: Project[], currentId: string) {
+interface ProjectNavigation {
+  previous: Project | null;
+  next: Project | null;
+}
+
+export function getProjectNavigation(
+  projects: Project[],
+  currentId: string,
+): ProjectNavigation {
   const index = projects.findIndex((p) => p.id === currentId);
 
   if (index === -1) {
