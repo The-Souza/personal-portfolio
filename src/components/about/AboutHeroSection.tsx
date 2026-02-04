@@ -28,7 +28,7 @@ export function AboutHeroSection() {
           animation="blurInUp"
           by="word"
           once
-          className="text-4xl md:text-5xl font-bold font-heading"
+          className="text-3xl md:text-4xl xl:text-5xl font-bold font-heading"
         >
           {t("about.title")}
         </TextAnimate>
@@ -54,7 +54,7 @@ export function AboutHeroSection() {
       >
         <CodeHeader icon={TypeScriptIcon}>developer.ts</CodeHeader>
 
-        <CodeBlock lang="ts" writing cursor duration={4000} />
+        <CodeBlock lang="ts" />
       </Code>
     </section>
   );
