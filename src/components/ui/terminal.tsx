@@ -113,7 +113,7 @@ export const TypingAnimation = ({
       motion.create(Component, {
         forwardMotionProps: true,
       }),
-    [Component]
+    [Component],
   );
 
   const elementRef = useRef<HTMLElement | null>(null);
@@ -202,6 +202,7 @@ interface TerminalProps {
   className?: string;
   sequence?: boolean;
   startOnView?: boolean;
+  onSequenceComplete?: () => void;
 }
 
 export const Terminal = ({
@@ -209,6 +210,7 @@ export const Terminal = ({
   className,
   sequence = true,
   startOnView = true,
+  onSequenceComplete: onComplete,
 }: TerminalProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(containerRef as React.RefObject<Element>, {
@@ -218,13 +220,27 @@ export const Terminal = ({
 
   const [activeIndex, setActiveIndex] = useState(0);
   const sequenceHasStarted = sequence ? !startOnView || isInView : false;
+  const totalItems = useMemo(() => Children.count(children), [children]);
+  const hasCompletedRef = useRef(false);
+
+  const hasFinishedSequence =
+    sequence && sequenceHasStarted && activeIndex >= totalItems;
+
+  useEffect(() => {
+    if (!onComplete) return;
+    if (!hasFinishedSequence) return;
+    if (hasCompletedRef.current) return;
+
+    hasCompletedRef.current = true;
+    onComplete();
+  }, [hasFinishedSequence, onComplete]);
 
   const contextValue = useMemo<SequenceContextValue | null>(() => {
     if (!sequence) return null;
     return {
       completeItem: (index: number) => {
         setActiveIndex((current) =>
-          index === current ? current + 1 : current
+          index === current ? current + 1 : current,
         );
       },
       activeIndex,
@@ -247,7 +263,7 @@ export const Terminal = ({
       ref={containerRef}
       className={cn(
         "border-border bg-background z-0 h-full max-h-100 w-full max-w-lg rounded-xl border",
-        className
+        className,
       )}
     >
       <div className="border-border flex flex-col gap-y-2 border-b p-4">

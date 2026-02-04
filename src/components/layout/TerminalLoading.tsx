@@ -6,9 +6,14 @@ import {
   TypingAnimation,
 } from "@/components/ui/terminal";
 
-export function TerminalLoading() {
+interface TerminalLoadingProps {
+  onComplete?: () => void;
+}
+
+export function TerminalLoading({ onComplete }: TerminalLoadingProps) {
   return (
     <Terminal
+      onSequenceComplete={onComplete}
       className="w-full sm:w-200 min-h-50 shadow-sm shadow-primary"
       aria-label="Loading portfolio"
     >
@@ -27,8 +32,9 @@ export function TerminalLoading() {
       </AnimatedSpan>
 
       <TypingAnimation className="text-muted-foreground">
-        Ready.
+        Ready. Welcome 👋
       </TypingAnimation>
     </Terminal>
   );
 }
+
