@@ -14,28 +14,20 @@ import {
   SidebarSeparator,
   useSidebar,
 } from "@/components/ui/sidebar";
-import {
-  FileDown,
-  FileText,
-  Github,
-  LinkedinIcon,
-} from "lucide-react";
+import { FileDown, FileText, Github, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
-import { ToggleTheme } from "../ui/themeToggle";
-import { Button } from "../ui/button";
+import { ToggleTheme } from "@/components/ui/themeToggle";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
-import { items } from "@/constants/menuItems";
+import { menuItems } from "@/constants/menu-items";
+import { useLanguage } from "@/hooks/use-language";
 
 export function MobileSidebar() {
   const { t, i18n } = useTranslation();
   const { toggleSidebar } = useSidebar();
   const pathname = usePathname();
-
-  function toggleLanguage() {
-    const next = i18n.language === "pt" ? "en" : "pt";
-    i18n.changeLanguage(next);
-  }
+  const { language, toggleLanguage } = useLanguage();
 
   return (
     <Sidebar>
@@ -45,11 +37,18 @@ export function MobileSidebar() {
           <ToggleTheme />
 
           <Button size="icon" variant="outline" onClick={toggleLanguage}>
-            {i18n.language?.toUpperCase()}
+            {language?.toUpperCase()}
           </Button>
 
           <Button asChild>
-            <Link href="/doc/Guilherme_Campos_Frontend_Jr.pdf" download>
+            <Link
+              href={
+                i18n.language === "pt"
+                  ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
+                  : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
+              }
+              download
+            >
               <FileDown className="w-4 h-4" />
               {t("actions.downloadCv")}
             </Link>
@@ -62,7 +61,7 @@ export function MobileSidebar() {
           <SidebarGroupLabel>Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
+              {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
                     asChild
@@ -108,9 +107,9 @@ export function MobileSidebar() {
             href="/doc/Guilherme_Campos_Frontend_Jr.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 transition-colors hover:text-primary"
+            className="flex items-center gap-2 hover:text-primary"
           >
-            <FileText className="w-4 h-4 transition-transform group-hover:scale-105" />
+            <FileText className="w-4 h-4" />
             {t("viewCv")}
           </Link>
         </div>

@@ -9,13 +9,13 @@ import {
 } from "@/components/ui/card";
 import { SectionHeader } from "@/components/section/SectionHeader";
 import { useTranslation } from "react-i18next";
-import { processSteps } from "@/constants/process.data";
+import { processSteps } from "@/constants/process-data";
 
 export function ProcessSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-12">
+    <section className="w-full py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader
         title={t("process.title")}
         subtitle={t("process.subtitle")}

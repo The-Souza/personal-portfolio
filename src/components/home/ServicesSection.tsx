@@ -3,13 +3,13 @@
 import MagicBento from "@/components/effects/MagicBento";
 import { SectionHeader } from "@/components/section/SectionHeader";
 import { useTranslation } from "react-i18next";
-import { services } from "@/constants/service.data";
+import { services } from "@/constants/service-data";
 
 export function ServicesSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-10">
+    <section className="w-full py-14 md:py-20 flex flex-col items-center gap-10">
       <SectionHeader
         title={t("services.title")}
         subtitle={t("services.subtitle")}

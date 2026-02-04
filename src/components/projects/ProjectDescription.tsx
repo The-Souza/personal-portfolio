@@ -1,9 +1,9 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { Project } from "@/constants/projects.data";
+import { Project } from "@/constants/projects/types";
 import { useTranslation } from "react-i18next";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 interface ProjectDescriptionProps {
@@ -14,19 +14,23 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-2">
-      <h1 className="font-heading text-2xl">{t(project.titleKey)}</h1>
-      <p className="text-sm text-muted-foreground">
-        {t(project.longDescriptionKey)}
-      </p>
+    <div className="flex flex-col gap-4 flex-1">
+      <div className="flex flex-col gap-2">
+        <h1 className="font-heading text-2xl leading-tight">
+          {t(project.titleKey)}
+        </h1>
+        <p className="text-md text-muted-foreground leading-relaxed">
+          {t(project.longDescriptionKey)}
+        </p>
+      </div>
 
       {project.features && project.architecture && (
-        <section className="space-y-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col gap-2">
-            <h4 className="text-sm font-semibold uppercase text-muted-foreground">
+            <h4 className="text-md font-semibold uppercase text-muted-foreground leading-tight">
               {t("projects.keyFeatures")}
             </h4>
-            <ul className="list-disc space-y-1 pl-4 text-sm">
+            <ul className="list-disc flex flex-col gap-1 pl-4 text-md">
               {project.features.map((feature) => (
                 <li key={feature}>{t(feature)}</li>
               ))}
@@ -34,10 +38,10 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h4 className="text-sm font-semibold uppercase text-muted-foreground">
+            <h4 className="text-md font-semibold uppercase text-muted-foreground leading-tight">
               {t("projects.technicalDecisions")}
             </h4>
-            <ul className="list-disc space-y-1 pl-4 text-sm">
+            <ul className="list-disc flex flex-col gap-1 pl-4 text-md">
               {project.architecture.map((item) => (
                 <li key={item}>{t(item)}</li>
               ))}
@@ -46,13 +50,17 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
         </section>
       )}
 
-      <section className="space-y-2">
-        <h4 className="text-sm font-semibold uppercase text-muted-foreground">
+      <section className="flex flex-col gap-2">
+        <h4 className="text-md font-semibold uppercase text-muted-foreground leading-tight">
           {t("projects.techStack")}
         </h4>
         <div className="flex flex-wrap gap-2">
           {project.techs.map((tech) => (
-            <Badge key={tech} variant="secondary" className="border-border py-1 px-3">
+            <Badge
+              key={tech}
+              variant="secondary"
+              className="border-border py-1 px-3"
+            >
               {tech}
             </Badge>
           ))}

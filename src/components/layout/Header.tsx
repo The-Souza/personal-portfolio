@@ -14,17 +14,19 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useSidebar } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
-import { items } from "@/constants/menuItems";
+import { menuItems } from "@/constants/menu-items";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { useLanguage } from "@/hooks/use-language";
 
 export function Header() {
   const { t, i18n } = useTranslation();
   const { toggleSidebar } = useSidebar();
   const pathname = usePathname();
-
-  function toggleLanguage() {
-    const next = i18n.language === "pt" ? "en" : "pt";
-    i18n.changeLanguage(next);
-  }
+  const { language, toggleLanguage } = useLanguage();
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full h-17.5 px-6 py-4 backdrop-blur-md border-b border-border">
@@ -41,15 +43,22 @@ export function Header() {
             <Menu className="w-5 h-5" />
           </Button>
 
-          <Button asChild variant="hover">
-            <Link
-              href="/"
-              className="flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
-            >
-              <CodeXml className="w-5 h-5 opacity-80" />
-              Guilherme Campos
-            </Link>
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button asChild variant="hover">
+                <Link
+                  href="/"
+                  className="flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
+                >
+                  <CodeXml className="w-5 h-5 opacity-80" />
+                  Guilherme Campos
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="leading-relaxed">{t(`navigation.button`)}</p>
+            </TooltipContent>
+          </Tooltip>
         </div>
 
         {/* Navigation */}
@@ -59,7 +68,7 @@ export function Header() {
         >
           <NavigationMenu>
             <NavigationMenuList>
-              {items.map((item) => {
+              {menuItems.map((item) => {
                 const isActive = pathname === item.url;
 
                 return (
@@ -95,13 +104,17 @@ export function Header() {
               onClick={toggleLanguage}
               className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
-              {i18n.language?.toUpperCase()}
+              {language?.toUpperCase()}
             </Button>
           </div>
 
           <Button asChild>
             <Link
-              href="/doc/Guilherme_Campos_Frontend_Jr.pdf"
+              href={
+                i18n.language === "pt"
+                  ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
+                  : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
+              }
               className="hover:scale-105 transition-transform active:scale-[0.97]"
               download
             >

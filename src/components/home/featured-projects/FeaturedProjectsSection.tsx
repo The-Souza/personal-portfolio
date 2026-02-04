@@ -4,8 +4,9 @@ import { useState } from "react";
 import { SectionHeader } from "@/components/section/SectionHeader";
 import { ProjectCard } from "@/components/projects";
 import { FeaturedProjectModal } from "./FeaturedProjectModal";
-import { projects, Project } from "@/constants/projects.data";
+import { projects } from "@/constants/projects";
 import { useTranslation } from "react-i18next";
+import { Project } from "@/constants/projects/types";
 
 export function FeaturedProjectsSection() {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ export function FeaturedProjectsSection() {
   const featuredProjects = projects.filter((project) => project.featured);
 
   return (
-    <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-12">
+    <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader
         title={t("projects.featuredTitle")}
         subtitle={t("projects.featuredSubtitle")}

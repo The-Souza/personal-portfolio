@@ -7,20 +7,17 @@ import { useTheme } from "next-themes";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { GlassCard } from "@/components/ui/glass-card";
 
 export default function NotFound() {
   const { theme } = useTheme();
   const { t } = useTranslation();
   const isDark = theme === "dark";
   const isMobile = useIsMobile(768);
-
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    if (theme !== undefined) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setReady(true);
-    }
+    setReady(theme !== undefined);
   }, [theme]);
 
   if (!ready) {
@@ -53,9 +50,11 @@ export default function NotFound() {
       </FuzzyText>
 
       {/* Message */}
-      <p className="z-1 w-auto text-base sm:text-lg md:text-xl">
-        {t("notFound.description")}
-      </p>
+      <GlassCard>
+        <p className="w-auto text-base sm:text-lg md:text-xl leading-relaxed">
+          {t("notFound.description")}
+        </p>
+      </GlassCard>
 
       {/* CTA */}
       <Button

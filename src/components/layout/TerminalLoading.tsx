@@ -6,21 +6,29 @@ import {
   TypingAnimation,
 } from "@/components/ui/terminal";
 
-export function TerminalLoading() {
+interface TerminalLoadingProps {
+  onComplete?: () => void;
+}
+
+export function TerminalLoading({ onComplete }: TerminalLoadingProps) {
   return (
-    <Terminal className="w-full sm:w-200 h-auto shadow-sm shadow-primary">
-      <TypingAnimation>&gt; npm install portfolio</TypingAnimation>
+    <Terminal
+      onSequenceComplete={onComplete}
+      className="w-full sm:w-200 min-h-50 shadow-sm shadow-primary"
+      aria-label="Loading portfolio"
+    >
+      <TypingAnimation>&gt; pnpm install @guilherme/portfolio</TypingAnimation>
 
       <AnimatedSpan className="text-green-500">
-        ✔ Initializing project
+        ✔ Resolving dependencies
       </AnimatedSpan>
 
       <AnimatedSpan className="text-green-500">
-        ✔ Loading components
+        ✔ Building UI components
       </AnimatedSpan>
 
       <AnimatedSpan className="text-green-500">
-        ✔ Applying UI theme
+        ✔ Optimizing assets
       </AnimatedSpan>
 
       <TypingAnimation className="text-muted-foreground">
@@ -29,3 +37,4 @@ export function TerminalLoading() {
     </Terminal>
   );
 }
+

@@ -44,14 +44,19 @@ export function ContactForm() {
     const sendPromise = sendContactEmail(data);
 
     toast.promise(sendPromise, {
-      loading: "Loading...",
+      loading: t("contact.toast.loading"),
       success: t("contact.toast.success"),
       error: t("contact.toast.error"),
       position: "top-left",
     });
 
     try {
-      await sendPromise;
+      const result = await sendPromise;
+
+      if (!result.success) {
+        return;
+      }
+
       form.reset();
     } finally {
       setIsSubmitting(false);
@@ -116,6 +121,7 @@ export function ContactForm() {
                       id={field.name}
                       placeholder={t("contact.form.message.placeholder")}
                       className="min-h-24 resize-none"
+                      maxLength={250}
                       aria-invalid={fieldState.invalid}
                     />
                     <InputGroupAddon align="block-end">
@@ -140,6 +146,7 @@ export function ContactForm() {
             variant="outline"
             onClick={() => form.reset()}
             disabled={isSubmitting}
+            className="hover:scale-105 transition-transform active:scale-[0.97]"
           >
             {t("contact.buttons.reset")}
           </Button>
@@ -148,7 +155,7 @@ export function ContactForm() {
             type="submit"
             form="form-contact"
             disabled={!form.formState.isValid || isSubmitting}
-            className="disabled:cursor-not-allowed"
+            className="hover:scale-105 transition-transform active:scale-[0.97]"
           >
             {t("contact.buttons.submit")}
           </Button>

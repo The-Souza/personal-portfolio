@@ -2,7 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/section/SectionHeader";
-import { EXPERIENCES, Works } from "@/constants/experience.data";
+import { EXPERIENCES, Experience } from "@/constants/experience-data";
 import {
   Card,
   CardHeader,
@@ -15,26 +15,26 @@ export function AboutExperienceSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full max-w-6xl py-14 md:py-20 flex flex-col items-center gap-12">
+    <section className="w-full py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader title={t("about.experience.title")} />
 
-      {EXPERIENCES.map((works: Works) => (
+      {EXPERIENCES.map((experience: Experience) => (
         <Card
-          key={works.id}
+          key={experience.id}
           className="group z-1 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary shadow-md hover:shadow-primary"
         >
           <CardHeader>
             <CardTitle className="text-lg font-heading group-hover:text-primary">
-              {t(works.placeKey)}
+              {t(experience.placeKey)}
             </CardTitle>
 
-            <CardDescription className="text-md text-foreground flex gap-2">
-              {t(works.positionKey)} <span>•</span> {t(works.period)}
+            <CardDescription className="text-md text-foreground flex gap-2 leading-relaxed">
+              {t(experience.positionKey)} <span>•</span> {t(experience.period)}
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <ul className="list-disc space-y-2 pl-4 text-md text-muted-foreground" role="list">
-              {works.responsibilitiesKey.map((key) => (
+            <ul className="list-disc flex flex-col gap-2 pl-4 text-md text-muted-foreground" role="list">
+              {experience.responsibilitiesKey.map((key) => (
                 <li key={key}>{t(key)}</li>
               ))}
             </ul>

@@ -6,7 +6,7 @@ import {
   CodeHeader,
 } from "@/components/animate-ui/components/animate/code";
 import { GlassCard } from "@/components/ui/glass-card";
-import { developerCode } from "@/constants/developer.code";
+import { developerCode } from "@/constants/developer-code";
 import { Trans, useTranslation } from "react-i18next";
 import { TextAnimate } from "@/components/effects/text-animate";
 import { TypeScriptIcon } from "@/icons/TypeScriptIcon";
@@ -19,7 +19,7 @@ export function AboutHeroSection() {
   const Highlight = <span className="text-primary font-semibold" />;
 
   return (
-    <section className="grid lg:grid-cols-2 w-full max-w-6xl py-14 md:py-20 items-center gap-12 min-h-[80vh]">
+    <section className="grid lg:grid-cols-2 w-full py-14 md:py-20 items-center gap-12 min-h-[80vh]">
       {/* LEFT — TEXTO */}
       <div className="flex flex-col gap-4">
         <TextAnimate
@@ -28,7 +28,7 @@ export function AboutHeroSection() {
           animation="blurInUp"
           by="word"
           once
-          className="text-4xl md:text-5xl font-bold font-heading"
+          className="text-3xl md:text-4xl xl:text-5xl font-bold font-heading"
         >
           {t("about.title")}
         </TextAnimate>
@@ -54,7 +54,7 @@ export function AboutHeroSection() {
       >
         <CodeHeader icon={TypeScriptIcon}>developer.ts</CodeHeader>
 
-        <CodeBlock lang="ts" writing cursor duration={4000} />
+        <CodeBlock lang="ts" />
       </Code>
     </section>
   );

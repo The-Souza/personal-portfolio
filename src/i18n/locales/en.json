@@ -3,7 +3,8 @@
     "home": "Home",
     "projects": "Projects",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "button": "Go to homepage"
   },
   "actions": {
     "downloadCv": "Download CV"
@@ -42,7 +43,7 @@
         "label": "End-to-End",
         "description": "Building complete applications integrating frontend and backend with a product vision."
       },
-      "metodologi": {
+      "methodology": {
         "title": "Clean Code & Architecture",
         "label": "Best Practices",
         "description": "Organized code following SRP, layered architecture, and maintainability best practices."
@@ -92,6 +93,17 @@
     "techStack": "Tech Stack",
     "technicalDecisions": "Technical Decisions",
     "keyFeatures": "Key Features",
+    "navigation": {
+      "label": {
+        "nav": "Project navigation",
+        "link": {
+          "previous": "Previous project",
+          "next": "Next project"
+        }
+      },
+      "previous": "Previous",
+      "next": "Next"
+    },
     "data": {
       "portfolio": {
         "status": {
@@ -103,22 +115,24 @@
         "description": "Portfolio built with focus on performance, animations and clean architecture.",
         "longDescription": "Application built with Next.js, focusing on modern UI, advanced animations, internationalization and clean code practices.",
         "highlights": {
-          "frontend": "Frontend",
           "next": "Next.js",
           "i18n": "i18n",
           "responsive": "Responsive",
+          "cleanCode": "Clean Code",
           "production": "Production Ready"
         },
         "features": {
           "i18n": "Internationalization (i18n)",
           "responsive": "Responsive layout with mobile-first approach",
           "components": "Reusable and scalable component architecture",
-          "media": "Optimized media loading and performance"
+          "animations": "Animations and micro-interactions",
+          "seo": "SEO and metadata configuration"
         },
         "architecture": {
           "components": "Component-driven architecture",
           "srp": "Single Responsibility Principle (SRP)",
-          "separation": "Clear separation between UI, data and logic"
+          "separation": "Clear separation between UI, data and logic",
+          "dataDriven": "Decoupled, data-driven content architecture"
         }
       },
       "account-management": {
@@ -131,7 +145,7 @@
         "description": "Fullstack system for financial account management.",
         "longDescription": "Fullstack project with authentication, complete CRUD, frontend-backend integration and layered architecture.",
         "highlights": {
-          "fullstack": "Fullstack",
+          "react": "React",
           "clean": "Clean Architecture",
           "jwt": "JWT",
           "dashboard": "Dashboard",
@@ -170,7 +184,7 @@
   "about": {
     "title": "Hi, I'm Guilherme",
     "text": {
-      "part1": "I’m a <strong>Frontend Developer</strong> focused on <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, building clear, performant, and well-structured interfaces.",
+      "part1": "I’m a <strong>Frontend Developer</strong> focused on <strong>Next.js</strong>, <strong>React</strong> and <strong>TypeScript</strong>, building clear, performant, and well-structured interfaces.",
       "part2": "I like to think about <strong>architecture</strong>, <strong>accessibility</strong>, and <strong>user experience</strong> from the very first component.",
       "part3": "I have an organized mindset, clear communication, and I’m constantly evolving, applying <strong>best practices</strong> and attention to detail in every project."
     },
@@ -225,7 +239,8 @@
     },
     "toast": {
       "success": "Message sent successfully!",
-      "error": "Failed to send the message."
+      "error": "Failed to send the message.",
+      "loading": "Loading..."
     },
     "buttons": {
       "reset": "Reset",
