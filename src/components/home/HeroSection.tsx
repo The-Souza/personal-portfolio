@@ -112,15 +112,17 @@ export function HeroSection() {
       </div>
 
       {/* RIGHT — AVATAR */}
-      <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden bg-background shadow-md hover:shadow-primary transition-transform duration-300 hover:scale-[1.03] border-2 border-primary animate-[float_6s_ease-in-out_infinite]">
+      <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden bg-background shadow-md hover:shadow-primary transition-transform duration-300 hover:scale-[1.03] border-2 border-primary">
         <BlurFade delay={0.25} inView className="w-full h-full relative">
           <Image
             src="/images/profile.jpeg"
             alt="Foto de Guilherme Campos, Desenvolvedor Frontend"
             fill
             priority
+            fetchPriority="high"
+            loading="eager"
             sizes="(max-width: 768px) 256px, 384px"
-            className="object-cover object-top transition-transform duration-500 hover:scale-110"
+            className="object-cover object-top"
           />
         </BlurFade>
       </div>
