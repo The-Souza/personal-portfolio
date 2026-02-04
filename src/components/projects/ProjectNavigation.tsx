@@ -17,17 +17,27 @@ export function ProjectNavigation({
   const navigation = getProjectNavigation(projects, id);
 
   return (
-    <nav className="w-full flex gap-4">
+    <nav
+      className="w-full flex gap-4"
+      aria-label={t("projects.navigation.label.nav")}
+    >
       {(navigation.previous || navigation.next) && (
-        <div className="w-full flex flex-col gap-4 sm:flex-row sm:justify-between">
+        <div className="w-full flex justify-between">
           {navigation.previous ? (
             <Link
-              aria-label={`Previous project ${t(navigation.previous.titleKey)}`}
+              aria-label={`${t("projects.navigation.label.link.previous")} ${t(navigation.previous.titleKey)}`}
               href={`/projects/${navigation.previous.id}`}
               className="text-lg underline z-1 flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
             >
               <ChevronsLeft className="w-7 h-7" />
-              {t(navigation.previous.titleKey)}
+
+              <span className="inline md:hidden">
+                {t("projects.navigation.previous")}
+              </span>
+
+              <span className="hidden md:inline">
+                {t(navigation.previous.titleKey)}
+              </span>
             </Link>
           ) : (
             <div />
@@ -35,11 +45,18 @@ export function ProjectNavigation({
 
           {navigation.next && (
             <Link
-              aria-label={`Next project ${t(navigation.next.titleKey)}`}
+              aria-label={`${t("projects.navigation.label.link.next")} ${t(navigation.next.titleKey)}`}
               href={`/projects/${navigation.next.id}`}
               className="text-lg underline z-1 flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
             >
-              {t(navigation.next.titleKey)}
+              <span className="inline md:hidden">
+                {t("projects.navigation.next")}
+              </span>
+
+              <span className="hidden md:inline">
+                {t(navigation.next.titleKey)}
+              </span>
+
               <ChevronsRight className="w-7 h-7" />
             </Link>
           )}

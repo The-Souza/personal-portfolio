@@ -93,6 +93,17 @@
     "techStack": "Tecnologias Utilizadas",
     "technicalDecisions": "Decisões Técnicas",
     "keyFeatures": "Funcionalidades Principais",
+    "navigation": {
+      "label": {
+        "nav": "Navegação de Projetos",
+        "link": {
+          "previous": "Projeto anterior",
+          "next": "Próximo projeto"
+        }
+      },
+      "previous": "Anterior",
+      "next": "Próximo"
+    },
     "data": {
       "portfolio": {
         "status": {

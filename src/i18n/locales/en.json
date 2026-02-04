@@ -93,6 +93,17 @@
     "techStack": "Tech Stack",
     "technicalDecisions": "Technical Decisions",
     "keyFeatures": "Key Features",
+    "navigation": {
+      "label": {
+        "nav": "Project navigation",
+        "link": {
+          "previous": "Previous project",
+          "next": "Next project"
+        }
+      },
+      "previous": "Previous",
+      "next": "Next"
+    },
     "data": {
       "portfolio": {
         "status": {
