@@ -20,7 +20,7 @@ export function ProjectContentTabs({ project }: ProjectContentTabsProps) {
   return (
     <Tabs
       defaultValue={hasVideo ? "video" : "description"}
-      className="w-full flex flex-col"
+      className="w-full flex flex-col flex-1"
     >
       <TabsList className="shrink-0">
         {hasVideo && (
@@ -35,14 +35,14 @@ export function ProjectContentTabs({ project }: ProjectContentTabsProps) {
         </TabsTrigger>
       </TabsList>
 
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1">
         {hasVideo && (
           <TabsContent value="video" className="h-full">
             <ProjectVideo src={media!.video!} />
           </TabsContent>
         )}
 
-        <TabsContent value="description" className="h-full overflow-y-auto">
+        <TabsContent value="description" className="h-full">
           <ProjectDescription project={project} />
         </TabsContent>
       </div>

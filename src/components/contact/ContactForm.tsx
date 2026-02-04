@@ -146,6 +146,7 @@ export function ContactForm() {
             variant="outline"
             onClick={() => form.reset()}
             disabled={isSubmitting}
+            className="hover:scale-105 transition-transform active:scale-[0.97]"
           >
             {t("contact.buttons.reset")}
           </Button>
@@ -154,6 +155,7 @@ export function ContactForm() {
             type="submit"
             form="form-contact"
             disabled={!form.formState.isValid || isSubmitting}
+            className="hover:scale-105 transition-transform active:scale-[0.97]"
           >
             {t("contact.buttons.submit")}
           </Button>

@@ -14,11 +14,15 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-2">
-      <h1 className="font-heading text-2xl leading-tight">{t(project.titleKey)}</h1>
-      <p className="text-md text-muted-foreground leading-relaxed">
-        {t(project.longDescriptionKey)}
-      </p>
+    <div className="flex flex-col gap-4 flex-1">
+      <div className="flex flex-col gap-2">
+        <h1 className="font-heading text-2xl leading-tight">
+          {t(project.titleKey)}
+        </h1>
+        <p className="text-md text-muted-foreground leading-relaxed">
+          {t(project.longDescriptionKey)}
+        </p>
+      </div>
 
       {project.features && project.architecture && (
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -52,7 +56,11 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
         </h4>
         <div className="flex flex-wrap gap-2">
           {project.techs.map((tech) => (
-            <Badge key={tech} variant="secondary" className="border-border py-1 px-3">
+            <Badge
+              key={tech}
+              variant="secondary"
+              className="border-border py-1 px-3"
+            >
               {tech}
             </Badge>
           ))}
