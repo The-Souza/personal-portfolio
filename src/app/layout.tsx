@@ -81,10 +81,11 @@ export default async function RootLayout({
 }>) {
   const cookieStore = await cookies();
   const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
+  const lang = cookieStore.get("lang")?.value ?? "pt";
 
   return (
     <html
-      lang="pt-BR"
+      lang={lang === "pt" ? "pt-BR" : "en"}
       suppressHydrationWarning
       className={`${inter.variable} ${poppins.variable} antialiased`}
     >

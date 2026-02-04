@@ -20,16 +20,13 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useLanguage } from "@/hooks/use-language";
 
 export function Header() {
   const { t, i18n } = useTranslation();
   const { toggleSidebar } = useSidebar();
   const pathname = usePathname();
-
-  function toggleLanguage() {
-    const next = i18n.language === "pt" ? "en" : "pt";
-    i18n.changeLanguage(next);
-  }
+  const { language, toggleLanguage } = useLanguage();
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full h-17.5 px-6 py-4 backdrop-blur-md border-b border-border">
@@ -107,7 +104,7 @@ export function Header() {
               onClick={toggleLanguage}
               className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
-              {i18n.language?.toUpperCase()}
+              {language?.toUpperCase()}
             </Button>
           </div>
 

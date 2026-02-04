@@ -21,16 +21,13 @@ import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
 import { menuItems } from "@/constants/menu-items";
+import { useLanguage } from "@/hooks/use-language";
 
 export function MobileSidebar() {
   const { t, i18n } = useTranslation();
   const { toggleSidebar } = useSidebar();
   const pathname = usePathname();
-
-  function toggleLanguage() {
-    const next = i18n.language === "pt" ? "en" : "pt";
-    i18n.changeLanguage(next);
-  }
+  const { language, toggleLanguage } = useLanguage();
 
   return (
     <Sidebar>
@@ -40,7 +37,7 @@ export function MobileSidebar() {
           <ToggleTheme />
 
           <Button size="icon" variant="outline" onClick={toggleLanguage}>
-            {i18n.language?.toUpperCase()}
+            {language?.toUpperCase()}
           </Button>
 
           <Button asChild>
