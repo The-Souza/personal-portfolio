@@ -100,6 +100,7 @@ export function HeroSection() {
                   ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
                   : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
               }
+              prefetch={false}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:scale-105 transition-transform active:scale-[0.97] z-1"

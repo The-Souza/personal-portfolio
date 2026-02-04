@@ -47,6 +47,7 @@ export function MobileSidebar() {
                   ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
                   : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
               }
+              prefetch={false}
               download
             >
               <FileDown className="w-4 h-4" />
@@ -104,8 +105,13 @@ export function MobileSidebar() {
           </Link>
 
           <Link
-            href="/doc/Guilherme_Campos_Frontend_Jr.pdf"
+            href={
+              i18n.language === "pt"
+                ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
+                : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
+            }
             target="_blank"
+            prefetch={false}
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-primary"
           >

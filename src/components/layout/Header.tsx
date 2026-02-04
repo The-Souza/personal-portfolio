@@ -115,6 +115,7 @@ export function Header() {
                   ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
                   : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
               }
+              prefetch={false}
               className="hover:scale-105 transition-transform active:scale-[0.97]"
               download
             >
