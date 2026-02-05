@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 export function ContactLinks() {
 
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
       <Button asChild>
         <Link
           href="https://linkedin.com/in/guilherme-campos-frontend"

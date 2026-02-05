@@ -8,7 +8,7 @@ export function ContactHero() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <div className="flex flex-col gap-4 w-full text-center lg:text-left">
       <TextAnimate
         key={i18n.language}
         as="h1"

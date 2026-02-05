@@ -14,7 +14,7 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-4 flex-1">
+    <div className="flex flex-col gap-4 flex-1 p-1">
       <div className="flex flex-col gap-2">
         <h1 className="font-heading text-2xl leading-tight">
           {t(project.titleKey)}
@@ -67,7 +67,7 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
         </div>
       </section>
 
-      <div className="flex gap-3 pt-2">
+      <div className="flex gap-3">
         {project.links?.demo && (
           <Button asChild>
             <Link
