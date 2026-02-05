@@ -67,7 +67,7 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
         </div>
       </section>
 
-      <div className="flex gap-3 pt-2">
+      <div className="flex gap-3 p-1">
         {project.links?.demo && (
           <Button asChild>
             <Link

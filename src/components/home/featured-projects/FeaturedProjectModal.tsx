@@ -26,7 +26,7 @@ export function FeaturedProjectModal({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
-        className="w-[90vw] max-w-5xl max-h-[90vh] overflow-hidden flex flex-col"
+        className="w-[90vw] max-w-5xl max-h-[70vh] sm:max-h-[90vh] flex flex-col"
       >
         <VisuallyHidden>
           <DialogTitle />
