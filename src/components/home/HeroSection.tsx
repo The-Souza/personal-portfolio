@@ -31,7 +31,7 @@ export function HeroSection() {
 
         {/* STACKS */}
         <div className="flex flex-wrap justify-center xl:justify-start gap-2">
-          {["React", "Next.js", "TypeScript", "Tailwind CSS"].map((tech) => (
+          {["Next.js","React", "TypeScript", "Tailwind CSS"].map((tech) => (
             <Badge
               key={tech}
               variant="outline"
