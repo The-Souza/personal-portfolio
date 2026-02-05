@@ -35,17 +35,14 @@ export function ProjectContentTabs({ project }: ProjectContentTabsProps) {
         </TabsTrigger>
       </TabsList>
 
-      <div className="flex-1 min-h-0 overflow-hidden">
+      <div className="flex-1 min-h-0 overflow-y-auto">
         {hasVideo && (
           <TabsContent value="video" className="h-full">
             <ProjectVideo src={media!.video!} />
           </TabsContent>
         )}
 
-        <TabsContent
-          value="description"
-          className="flex-1 min-h-0 overflow-y-auto overscroll-contain touch-pan-y"
-        >
+        <TabsContent value="description" className="min-h-0">
           <ProjectDescription project={project} />
         </TabsContent>
       </div>
