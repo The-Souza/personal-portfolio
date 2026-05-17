@@ -1,33 +1,70 @@
 "use client";
 
-import { sendContactEmail } from "./actions";
-import { Card, CardFooter, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import {
   Field,
   FieldError,
   FieldGroup,
   FieldLabel,
 } from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupText,
   InputGroupTextarea,
 } from "@/components/ui/input-group";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Controller, useForm } from "react-hook-form";
-import * as z from "zod";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { createFormSchema } from "@/schema/contact";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  Control,
+  Controller,
+  ControllerFieldState,
+  ControllerRenderProps,
+  Path,
+  useForm,
+} from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import { toast } from "sonner";
+import * as z from "zod";
+import { sendContactEmail } from "./actions";
+
+type FormValues = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+interface ContactFieldProps {
+  name: Path<FormValues>;
+  control: Control<FormValues>;
+  label: string;
+  children: (
+    field: ControllerRenderProps<FormValues, Path<FormValues>>,
+    fieldState: ControllerFieldState,
+  ) => React.ReactNode;
+}
+
+function ContactField({ name, control, label, children }: ContactFieldProps) {
+  return (
+    <Controller
+      name={name}
+      control={control}
+      render={({ field, fieldState }) => (
+        <Field data-invalid={fieldState.invalid}>
+          <FieldLabel htmlFor={field.name}>{label}</FieldLabel>
+          {children(field, fieldState)}
+          {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
+        </Field>
+      )}
+    />
+  );
+}
 
 export function ContactForm() {
   const { t } = useTranslation();
   const formSchema = createFormSchema(t);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     mode: "onSubmit",
@@ -38,9 +75,9 @@ export function ContactForm() {
     },
   });
 
-  async function onSubmit(data: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
+  const { isSubmitting } = form.formState;
 
+  async function onSubmit(data: z.infer<typeof formSchema>) {
     const sendPromise = sendContactEmail(data);
 
     toast.promise(sendPromise, {
@@ -50,17 +87,8 @@ export function ContactForm() {
       position: "top-left",
     });
 
-    try {
-      const result = await sendPromise;
-
-      if (!result.success) {
-        return;
-      }
-
-      form.reset();
-    } finally {
-      setIsSubmitting(false);
-    }
+    const result = await sendPromise;
+    if (result.success) form.reset();
   }
 
   return (
@@ -68,74 +96,58 @@ export function ContactForm() {
       <CardContent>
         <form id="form-contact" onSubmit={form.handleSubmit(onSubmit)}>
           <FieldGroup>
-            <Controller
+            <ContactField
               name="name"
               control={form.control}
-              render={({ field, fieldState }) => (
-                <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel htmlFor={field.name}>
-                    {t("contact.form.name")}
-                  </FieldLabel>
-                  <Input
-                    {...field}
-                    id={field.name}
-                    aria-invalid={fieldState.invalid}
-                  />
-                  {fieldState.invalid && (
-                    <FieldError errors={[fieldState.error]} />
-                  )}
-                </Field>
+              label={t("contact.form.name")}
+            >
+              {(field, fieldState) => (
+                <Input
+                  {...field}
+                  id={field.name}
+                  aria-invalid={fieldState.invalid}
+                />
               )}
-            />
-            <Controller
+            </ContactField>
+
+            <ContactField
               name="email"
               control={form.control}
-              render={({ field, fieldState }) => (
-                <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel htmlFor={field.name}>
-                    {t("contact.form.email")}
-                  </FieldLabel>
-                  <Input
-                    {...field}
-                    id={field.name}
-                    type="email"
-                    aria-invalid={fieldState.invalid}
-                  />
-                  {fieldState.invalid && (
-                    <FieldError errors={[fieldState.error]} />
-                  )}
-                </Field>
+              label={t("contact.form.email")}
+            >
+              {(field, fieldState) => (
+                <Input
+                  {...field}
+                  id={field.name}
+                  type="email"
+                  aria-invalid={fieldState.invalid}
+                />
               )}
-            />
-            <Controller
+            </ContactField>
+
+            <ContactField
               name="message"
               control={form.control}
-              render={({ field, fieldState }) => (
-                <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel htmlFor={field.name}>
-                    {t("contact.form.message.label")}
-                  </FieldLabel>
-                  <InputGroup>
-                    <InputGroupTextarea
-                      {...field}
-                      id={field.name}
-                      placeholder={t("contact.form.message.placeholder")}
-                      className="min-h-24 resize-none"
-                      maxLength={250}
-                      aria-invalid={fieldState.invalid}
-                    />
-                    <InputGroupAddon align="block-end">
-                      <InputGroupText className="tabular-nums">
-                        {field.value.length ?? 0}/250
-                      </InputGroupText>
-                    </InputGroupAddon>
-                  </InputGroup>
-                  {fieldState.invalid && (
-                    <FieldError errors={[fieldState.error]} />
-                  )}
-                </Field>
+              label={t("contact.form.message.label")}
+            >
+              {(field, fieldState) => (
+                <InputGroup>
+                  <InputGroupTextarea
+                    {...field}
+                    id={field.name}
+                    placeholder={t("contact.form.message.placeholder")}
+                    className="min-h-24 resize-none"
+                    maxLength={250}
+                    aria-invalid={fieldState.invalid}
+                  />
+                  <InputGroupAddon align="block-end">
+                    <InputGroupText className="tabular-nums">
+                      {field.value.length ?? 0}/250
+                    </InputGroupText>
+                  </InputGroupAddon>
+                </InputGroup>
               )}
-            />
+            </ContactField>
           </FieldGroup>
         </form>
       </CardContent>
