@@ -1,10 +1,10 @@
 "use client";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { VideoIcon, AlignLeftIcon } from "lucide-react";
-import { Project } from "@/constants/projects/types";
-import { ProjectVideo } from "./ProjectVideo";
 import { ProjectDescription } from "./ProjectDescription";
+import { ProjectVideo } from "./ProjectVideo";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Project } from "@/constants/projects/types";
+import { AlignLeftIcon, VideoIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface ProjectContentTabsProps {
