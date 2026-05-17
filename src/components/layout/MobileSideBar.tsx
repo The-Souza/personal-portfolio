@@ -119,7 +119,7 @@ export function MobileSidebar() {
             {t("viewCv")}
           </Link>
         </div>
-        <span className="text-xs opacity-70 mt-2">© 2026 Guilherme Souza</span>
+        <span className="text-xs opacity-70 mt-2">© 2026 Guilherme Campos</span>
       </SidebarFooter>
     </Sidebar>
   );

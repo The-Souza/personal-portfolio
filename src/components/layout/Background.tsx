@@ -25,8 +25,6 @@ export function Background() {
         speed={0.5}
         transparent
         edgeFade={0.25}
-        className={undefined}
-        style={undefined}
       />
     </div>
   );
