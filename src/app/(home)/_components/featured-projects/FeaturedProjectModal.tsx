@@ -7,7 +7,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Project } from "@/constants/projects/types";
-import { ProjectContentTabs } from "@/components/projects";
+import { ProjectContentTabs } from "@/components/projects/ProjectContentTabs";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 interface FeaturedProjectModalProps {

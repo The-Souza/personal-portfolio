@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { socialLinks } from "@/constants/social-links";
 
 export function ContactLinks() {
 
@@ -8,7 +9,7 @@ export function ContactLinks() {
     <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
       <Button asChild>
         <Link
-          href="https://linkedin.com/in/guilherme-campos-frontend"
+          href={socialLinks.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
@@ -20,7 +21,7 @@ export function ContactLinks() {
 
       <Button asChild variant="secondary">
         <Link
-          href="https://github.com/The-Souza"
+          href={socialLinks.github}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
@@ -32,7 +33,7 @@ export function ContactLinks() {
 
       <Button asChild variant="outline">
         <Link
-          href="mailto:guilhermev272@gmail.com"
+          href={`mailto:${socialLinks.email}`}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-105 transition-transform active:scale-[0.97] z-1"

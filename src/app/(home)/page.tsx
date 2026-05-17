@@ -5,7 +5,7 @@ import {
   ProcessSection,
   FeaturedProjectsSection,
   CallToActionSection,
-} from "@/components/home";
+} from "./_components";
 
 export const metadata: Metadata = {
   title: "Guilherme Campos | Frontend Developer",

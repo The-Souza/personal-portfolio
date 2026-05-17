@@ -1,6 +1,4 @@
 export { ProjectHero } from "./ProjectHero"
-export { ProjectCard } from "./ProjectCard"
-export { ProjectContentTabs } from "./ProjectContentTabs"
 export { ProjectDescription } from "./ProjectDescription"
 export { ProjectDetails } from "./ProjectDetails"
 export { ProjectOutcome } from "./ProjectOutcome"
