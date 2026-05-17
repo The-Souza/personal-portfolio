@@ -1,0 +1,7 @@
+export { ProjectHero } from "./ProjectHero"
+export { ProjectDescription } from "./ProjectDescription"
+export { ProjectDetails } from "./ProjectDetails"
+export { ProjectOutcome } from "./ProjectOutcome"
+export { ProjectVideo } from "./ProjectVideo"
+export { ProjectsSection } from "./ProjectsSection"
+export { ProjectNavigation } from "./ProjectNavigation"

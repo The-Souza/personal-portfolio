@@ -7,7 +7,7 @@ import {
   ProjectVideo,
   ProjectOutcome,
   ProjectNavigation,
-} from "@/components/projects";
+} from "../_components";
 
 interface ProjectPageProps {
   params: Promise<{

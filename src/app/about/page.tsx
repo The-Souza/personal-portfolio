@@ -2,7 +2,7 @@ import {
   AboutHeroSection,
   AboutStackSection,
   AboutExperienceSection,
-} from "@/components/about";
+} from "./_components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
