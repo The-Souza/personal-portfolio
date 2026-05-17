@@ -135,6 +135,36 @@
           "dataDriven": "Decoupled, data-driven content architecture"
         }
       },
+      "consulta-nfe-cte": {
+        "status": {
+          "inDevelopment": "In Development",
+          "completed": "Completed",
+          "inMaintenance": "In Maintenance"
+        },
+        "title": "NF-e / CT-e Query Tool",
+        "description": "Desktop application for querying NF-e/CT-e associations and uploading delivery receipts via internal API, without a browser.",
+        "longDescription": "Built for internal use at a logistics company, the system automates NF-e → CT-e association lookups, renames receipt images using OCR, and performs batch uploads — all from a standalone executable generated with PyInstaller.",
+        "highlights": {
+          "python": "Python",
+          "desktop": "Desktop App",
+          "ocr": "Tesseract OCR",
+          "excel": "Excel Export",
+          "completed": "Completed"
+        },
+        "features": {
+          "login": "Automatic login with email and password, no browser required",
+          "search": "NF-e range search with status table (With CT-e / Without CT-e / Not registered)",
+          "ocr": "OCR-based NF-e number detection in images with automatic file renaming",
+          "upload": "Batch upload of receipt images, skipping NF-es not in PENDING status",
+          "excel": "Results export to Excel and restorable query history"
+        },
+        "architecture": {
+          "threads": "Background worker threads for OCR, renaming and upload (UI never blocks)",
+          "keyring": "Credentials securely stored via Windows Credential Manager (keyring)",
+          "env": "Environment variable configuration (.env) for portability across companies",
+          "build": "Distributable build with PyInstaller generating a standalone .exe"
+        }
+      },
       "account-management": {
         "status": {
           "inDevelopment": "In Development",

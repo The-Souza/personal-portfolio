@@ -3,7 +3,7 @@ import { Project } from "./types";
 export const accountManagementProject: Project = {
   id: "account-management",
   nameProject: "Account Management",
-  featured: true,
+  featured: false,
 
   titleKey: "projects.data.account-management.title",
   descriptionKey: "projects.data.account-management.description",

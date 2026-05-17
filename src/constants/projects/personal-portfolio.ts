@@ -3,7 +3,7 @@ import { Project } from "./types";
 export const personalPortfolioProject: Project = {
   id: "portfolio",
   nameProject: "Portfólio",
-  featured: true,
+  featured: false,
 
   titleKey: "projects.data.portfolio.title",
   descriptionKey: "projects.data.portfolio.description",
@@ -20,14 +20,7 @@ export const personalPortfolioProject: Project = {
     "projects.data.portfolio.highlights.production",
   ],
 
-  techs: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "i18n",
-    "Zod",
-  ],
+  techs: ["Next.js", "React", "TypeScript", "Tailwind CSS", "i18n", "Zod"],
 
   features: [
     "projects.data.portfolio.features.i18n",
