@@ -22,12 +22,15 @@ import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
 import { menuItems } from "@/constants/menu-items";
 import { useLanguage } from "@/hooks/use-language";
+import { useCvPath } from "@/hooks/use-cv-path";
+import { socialLinks } from "@/constants/social-links";
 
 export function MobileSidebar() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { toggleSidebar } = useSidebar();
   const pathname = usePathname();
   const { language, toggleLanguage } = useLanguage();
+  const cvPath = useCvPath();
 
   return (
     <Sidebar>
@@ -42,11 +45,7 @@ export function MobileSidebar() {
 
           <Button asChild>
             <Link
-              href={
-                i18n.language === "pt"
-                  ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
-                  : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
-              }
+              href={cvPath}
               prefetch={false}
               download
             >
@@ -87,7 +86,7 @@ export function MobileSidebar() {
       <SidebarFooter>
         <div className="flex items-center justify-evenly gap-2 opacity-80 hover:opacity-100">
           <Link
-            href="https://github.com/The-Souza"
+            href={socialLinks.github}
             target="_blank"
             className="flex items-center gap-2 hover:text-primary"
           >
@@ -96,7 +95,7 @@ export function MobileSidebar() {
           </Link>
 
           <Link
-            href="https://linkedin.com/in/guilherme-campos-frontend"
+            href={socialLinks.linkedin}
             target="_blank"
             className="flex items-center gap-2 hover:text-primary"
           >
@@ -105,11 +104,7 @@ export function MobileSidebar() {
           </Link>
 
           <Link
-            href={
-              i18n.language === "pt"
-                ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
-                : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
-            }
+            href={cvPath}
             target="_blank"
             prefetch={false}
             rel="noopener noreferrer"
@@ -119,7 +114,7 @@ export function MobileSidebar() {
             {t("viewCv")}
           </Link>
         </div>
-        <span className="text-xs opacity-70 mt-2">© 2026 Guilherme Souza</span>
+        <span className="text-xs opacity-70 mt-2">© 2026 Guilherme Campos</span>
       </SidebarFooter>
     </Sidebar>
   );

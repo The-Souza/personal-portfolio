@@ -15,8 +15,8 @@
   "home": {
     "head": "Desenvolvedor Frontend",
     "description": {
-      "part1": "Desenvolvedor Frontend com foco em interfaces modernas, responsivas e bem estruturadas.",
-      "part2": "Experiência com <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, integração frontend–backend em projetos <strong>fullstack</strong>, modernização de sistemas web e aplicação de boas práticas como <strong>Clean Code</strong>, <strong>SRP</strong> e <strong>arquitetura em camadas</strong>."
+      "part1": "Especializado em React e Next.js, construindo interfaces de alta performance com foco em acessibilidade e experiência do usuário.",
+      "part2": "Experiência com <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, integração frontend–backend em projetos <strong>Fullstack</strong>, modernização de sistemas web e aplicação de boas práticas como <strong>Clean Code</strong>, <strong>SRP</strong> e <strong>arquitetura em camadas</strong>."
     }
   },
   "notFound": {
@@ -31,12 +31,12 @@
       "frontendDevelopment": {
         "title": "Desenvolvimento Frontend",
         "label": "UI / UX",
-        "description": "Criação de interfaces modernas e responsivas utilizando as mais recentes tecnologias e melhores práticas do mercado."
+        "description": "Interfaces responsivas com React/Next.js, otimizadas para Core Web Vitals, com animações fluidas e foco em UX."
       },
       "backendIntegration": {
         "title": "APIs & Integração",
         "label": "Backend",
-        "description": "Desenvolvimento e integração de APIs REST com autenticação, validação e operações CRUD."
+        "description": "Integração frontend-backend com APIs REST, autenticação JWT, validação em camadas e tratamento consistente de erros."
       },
       "projectsFullstack": {
         "title": "Projetos Fullstack",
@@ -46,7 +46,7 @@
       "methodology": {
         "title": "Clean Code & Arquitetura",
         "label": "Boas Práticas",
-        "description": "Código organizado seguindo SRP, arquitetura em camadas e boas práticas de manutenção."
+        "description": "Código limpo e manutenível com SRP, componentes reutilizáveis e arquitetura escalável."
       },
       "performanceOptimization": {
         "title": "Performance Next.js",
@@ -135,15 +135,86 @@
           "dataDriven": "Conteúdo desacoplado e orientado a dados"
         }
       },
+      "billwise-dashboard": {
+        "status": {
+          "inDevelopment": "Em Desenvolvimento",
+          "completed": "Concluído",
+          "inMaintenance": "Em Manutenção"
+        },
+        "title": "BillWise Dashboard",
+        "description": "Plataforma Fullstack de gestão financeira pessoal com orçamentos, analytics e recorrências.",
+        "longDescription": "Reescrita completa do Account Management com Next.js 16 App Router, Prisma e Supabase Auth. Substitui a arquitetura SPA + Express por Server Components e Server Actions, adicionando orçamentos, analytics, notificações, recorrências e área administrativa.",
+        "highlights": {
+          "nextjs": "Next.js 16",
+          "prisma": "Prisma ORM",
+          "supabase": "Supabase Auth",
+          "serverActions": "Server Actions",
+          "inDevelopment": "Em Desenvolvimento"
+        },
+        "features": {
+          "auth": "Autenticação completa com Supabase Auth: cadastro, login, reset de senha e verificação de e-mail",
+          "dashboard": "Dashboard financeiro com resumo mensal e gráfico de receitas vs. despesas",
+          "budgets": "Orçamentos por categoria com barra de progresso e alertas visuais ao atingir o limite",
+          "analytics": "Analytics com evolução financeira por período e breakdown de gastos por categoria",
+          "recurrences": "Regras de cobrança recorrente com geração automática de contas mensais via cron job",
+          "notifications": "Centro de notificações com filtros por tipo: vencidas, prestes a vencer, orçamento excedido",
+          "admin": "Área administrativa com visão geral de usuários, protegida por RBAC (role admin)"
+        },
+        "architecture": {
+          "appRouter": "Next.js App Router com Server Components — elimina camada de API para a maioria das operações",
+          "serverActions": "Server Actions para todas as mutations, sem rotas de API manuais",
+          "prisma": "Prisma ORM com migrations versionadas, queries tipadas e transações atômicas",
+          "rbac": "RBAC com roles user e admin, guards server-side em cada route e action",
+          "cron": "Cron jobs via API route para geração de recorrências e processamento de vencimentos"
+        },
+        "outcome": {
+          "contextTitle": "Contexto",
+          "solutionTitle": "Solução",
+          "resultTitle": "Resultado",
+          "context": "O Account Management v1 era uma SPA React + Vite com backend Express serverless. Funcionou bem como projeto de referência, mas tinha limitações claras: sem ORM, sem server-side rendering, features básicas e arquitetura separada entre frontend e backend.",
+          "solution": "Reescrita completa com Next.js 16 App Router, Prisma 7 e Supabase Auth. A integração de Server Components e Server Actions eliminou a camada Express para a maioria das operações, enquanto o Prisma trouxe queries tipadas e migrations versionadas. O escopo foi expandido com orçamentos, analytics, notificações, recorrências e área admin.",
+          "result": "Projeto em desenvolvimento ativo com deploy previsto em breve. A nova arquitetura é significativamente mais manutenível, testável e escalável do que a v1."
+        }
+      },
+      "consulta-nfe-cte": {
+        "status": {
+          "inDevelopment": "Em Desenvolvimento",
+          "completed": "Concluído",
+          "inMaintenance": "Em Manutenção"
+        },
+        "title": "Consulta NF-e / CT-e",
+        "description": "Aplicativo desktop para consulta de NF-e/CT-e e upload de canhotos via API interna, sem necessidade de browser.",
+        "longDescription": "Desenvolvido para uso interno em uma transportadora, o sistema automatiza a consulta de associações NF-e → CT-e, renomeia canhotos via OCR e realiza uploads em lote — tudo a partir de um executável standalone gerado com PyInstaller.",
+        "highlights": {
+          "python": "Python",
+          "desktop": "App Desktop",
+          "ocr": "Tesseract OCR",
+          "excel": "Exportação Excel",
+          "completed": "Concluído"
+        },
+        "features": {
+          "login": "Login automático com e-mail e senha, sem abertura de browser",
+          "search": "Busca por intervalo de NF-e com tabela de status (Com CT-e / Sem CT-e / Não cadastrada)",
+          "ocr": "Detecção do número de NF-e em imagens via OCR e renomeação automática dos arquivos",
+          "upload": "Upload em lote de canhotos, ignorando NF-es fora do status PENDENTE",
+          "excel": "Exportação dos resultados para Excel e histórico de consultas restaurável"
+        },
+        "architecture": {
+          "threads": "Workers em threads separadas para OCR, renomeação e upload (UI nunca bloqueia)",
+          "keyring": "Credenciais armazenadas com segurança via Windows Credential Manager (keyring)",
+          "env": "Configuração por variáveis de ambiente (.env) para portabilidade entre empresas",
+          "build": "Build distribuível com PyInstaller gerando executável standalone (.exe)"
+        }
+      },
       "account-management": {
         "status": {
           "inDevelopment": "Em Desenvolvimento",
           "completed": "Concluído",
           "inMaintenance": "Em Manutenção"
         },
-        "title": "Account Management",
-        "description": "Sistema fullstack para gerenciamento de contas financeiras.",
-        "longDescription": "Projeto fullstack com autenticação, CRUD completo, integração frontend-backend e arquitetura em camadas.",
+        "title": "Account Management — v1",
+        "description": "Versão 1 do sistema de gestão financeira. SPA React + Vite com backend Express serverless e autenticação JWT.",
+        "longDescription": "Projeto Fullstack com autenticação JWT, CRUD completo de contas, Dashboard financeiro e arquitetura em camadas. Serviu como base para o BillWise Dashboard (v2), uma reescrita completa com Next.js 16, Prisma e Supabase Auth.",
         "highlights": {
           "react": "React",
           "clean": "Arquitetura Limpa",
@@ -169,9 +240,9 @@
           "contextTitle": "Contexto",
           "solutionTitle": "Solução",
           "resultTitle": "Resultado",
-          "context": "Sempre gostei de trabalhar com dashboards e gestão de dados. Já utilizava Power BI e Excel para esse tipo de controle, mas queria ir além das ferramentas prontas. Usei as despesas reais de casa como cenário para criar uma solução própria, totalmente programada.",
-          "solution": "Desenvolvi uma aplicação fullstack focada em visualização e gestão de dados financeiros, criando meus próprios componentes de dashboard, sem depender de bibliotecas prontas. A aplicação foi pensada para clareza, reutilização e performance.",
-          "result": "Após publicar a demo, disponibilizei o sistema para familiares utilizarem no dia a dia e coletarem feedback real. Com isso, evoluí a experiência do usuário, organização dos dados e fluxos da aplicação."
+          "context": "Trabalhei com Power BI e Excel para controle de dados antes de desenvolver esta solução. O objetivo era ir além das ferramentas prontas e construir um sistema próprio — usando as despesas reais de casa como cenário concreto para aplicar as tecnologias que estava aprendendo.",
+          "solution": "Desenvolvi uma aplicação Fullstack focada em visualização e gestão financeira, criando componentes de Dashboard próprios sem dependência de bibliotecas externas. A arquitetura priorizou clareza, reutilização e performance.",
+          "result": "Após publicar a demo, disponibilizei o sistema para familiares utilizarem e coletar feedback real. A experiência expôs as limitações da arquitetura SPA + Express, o que motivou a reescrita completa no BillWise Dashboard (v2) com Next.js 16, Prisma e Supabase Auth."
         }
       }
     }
@@ -200,7 +271,7 @@
       "crea-sp": {
         "place": "CREA-SP – Conselho Regional de Engenharia e Agronomia do Estado de São Paulo",
         "position": "Estagiário",
-        "period": "Jun/2025 - Dez/2025",
+        "period": "Jun/2025 – Dez/2025",
         "responsibilities": {
           "modernization": "Atuação na modernização incremental de sistema web institucional de grande porte",
           "components": "Desenvolvimento de páginas e componentes com TypeScript, Tailwind CSS e Vite",
@@ -226,7 +297,7 @@
         },
         "message": {
           "noneEmpty": "Mensagem é necessária",
-          "min": "A mensagem deve ser maior que 20 caracteres",
+          "min": "A mensagem deve ter pelo menos 20 caracteres",
           "max": "A mensagem deve ter menos de 250 caracteres"
         }
       },

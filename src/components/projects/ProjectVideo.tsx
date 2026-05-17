@@ -14,7 +14,7 @@ export function ProjectVideo({ src }: ProjectVideoProps) {
         <video
           src={src}
           controls
-          preload="metadata"
+          preload="none"
           playsInline
           className="h-full w-full object-contain"
         >
