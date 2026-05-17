@@ -15,8 +15,8 @@
   "home": {
     "head": "Frontend Developer",
     "description": {
-      "part1": "Frontend Developer focused on building modern, responsive, and well-structured interfaces.",
-      "part2": "Experience with <strong>Next.js</strong>, <strong>React</strong>, and <strong>TypeScript</strong>, frontend–backend integration in <strong>fullstack</strong> projects, web system modernization, and applying best practices such as <strong>Clean Code</strong>, <strong>SRP</strong>, and <strong>layered architecture</strong>."
+      "part1": "Specializing in React and Next.js, building high-performance interfaces focused on accessibility and user experience.",
+      "part2": "Experience with <strong>Next.js</strong>, <strong>React</strong>, and <strong>TypeScript</strong>, frontend–backend integration in <strong>Fullstack</strong> projects, web system modernization, and applying best practices such as <strong>Clean Code</strong>, <strong>SRP</strong>, and <strong>layered architecture</strong>."
     }
   },
   "notFound": {
@@ -31,12 +31,12 @@
       "frontendDevelopment": {
         "title": "Frontend Development",
         "label": "UI / UX",
-        "description": "Creating modern and responsive interfaces using the latest technologies and best market practices."
+        "description": "Responsive interfaces built with React/Next.js, optimized for Core Web Vitals, with fluid animations and a focus on UX."
       },
       "backendIntegration": {
         "title": "APIs & Integration",
         "label": "Backend",
-        "description": "Development and integration of REST APIs with authentication, validation, and CRUD operations."
+        "description": "Frontend-backend integration with REST APIs, JWT authentication, layered validation, and consistent error handling."
       },
       "projectsFullstack": {
         "title": "Fullstack Projects",
@@ -46,7 +46,7 @@
       "methodology": {
         "title": "Clean Code & Architecture",
         "label": "Best Practices",
-        "description": "Organized code following SRP, layered architecture, and maintainability best practices."
+        "description": "Clean and maintainable code applying SRP, reusable components, and scalable architecture."
       },
       "performanceOptimization": {
         "title": "Next.js Performance",
@@ -153,7 +153,7 @@
         },
         "features": {
           "auth": "User authentication with JWT",
-          "dashboard": "Financial dashboard with interactive charts",
+          "dashboard": "Financial Dashboard with interactive charts",
           "crud": "Accounts CRUD with pagination and filters",
           "theme": "Light and Dark theme support",
           "mobile": "Mobile-first experience"
@@ -169,24 +169,24 @@
           "contextTitle": "Context",
           "solutionTitle": "Solution",
           "resultTitle": "Result",
-          "context": "I have always enjoyed working with dashboards and data management. I previously used Power BI and Excel for this purpose, but wanted to go beyond ready-made tools. I used real household expenses as a real-world scenario to build a fully coded solution.",
-          "solution": "I developed a fullstack application focused on financial data visualization and management, building custom dashboard components without relying on UI libraries. The solution was designed for clarity, reusability, and performance.",
-          "result": "After publishing the demo, I allowed family members to use the system in their daily routine and collect real user feedback. This led to improvements in UX, data organization, and application flow."
+          "context": "I worked with Power BI and Excel for data tracking before building this solution. The goal was to go beyond ready-made tools and build a fully coded system — using real household expenses as a concrete scenario to apply the technologies I was learning.",
+          "solution": "I developed a Fullstack application focused on financial data visualization and management, building custom Dashboard components without relying on external UI libraries. The architecture prioritized clarity, reusability, and performance.",
+          "result": "After publishing the demo, I made the system available for family members to use daily and collect real feedback. This led to improvements in UX, data organization, and application flow."
         }
       }
     }
   },
   "cta": {
     "title": "Ready to build something solid?",
-    "description": "If you like how I design, structure, and build applications, let’s talk about how I can help with your next project.",
+    "description": "If you like how I design, structure, and build applications, let's talk about how I can help with your next project.",
     "primary": "Contact me"
   },
   "about": {
     "title": "Hi, I'm Guilherme",
     "text": {
-      "part1": "I’m a <strong>Frontend Developer</strong> focused on <strong>Next.js</strong>, <strong>React</strong> and <strong>TypeScript</strong>, building clear, performant, and well-structured interfaces.",
+      "part1": "I'm a <strong>Frontend Developer</strong> focused on <strong>Next.js</strong>, <strong>React</strong> and <strong>TypeScript</strong>, building clear, performant, and well-structured interfaces.",
       "part2": "I like to think about <strong>architecture</strong>, <strong>accessibility</strong>, and <strong>user experience</strong> from the very first component.",
-      "part3": "I have an organized mindset, clear communication, and I’m constantly evolving, applying <strong>best practices</strong> and attention to detail in every project."
+      "part3": "I have an organized mindset, clear communication, and I'm constantly evolving, applying <strong>best practices</strong> and attention to detail in every project."
     },
     "stacks": "My Stacks",
     "categories": {
@@ -216,7 +216,7 @@
   "contact": {
     "title": "Contact",
     "mail": "Email",
-    "text": "Want to talk about an opportunity, project, or idea? Feel free to reach out — I’ll get back to you as soon as possible.",
+    "text": "Want to talk about an opportunity, project, or idea? Feel free to reach out — I'll get back to you as soon as possible.",
     "form": {
       "schema": {
         "name": "Name is required",
