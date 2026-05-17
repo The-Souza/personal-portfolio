@@ -41,7 +41,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
           <Image
             src={project.media.previewImage}
             alt={t(project.titleKey)}
-            loading="eager"
+            loading="lazy"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover object-top"
