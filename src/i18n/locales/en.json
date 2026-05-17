@@ -135,6 +135,47 @@
           "dataDriven": "Decoupled, data-driven content architecture"
         }
       },
+      "billwise-dashboard": {
+        "status": {
+          "inDevelopment": "In Development",
+          "completed": "Completed",
+          "inMaintenance": "In Maintenance"
+        },
+        "title": "BillWise Dashboard",
+        "description": "Fullstack personal finance platform with budgets, analytics, and recurring transactions.",
+        "longDescription": "A complete rewrite of Account Management using Next.js 16 App Router, Prisma, and Supabase Auth. Replaces the SPA + Express architecture with Server Components and Server Actions, adding budgets, analytics, notifications, recurrences, and an admin area.",
+        "highlights": {
+          "nextjs": "Next.js 16",
+          "prisma": "Prisma ORM",
+          "supabase": "Supabase Auth",
+          "serverActions": "Server Actions",
+          "inDevelopment": "In Development"
+        },
+        "features": {
+          "auth": "Full authentication with Supabase Auth: sign-up, login, password reset, and email verification",
+          "dashboard": "Financial dashboard with monthly summary and revenue vs. expenses chart",
+          "budgets": "Category budgets with progress bars and visual alerts when limits are reached",
+          "analytics": "Analytics with financial evolution over time and spending breakdown by category",
+          "recurrences": "Recurring billing rules with automatic monthly account generation via cron job",
+          "notifications": "Notification center with filters by type: overdue, due soon, budget exceeded",
+          "admin": "Admin area with user overview, protected by RBAC (admin role)"
+        },
+        "architecture": {
+          "appRouter": "Next.js App Router with Server Components — eliminates the API layer for most operations",
+          "serverActions": "Server Actions for all mutations, no manual API routes needed",
+          "prisma": "Prisma ORM with versioned migrations, typed queries, and atomic transactions",
+          "rbac": "RBAC with user and admin roles, server-side guards on every route and action",
+          "cron": "Cron jobs via API route for generating recurrences and processing due dates"
+        },
+        "outcome": {
+          "contextTitle": "Context",
+          "solutionTitle": "Solution",
+          "resultTitle": "Result",
+          "context": "Account Management v1 was a React + Vite SPA with a serverless Express backend. It worked well as a reference project, but had clear limitations: no ORM, no server-side rendering, basic features, and a split frontend/backend architecture.",
+          "solution": "A full rewrite using Next.js 16 App Router, Prisma 7, and Supabase Auth. The integration of Server Components and Server Actions eliminated the Express layer for most operations, while Prisma brought typed queries and versioned migrations. The scope was expanded with budgets, analytics, notifications, recurrences, and an admin area.",
+          "result": "The project is in active development with a deployment coming soon. The new architecture is significantly more maintainable, testable, and scalable than v1."
+        }
+      },
       "consulta-nfe-cte": {
         "status": {
           "inDevelopment": "In Development",
@@ -171,9 +212,9 @@
           "completed": "Completed",
           "inMaintenance": "In Maintenance"
         },
-        "title": "Account Management",
-        "description": "Fullstack system for financial account management.",
-        "longDescription": "Fullstack project with authentication, complete CRUD, frontend-backend integration and layered architecture.",
+        "title": "Account Management — v1",
+        "description": "Version 1 of the financial management system. React + Vite SPA with serverless Express backend and JWT authentication.",
+        "longDescription": "Fullstack project with JWT authentication, complete accounts CRUD, financial Dashboard, and layered architecture. Served as the foundation for BillWise Dashboard (v2), a full rewrite using Next.js 16, Prisma, and Supabase Auth.",
         "highlights": {
           "react": "React",
           "clean": "Clean Architecture",
@@ -201,7 +242,7 @@
           "resultTitle": "Result",
           "context": "I worked with Power BI and Excel for data tracking before building this solution. The goal was to go beyond ready-made tools and build a fully coded system — using real household expenses as a concrete scenario to apply the technologies I was learning.",
           "solution": "I developed a Fullstack application focused on financial data visualization and management, building custom Dashboard components without relying on external UI libraries. The architecture prioritized clarity, reusability, and performance.",
-          "result": "After publishing the demo, I made the system available for family members to use daily and collect real feedback. This led to improvements in UX, data organization, and application flow."
+          "result": "After publishing the demo, I made the system available for family members to collect real feedback. The experience exposed the limitations of the SPA + Express architecture, which motivated the full rewrite into BillWise Dashboard (v2) using Next.js 16, Prisma, and Supabase Auth."
         }
       }
     }
