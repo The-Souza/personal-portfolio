@@ -9,9 +9,12 @@ import { Github, Linkedin, FileText, Briefcase } from "lucide-react";
 import { BlurFade } from "@/components/effects/blur-fade";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Trans, useTranslation } from "react-i18next";
+import { useCvPath } from "@/hooks/use-cv-path";
+import { socialLinks } from "@/constants/social-links";
 
 export function HeroSection() {
   const { t, i18n } = useTranslation();
+  const cvPath = useCvPath();
   const Highlight = <span className="text-primary font-semibold" />;
 
   return (
@@ -61,7 +64,7 @@ export function HeroSection() {
         <div className="flex flex-wrap justify-center xl:justify-start gap-4 pt-4">
           <Button asChild>
             <Link
-              href="https://linkedin.com/in/guilherme-campos-frontend"
+              href={socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
@@ -73,7 +76,7 @@ export function HeroSection() {
 
           <Button asChild>
             <Link
-              href="https://github.com/The-Souza"
+              href={socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
@@ -95,11 +98,7 @@ export function HeroSection() {
 
           <Button asChild variant="secondary">
             <Link
-              href={
-                i18n.language === "pt"
-                  ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
-                  : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
-              }
+              href={cvPath}
               prefetch={false}
               target="_blank"
               rel="noopener noreferrer"
