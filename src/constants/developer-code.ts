@@ -14,7 +14,7 @@ export const developerCode: Record<SupportedLocale, string> = {
 const developer: Developer = {
   name: 'Guilherme Campos',
   role: 'Frontend Developer',
-  stack: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
+  stack: ['Next.js', 'React', 'TypeScript', 'Prisma', 'Supabase'],
   principles: ['Clean Code', 'SRP', 'Acessibilidade por padrão'],
   mindset: 'Interfaces claras para usuários, código claro para devs',
   focus: ['UI/UX', 'Performance', 'Manutenibilidade'],
@@ -34,7 +34,7 @@ const developer: Developer = {
 const developer: Developer = {
   name: 'Guilherme Campos',
   role: 'Frontend Developer',
-  stack: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
+  stack: ['Next.js', 'React', 'TypeScript', 'Prisma', 'Supabase'],
   principles: ['Clean Code', 'SRP', 'Accessibility by default'],
   mindset: 'Clear interfaces for users, clean code for developers',
   focus: ['UI/UX', 'Performance', 'Maintainability'],
