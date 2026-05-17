@@ -4,7 +4,7 @@ import { IntroProvider } from "@/providers/IntroProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileSidebar } from "@/components/layout/MobileSideBar";
-import { Background } from "@/components/layout/Backgound";
+import { Background } from "@/components/layout/Background";
 import { IntroGate } from "@/components/layout/IntroGate";
 import { Separator } from "@/components/ui/separator";
 import { SidebarProvider } from "@/components/ui/sidebar";
