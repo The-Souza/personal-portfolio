@@ -135,6 +135,36 @@
           "dataDriven": "Conteúdo desacoplado e orientado a dados"
         }
       },
+      "consulta-nfe-cte": {
+        "status": {
+          "inDevelopment": "Em Desenvolvimento",
+          "completed": "Concluído",
+          "inMaintenance": "Em Manutenção"
+        },
+        "title": "Consulta NF-e / CT-e",
+        "description": "Aplicativo desktop para consulta de NF-e/CT-e e upload de canhotos via API interna, sem necessidade de browser.",
+        "longDescription": "Desenvolvido para uso interno em uma transportadora, o sistema automatiza a consulta de associações NF-e → CT-e, renomeia canhotos via OCR e realiza uploads em lote — tudo a partir de um executável standalone gerado com PyInstaller.",
+        "highlights": {
+          "python": "Python",
+          "desktop": "App Desktop",
+          "ocr": "Tesseract OCR",
+          "excel": "Exportação Excel",
+          "completed": "Concluído"
+        },
+        "features": {
+          "login": "Login automático com e-mail e senha, sem abertura de browser",
+          "search": "Busca por intervalo de NF-e com tabela de status (Com CT-e / Sem CT-e / Não cadastrada)",
+          "ocr": "Detecção do número de NF-e em imagens via OCR e renomeação automática dos arquivos",
+          "upload": "Upload em lote de canhotos, ignorando NF-es fora do status PENDENTE",
+          "excel": "Exportação dos resultados para Excel e histórico de consultas restaurável"
+        },
+        "architecture": {
+          "threads": "Workers em threads separadas para OCR, renomeação e upload (UI nunca bloqueia)",
+          "keyring": "Credenciais armazenadas com segurança via Windows Credential Manager (keyring)",
+          "env": "Configuração por variáveis de ambiente (.env) para portabilidade entre empresas",
+          "build": "Build distribuível com PyInstaller gerando executável standalone (.exe)"
+        }
+      },
       "account-management": {
         "status": {
           "inDevelopment": "Em Desenvolvimento",
