@@ -9,6 +9,7 @@ import {
   NodeJsIcon,
   PrismaIcon,
   PostgreSQLIcon,
+  SupabaseIcon,
   GitIcon,
   GitHubIcon,
   EslintIcon,
@@ -67,6 +68,10 @@ export const STACKS = {
       name: "PostgreSQL",
       icon: PostgreSQLIcon,
     },
+    supabase: {
+      name: "Supabase",
+      icon: SupabaseIcon,
+    },
   },
   tools: {
     git: {
@@ -89,7 +94,7 @@ export const STACKS = {
       name: "npm",
       icon: NpmIcon,
     },
-    Insomnia: {
+    insomnia: {
       name: "Insomnia",
       icon: InsomniaIcon,
     },

@@ -14,3 +14,4 @@ export { EslintIcon } from "./EslintIcon";
 export { VercelIcon } from "./VercelIcon";
 export { NpmIcon } from "./NpmIcon";
 export { InsomniaIcon } from "./InsomniaIcon";
+export { SupabaseIcon } from "./SupabaseIcon";
