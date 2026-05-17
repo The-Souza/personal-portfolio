@@ -21,12 +21,14 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useLanguage } from "@/hooks/use-language";
+import { useCvPath } from "@/hooks/use-cv-path";
 
 export function Header() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { toggleSidebar } = useSidebar();
   const pathname = usePathname();
   const { language, toggleLanguage } = useLanguage();
+  const cvPath = useCvPath();
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full h-17.5 px-6 py-4 backdrop-blur-md border-b border-border">
@@ -110,11 +112,7 @@ export function Header() {
 
           <Button asChild>
             <Link
-              href={
-                i18n.language === "pt"
-                  ? "/doc/Guilherme_Campos_Frontend_Jr.pdf"
-                  : "/doc/Guilherme_Campos_Frontend_Jr_En.pdf"
-              }
+              href={cvPath}
               prefetch={false}
               className="hover:scale-105 transition-transform active:scale-[0.97]"
               download
