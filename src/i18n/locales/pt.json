@@ -15,8 +15,8 @@
   "home": {
     "head": "Desenvolvedor Frontend",
     "description": {
-      "part1": "Desenvolvedor Frontend com foco em interfaces modernas, responsivas e bem estruturadas.",
-      "part2": "Experiência com <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, integração frontend–backend em projetos <strong>fullstack</strong>, modernização de sistemas web e aplicação de boas práticas como <strong>Clean Code</strong>, <strong>SRP</strong> e <strong>arquitetura em camadas</strong>."
+      "part1": "Especializado em React e Next.js, construindo interfaces de alta performance com foco em acessibilidade e experiência do usuário.",
+      "part2": "Experiência com <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, integração frontend–backend em projetos <strong>Fullstack</strong>, modernização de sistemas web e aplicação de boas práticas como <strong>Clean Code</strong>, <strong>SRP</strong> e <strong>arquitetura em camadas</strong>."
     }
   },
   "notFound": {
@@ -31,12 +31,12 @@
       "frontendDevelopment": {
         "title": "Desenvolvimento Frontend",
         "label": "UI / UX",
-        "description": "Criação de interfaces modernas e responsivas utilizando as mais recentes tecnologias e melhores práticas do mercado."
+        "description": "Interfaces responsivas com React/Next.js, otimizadas para Core Web Vitals, com animações fluidas e foco em UX."
       },
       "backendIntegration": {
         "title": "APIs & Integração",
         "label": "Backend",
-        "description": "Desenvolvimento e integração de APIs REST com autenticação, validação e operações CRUD."
+        "description": "Integração frontend-backend com APIs REST, autenticação JWT, validação em camadas e tratamento consistente de erros."
       },
       "projectsFullstack": {
         "title": "Projetos Fullstack",
@@ -46,7 +46,7 @@
       "methodology": {
         "title": "Clean Code & Arquitetura",
         "label": "Boas Práticas",
-        "description": "Código organizado seguindo SRP, arquitetura em camadas e boas práticas de manutenção."
+        "description": "Código limpo e manutenível com SRP, componentes reutilizáveis e arquitetura escalável."
       },
       "performanceOptimization": {
         "title": "Performance Next.js",
@@ -142,8 +142,8 @@
           "inMaintenance": "Em Manutenção"
         },
         "title": "Account Management",
-        "description": "Sistema fullstack para gerenciamento de contas financeiras.",
-        "longDescription": "Projeto fullstack com autenticação, CRUD completo, integração frontend-backend e arquitetura em camadas.",
+        "description": "Sistema Fullstack para gerenciamento de contas financeiras.",
+        "longDescription": "Projeto Fullstack com autenticação, CRUD completo, integração frontend-backend e arquitetura em camadas.",
         "highlights": {
           "react": "React",
           "clean": "Arquitetura Limpa",
@@ -169,8 +169,8 @@
           "contextTitle": "Contexto",
           "solutionTitle": "Solução",
           "resultTitle": "Resultado",
-          "context": "Sempre gostei de trabalhar com dashboards e gestão de dados. Já utilizava Power BI e Excel para esse tipo de controle, mas queria ir além das ferramentas prontas. Usei as despesas reais de casa como cenário para criar uma solução própria, totalmente programada.",
-          "solution": "Desenvolvi uma aplicação fullstack focada em visualização e gestão de dados financeiros, criando meus próprios componentes de dashboard, sem depender de bibliotecas prontas. A aplicação foi pensada para clareza, reutilização e performance.",
+          "context": "Trabalhei com Power BI e Excel para controle de dados antes de desenvolver esta solução. O objetivo era ir além das ferramentas prontas e construir um sistema próprio — usando as despesas reais de casa como cenário concreto para aplicar as tecnologias que estava aprendendo.",
+          "solution": "Desenvolvi uma aplicação Fullstack focada em visualização e gestão financeira, criando componentes de Dashboard próprios sem dependência de bibliotecas externas. A arquitetura priorizou clareza, reutilização e performance.",
           "result": "Após publicar a demo, disponibilizei o sistema para familiares utilizarem no dia a dia e coletarem feedback real. Com isso, evoluí a experiência do usuário, organização dos dados e fluxos da aplicação."
         }
       }
@@ -200,7 +200,7 @@
       "crea-sp": {
         "place": "CREA-SP – Conselho Regional de Engenharia e Agronomia do Estado de São Paulo",
         "position": "Estagiário",
-        "period": "Jun/2025 - Dez/2025",
+        "period": "Jun/2025 – Dez/2025",
         "responsibilities": {
           "modernization": "Atuação na modernização incremental de sistema web institucional de grande porte",
           "components": "Desenvolvimento de páginas e componentes com TypeScript, Tailwind CSS e Vite",
@@ -226,7 +226,7 @@
         },
         "message": {
           "noneEmpty": "Mensagem é necessária",
-          "min": "A mensagem deve ser maior que 20 caracteres",
+          "min": "A mensagem deve ter pelo menos 20 caracteres",
           "max": "A mensagem deve ter menos de 250 caracteres"
         }
       },
