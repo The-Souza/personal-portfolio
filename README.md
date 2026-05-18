@@ -26,18 +26,21 @@ https://guilherme-personal-portfolio.vercel.app
 - 🌗 Dark / Light theme toggle
 - 🎬 Project demos with videos and detailed case studies
 - 📄 Downloadable CV (PT / EN)
+- 🐍 Python automation scripts (OCR, batch processing, internal API integration)
 
 ---
 
 ## 🧱 Tech Stack
 
-- **Framework:** Next.js 14+
+- **Framework:** Next.js 15+
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **UI Components:** shadcn/ui, react-bits
 - **Icons:** Lucide React
 - **Animations:** Custom effects & motion utilities
 - **Internationalization:** react-i18next
+- **Database / Auth:** Prisma, Supabase
+- **Automation:** Python
 - **Deployment:** Vercel
 
 ---
@@ -52,9 +55,9 @@ src/
 ├── hooks/          # Custom React hooks
 ├── i18n/           # Internationalization config and locales
 ├── icons/          # Custom SVG icon components
+├── lib/            # Shared utilities and helpers
 ├── providers/      # Global providers (Theme, i18n, Intro)
 ├── schema/         # Validation schemas
-├── utils/          # Helper functions
 
 public/
 ├── doc/            # CV files (PT / EN)
