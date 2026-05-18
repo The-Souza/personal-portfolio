@@ -11,6 +11,7 @@ import { GlassCard } from "@/components/ui/glass-card";
 import { Trans, useTranslation } from "react-i18next";
 import { useCvPath } from "@/hooks/use-cv-path";
 import { socialLinks } from "@/constants/social-links";
+import { STACKS } from "@/constants/stacks";
 
 export function HeroSection() {
   const { t, i18n } = useTranslation();
@@ -34,7 +35,14 @@ export function HeroSection() {
 
         {/* STACKS */}
         <div className="flex flex-wrap justify-center xl:justify-start gap-2">
-          {["Next.js","React", "TypeScript", "Tailwind CSS"].map((tech) => (
+          {[
+            STACKS.frontend.nextjs.name,
+            STACKS.frontend.react.name,
+            STACKS.frontend.typescript.name,
+            STACKS.frontend.tailwind.name,
+            STACKS.backend.prisma.name,
+            STACKS.database.supabase.name,
+          ].map((tech) => (
             <Badge
               key={tech}
               variant="outline"

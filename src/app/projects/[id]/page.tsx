@@ -4,10 +4,10 @@ import { projects } from "@/constants/projects";
 import {
   ProjectHero,
   ProjectDetails,
-  ProjectVideo,
   ProjectOutcome,
   ProjectNavigation,
-} from "@/components/projects";
+} from "../_components";
+import { ProjectVideo } from "@/components/projects/ProjectVideo";
 
 interface ProjectPageProps {
   params: Promise<{

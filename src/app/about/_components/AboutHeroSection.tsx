@@ -5,11 +5,11 @@ import {
   CodeBlock,
   CodeHeader,
 } from "@/components/animate-ui/components/animate/code";
+import { TextAnimate } from "@/components/effects/text-animate";
 import { GlassCard } from "@/components/ui/glass-card";
 import { developerCode } from "@/constants/developer-code";
-import { Trans, useTranslation } from "react-i18next";
-import { TextAnimate } from "@/components/effects/text-animate";
 import { TypeScriptIcon } from "@/icons/TypeScriptIcon";
+import { Trans, useTranslation } from "react-i18next";
 
 export function AboutHeroSection() {
   const { i18n, t } = useTranslation("translation");
@@ -49,7 +49,7 @@ export function AboutHeroSection() {
 
       {/* RIGHT — TERMINAL */}
       <Code
-        className="w-full h-113.5 transition-all duration-300 ease-out hover:border-primary shadow-md hover:shadow-primary"
+        className="w-full h-auto transition-all duration-300 ease-out hover:border-primary shadow-md hover:shadow-primary"
         code={developerCode[locale]}
       >
         <CodeHeader icon={TypeScriptIcon}>developer.ts</CodeHeader>

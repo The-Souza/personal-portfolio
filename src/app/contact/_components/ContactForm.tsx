@@ -28,7 +28,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import * as z from "zod";
-import { sendContactEmail } from "./actions";
+import { sendContactEmail } from "../actions";
 
 type FormValues = {
   name: string;

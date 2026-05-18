@@ -1,5 +1,6 @@
 "use client";
 
+import { ProjectContentTabs } from "@/components/projects/ProjectContentTabs";
 import {
   Dialog,
   DialogContent,
@@ -7,7 +8,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Project } from "@/constants/projects/types";
-import { ProjectContentTabs } from "@/components/projects";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 interface FeaturedProjectModalProps {
@@ -25,9 +25,7 @@ export function FeaturedProjectModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent
-        className="w-[90vw] max-w-5xl max-h-[70vh] sm:max-h-[90vh] flex flex-col"
-      >
+      <DialogContent className="w-[90vw] max-w-5xl max-h-[70vh] sm:max-h-[90vh] flex flex-col">
         <VisuallyHidden>
           <DialogTitle />
           <DialogDescription />

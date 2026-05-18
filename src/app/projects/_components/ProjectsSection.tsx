@@ -1,7 +1,7 @@
 "use client";
 
 import { projects } from "@/constants/projects";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "@/components/projects/ProjectCard";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/navigation";
 import { TextAnimate } from "@/components/effects/text-animate";

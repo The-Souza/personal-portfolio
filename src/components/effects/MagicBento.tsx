@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState, useCallback } from "react";
 import { BentoItem } from "@/constants/service-data";
 import { gsap } from "gsap";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 interface BentoInteractiveCardProps {
   className?: string;
@@ -59,8 +59,15 @@ function BentoInteractiveCard({
 
     const handleMouseLeave = () => {
       if (shouldDisableAnimations) return;
-      if (enableTilt) gsap.to(el, { rotateX: 0, rotateY: 0, duration: 0.3, ease: "power2.out" });
-      if (enableMagnetism) gsap.to(el, { x: 0, y: 0, duration: 0.3, ease: "power2.out" });
+      if (enableTilt)
+        gsap.to(el, {
+          rotateX: 0,
+          rotateY: 0,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      if (enableMagnetism)
+        gsap.to(el, { x: 0, y: 0, duration: 0.3, ease: "power2.out" });
     };
 
     const handleClick = (e: MouseEvent) => {
@@ -72,7 +79,7 @@ function BentoInteractiveCard({
         Math.hypot(x, y),
         Math.hypot(x - rect.width, y),
         Math.hypot(x, y - rect.height),
-        Math.hypot(x - rect.width, y - rect.height)
+        Math.hypot(x - rect.width, y - rect.height),
       );
       const ripple = document.createElement("div");
       ripple.style.cssText = `
@@ -90,7 +97,13 @@ function BentoInteractiveCard({
       gsap.fromTo(
         ripple,
         { scale: 0, opacity: 1 },
-        { scale: 1, opacity: 0, duration: 0.8, ease: "power2.out", onComplete: () => ripple.remove() }
+        {
+          scale: 1,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          onComplete: () => ripple.remove(),
+        },
       );
     };
 
@@ -103,7 +116,13 @@ function BentoInteractiveCard({
       el.removeEventListener("mouseleave", handleMouseLeave);
       el.removeEventListener("click", handleClick);
     };
-  }, [enableTilt, enableMagnetism, clickEffect, glowColor, shouldDisableAnimations]);
+  }, [
+    enableTilt,
+    enableMagnetism,
+    clickEffect,
+    glowColor,
+    shouldDisableAnimations,
+  ]);
 
   return (
     <div ref={ref} className={className} style={style}>
@@ -144,7 +163,7 @@ const MOBILE_BREAKPOINT = 768;
 const createParticleElement = (
   x: number,
   y: number,
-  color: string = DEFAULT_GLOW_COLOR
+  color: string = DEFAULT_GLOW_COLOR,
 ): HTMLDivElement => {
   const el = document.createElement("div");
   el.className = "particle";
@@ -173,7 +192,7 @@ const updateCardGlowProperties = (
   mouseX: number,
   mouseY: number,
   glow: number,
-  radius: number
+  radius: number,
 ) => {
   const rect = card.getBoundingClientRect();
   const relativeX = ((mouseX - rect.left) / rect.width) * 100;
@@ -222,8 +241,8 @@ const ParticleCard: React.FC<{
       createParticleElement(
         Math.random() * width,
         Math.random() * height,
-        glowColor
-      )
+        glowColor,
+      ),
     );
     particlesInitialized.current = true;
   }, [particleCount, glowColor]);
@@ -265,7 +284,7 @@ const ParticleCard: React.FC<{
         gsap.fromTo(
           clone,
           { scale: 0, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.7)" }
+          { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.7)" },
         );
 
         gsap.to(clone, {
@@ -380,7 +399,7 @@ const ParticleCard: React.FC<{
         Math.hypot(x, y),
         Math.hypot(x - rect.width, y),
         Math.hypot(x, y - rect.height),
-        Math.hypot(x - rect.width, y - rect.height)
+        Math.hypot(x - rect.width, y - rect.height),
       );
 
       const ripple = document.createElement("div");
@@ -410,7 +429,7 @@ const ParticleCard: React.FC<{
           duration: 0.8,
           ease: "power2.out",
           onComplete: () => ripple.remove(),
-        }
+        },
       );
     };
 
@@ -547,7 +566,7 @@ const GlobalSpotlight: React.FC<{
           e.clientX,
           e.clientY,
           glowIntensity,
-          spotlightRadius
+          spotlightRadius,
         );
       });
 
@@ -728,6 +747,15 @@ const MagicBento: React.FC<BentoProps> = ({
             overflow: hidden;
             text-overflow: ellipsis;
           }
+
+          .text-clamp-4 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
         `}
       </style>
 
@@ -782,7 +810,7 @@ const MagicBento: React.FC<BentoProps> = ({
                       {card.titleKey}
                     </h3>
                     <p
-                      className={`card__description text-xs lg:text-sm leading-relaxed text-muted-foreground ${textAutoHide ? "text-clamp-3" : ""}`}
+                      className={`card__description text-xs lg:text-sm leading-relaxed text-muted-foreground text-clamp-4`}
                     >
                       {card.descriptionKey}
                     </p>
@@ -815,7 +843,7 @@ const MagicBento: React.FC<BentoProps> = ({
                     {card.titleKey}
                   </h3>
                   <p
-                    className={`card__description text-xs lg:text-sm leading-relaxed ${textAutoHide ? "text-clamp-3" : ""}`}
+                    className={`card__description text-xs lg:text-sm leading-relaxed ${textAutoHide ? "text-clamp-4" : ""}`}
                   >
                     {card.descriptionKey}
                   </p>

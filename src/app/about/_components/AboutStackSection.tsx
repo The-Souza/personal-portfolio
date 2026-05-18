@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import { SectionHeader } from "@/components/section/SectionHeader";
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CATEGORY_META } from "@/constants/stack-category";
 import { STACKS } from "@/constants/stacks";
 import { useTranslation } from "react-i18next";
@@ -18,7 +18,7 @@ export function AboutStackSection() {
     <section className="w-full py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader title={t("about.stacks")} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 z-1 w-full lg:w-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 z-1 w-full lg:w-auto">
         {entries.map(([category, stacks]) => {
           const meta = CATEGORY_META[category];
 
