@@ -57,6 +57,11 @@
         "title": "Integração de Sistemas",
         "label": "Integração",
         "description": "Integração entre sistemas internos e externos, garantindo consistência e confiabilidade."
+      },
+      "automation": {
+        "title": "Automação com Python",
+        "label": "Python",
+        "description": "Scripts de automação para processamento em lote, OCR, manipulação de arquivos e integração com APIs internas — entregues como executável standalone ou acoplados a uma interface web."
       }
     }
   },
@@ -264,7 +269,8 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "database": "Banco de Dados",
-      "tools": "Ferramentas"
+      "tools": "Ferramentas",
+      "automation": "Automação"
     },
     "experience": {
       "title": "Minhas Experiências",
