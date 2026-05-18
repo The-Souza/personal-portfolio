@@ -12,6 +12,12 @@ export const consultaNfeCteProject: Project = {
   role: "Desktop",
   status: "completed",
 
+  outcome: {
+    context: "projects.data.consulta-nfe-cte.outcome.context",
+    solution: "projects.data.consulta-nfe-cte.outcome.solution",
+    result: "projects.data.consulta-nfe-cte.outcome.result",
+  },
+
   highlights: [
     "projects.data.consulta-nfe-cte.highlights.python",
     "projects.data.consulta-nfe-cte.highlights.desktop",
