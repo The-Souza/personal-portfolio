@@ -188,6 +188,14 @@
           "inMaintenance": "Em Manutenção"
         },
         "title": "Consulta NF-e / CT-e",
+        "outcome": {
+          "contextTitle": "Contexto",
+          "solutionTitle": "Solução",
+          "resultTitle": "Resultado",
+          "context": "A rotina da transportadora envolvia dois processos extremamente manuais: consultar NF-e por NF-e no sistema para descobrir o CT-e correspondente — anotando em cada canhoto físico — e baixar, renomear e subir foto por foto das imagens enviadas pelos motoristas. Com centenas de arquivos por dia, o processo consumia horas.",
+          "solution": "Desenvolvi um aplicativo desktop em Python com duas funcionalidades principais: consulta em lote de NF-e → CT-e, com status visual e exportação para Excel; e upload automatizado com OCR (Tesseract + OpenCV), que lê o número da NF-e diretamente da foto do canhoto, renomeia os arquivos e realiza o upload em lote. A estrutura foi desacoplada via .env para permitir adaptação a qualquer empresa com API compatível.",
+          "result": "A consulta deixou de exigir pesquisa manual NF-e por NF-e. O upload, que antes consumia horas, passou a levar minutos. A conferência e localização de canhotos ficou significativamente mais rápida, com o operador revisando apenas as exceções em que o OCR não consegue identificar a NF-e."
+        },
         "description": "Aplicativo desktop para consulta de NF-e/CT-e e upload de canhotos via API interna, sem necessidade de browser.",
         "longDescription": "Desenvolvido para uso interno em uma transportadora, o sistema automatiza a consulta de associações NF-e → CT-e, renomeia canhotos via OCR e realiza uploads em lote — tudo a partir de um executável standalone gerado com PyInstaller.",
         "highlights": {
