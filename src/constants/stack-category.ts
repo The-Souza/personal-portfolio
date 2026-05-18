@@ -3,6 +3,7 @@ import {
   Server,
   Database,
   Wrench,
+  Terminal,
 } from "lucide-react";
 
 export const CATEGORY_META = {
@@ -21,5 +22,9 @@ export const CATEGORY_META = {
   tools: {
     labelKey: "about.categories.tools",
     icon: Wrench,
+  },
+  automation: {
+    labelKey: "about.categories.automation",
+    icon: Terminal,
   },
 } as const;

@@ -16,7 +16,7 @@
     "head": "Frontend Developer",
     "description": {
       "part1": "Specializing in React and Next.js, building high-performance interfaces focused on accessibility and user experience.",
-      "part2": "Experience with <strong>Next.js</strong>, <strong>React</strong>, and <strong>TypeScript</strong>, frontend–backend integration in <strong>Fullstack</strong> projects, web system modernization, and applying best practices such as <strong>Clean Code</strong>, <strong>SRP</strong>, and <strong>layered architecture</strong>."
+      "part2": "Experience with <strong>Next.js</strong>, <strong>React</strong>, <strong>TypeScript</strong>, <strong>Prisma</strong>, and <strong>Supabase</strong>, frontend–backend integration in <strong>Fullstack</strong> projects, web system modernization, and applying best practices such as <strong>Clean Code</strong>, <strong>SRP</strong>, and <strong>layered architecture</strong>."
     }
   },
   "notFound": {
@@ -57,6 +57,11 @@
         "title": "Systems Integration",
         "label": "Integration",
         "description": "Integration between internal and external systems, ensuring consistency and reliability."
+      },
+      "automation": {
+        "title": "Python Automation",
+        "label": "Python",
+        "description": "Automation scripts for batch processing, OCR, file handling, and internal API integration — delivered as standalone executables or paired with a web interface."
       }
     }
   },
@@ -264,7 +269,8 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "database": "Database",
-      "tools": "Tools"
+      "tools": "Tools",
+      "automation": "Automation"
     },
     "experience": {
       "title": "My Experiences",

@@ -5,6 +5,7 @@ import {
   Workflow,
   Gauge,
   Plug,
+  Terminal,
 } from "lucide-react";
 
 export interface BentoItem {
@@ -50,5 +51,11 @@ export const services: BentoItem[] = [
     labelKey: "services.data.integration.label",
     descriptionKey: "services.data.integration.description",
     icon: Plug,
+  },
+  {
+    titleKey: "services.data.automation.title",
+    labelKey: "services.data.automation.label",
+    descriptionKey: "services.data.automation.description",
+    icon: Terminal,
   },
 ];

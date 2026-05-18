@@ -14,8 +14,9 @@ import {
   GitHubIcon,
   EslintIcon,
   VercelIcon,
-  NpmIcon,
   InsomniaIcon,
+  PythonIcon,
+  PnpmIcon,
 } from "@/icons";
 
 export const STACKS = {
@@ -73,6 +74,12 @@ export const STACKS = {
       icon: SupabaseIcon,
     },
   },
+  automation: {
+    python: {
+      name: "Python",
+      icon: PythonIcon,
+    },
+  },
   tools: {
     git: {
       name: "Git",
@@ -90,9 +97,9 @@ export const STACKS = {
       name: "Vercel",
       icon: VercelIcon,
     },
-    npm: {
-      name: "npm",
-      icon: NpmIcon,
+    pnpm: {
+      name: "pnpm",
+      icon: PnpmIcon,
     },
     insomnia: {
       name: "Insomnia",

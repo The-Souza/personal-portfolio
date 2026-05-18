@@ -16,7 +16,7 @@
     "head": "Desenvolvedor Frontend",
     "description": {
       "part1": "Especializado em React e Next.js, construindo interfaces de alta performance com foco em acessibilidade e experiência do usuário.",
-      "part2": "Experiência com <strong>Next.js</strong>, <strong>React</strong> e <strong>TypeScript</strong>, integração frontend–backend em projetos <strong>Fullstack</strong>, modernização de sistemas web e aplicação de boas práticas como <strong>Clean Code</strong>, <strong>SRP</strong> e <strong>arquitetura em camadas</strong>."
+      "part2": "Experiência com <strong>Next.js</strong>, <strong>React</strong>, <strong>TypeScript</strong>, <strong>Prisma</strong> e <strong>Supabase</strong>, integração frontend–backend em projetos <strong>Fullstack</strong>, modernização de sistemas web e aplicação de boas práticas como <strong>Clean Code</strong>, <strong>SRP</strong> e <strong>arquitetura em camadas</strong>."
     }
   },
   "notFound": {
@@ -57,6 +57,11 @@
         "title": "Integração de Sistemas",
         "label": "Integração",
         "description": "Integração entre sistemas internos e externos, garantindo consistência e confiabilidade."
+      },
+      "automation": {
+        "title": "Automação com Python",
+        "label": "Python",
+        "description": "Scripts de automação para processamento em lote, OCR, manipulação de arquivos e integração com APIs internas — entregues como executável standalone ou acoplados a uma interface web."
       }
     }
   },
@@ -264,7 +269,8 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "database": "Banco de Dados",
-      "tools": "Ferramentas"
+      "tools": "Ferramentas",
+      "automation": "Automação"
     },
     "experience": {
       "title": "Minhas Experiências",
