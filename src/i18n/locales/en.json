@@ -188,6 +188,14 @@
           "inMaintenance": "In Maintenance"
         },
         "title": "NF-e / CT-e Query Tool",
+        "outcome": {
+          "contextTitle": "Context",
+          "solutionTitle": "Solution",
+          "resultTitle": "Result",
+          "context": "The logistics company's daily workflow involved two highly manual processes: looking up NF-e numbers one by one to find the corresponding CT-e — manually annotating each physical receipt — and downloading, renaming, and uploading driver-submitted photos one at a time. With hundreds of files per day, the process consumed hours.",
+          "solution": "I built a desktop application in Python with two main features: batch NF-e → CT-e lookup with visual status display and Excel export; and automated OCR-based upload using Tesseract and OpenCV, which reads the NF-e number directly from the receipt photo, renames the files, and performs batch uploads. The app was decoupled via .env configuration to allow adaptation to any company with a compatible API.",
+          "result": "Manual NF-e lookups were eliminated. The upload process, which previously took hours, now takes minutes. Receipt verification and location became significantly faster, with operators only reviewing exceptions where OCR fails to identify the NF-e correctly."
+        },
         "description": "Desktop application for querying NF-e/CT-e associations and uploading delivery receipts via internal API, without a browser.",
         "longDescription": "Built for internal use at a logistics company, the system automates NF-e → CT-e association lookups, renames receipt images using OCR, and performs batch uploads — all from a standalone executable generated with PyInstaller.",
         "highlights": {
