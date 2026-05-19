@@ -49,7 +49,7 @@ export function AboutHeroSection() {
 
       {/* RIGHT — TERMINAL */}
       <Code
-        className="w-full h-auto transition-all duration-300 ease-out hover:border-primary shadow-md hover:shadow-primary"
+        className="w-full h-128.5 transition-all duration-300 ease-out hover:border-primary shadow-md hover:shadow-primary"
         code={developerCode[locale]}
       >
         <CodeHeader icon={TypeScriptIcon}>developer.ts</CodeHeader>
