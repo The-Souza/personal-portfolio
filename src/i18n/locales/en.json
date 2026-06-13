@@ -147,29 +147,29 @@
           "inMaintenance": "In Maintenance"
         },
         "title": "BillWise Dashboard",
-        "description": "Fullstack personal finance platform with budgets, analytics, and recurring transactions.",
-        "longDescription": "A complete rewrite of Account Management using Next.js 16 App Router, Prisma, and Supabase Auth. Replaces the SPA + Express architecture with Server Components and Server Actions, adding budgets, analytics, notifications, recurrences, and an admin area.",
+        "description": "Fullstack personal and collaborative finance platform with budgets, analytics, recurrences, and shared workspaces.",
+        "longDescription": "A complete rewrite of Account Management using Next.js 16 App Router, Prisma, and Supabase Auth. Replaces the SPA + Express architecture with Server Components and Server Actions, adding budgets, analytics, notifications, recurrences, and shared Workspaces.",
         "highlights": {
           "nextjs": "Next.js 16",
           "prisma": "Prisma ORM",
           "supabase": "Supabase Auth",
-          "serverActions": "Server Actions",
-          "inDevelopment": "In Development"
+          "workspaces": "Workspaces",
+          "production": "In Production"
         },
         "features": {
-          "auth": "Full authentication with Supabase Auth: sign-up, login, password reset, and email verification",
+          "auth": "Full authentication with Supabase Auth: sign-up, login, password reset, email verification, and anti-bot protection with Cloudflare Turnstile",
+          "workspaces": "Shared workspaces with email invitations, fully isolating the financial ecosystem (accounts, budgets, recurrences) per context",
           "dashboard": "Financial dashboard with monthly summary and revenue vs. expenses chart",
           "budgets": "Category budgets with progress bars and visual alerts when limits are reached",
           "analytics": "Analytics with financial evolution over time and spending breakdown by category",
           "recurrences": "Recurring billing rules with automatic monthly account generation via cron job",
-          "notifications": "Notification center with filters by type: overdue, due soon, budget exceeded",
-          "admin": "Admin area with user overview, protected by RBAC (admin role)"
+          "notifications": "Notification center with filters by type: overdue, due soon, budget exceeded, recurrence generated, workspace invite"
         },
         "architecture": {
           "appRouter": "Next.js App Router with Server Components — eliminates the API layer for most operations",
           "serverActions": "Server Actions for all mutations, no manual API routes needed",
           "prisma": "Prisma ORM with versioned migrations, typed queries, and atomic transactions",
-          "rbac": "RBAC with user and admin roles, server-side guards on every route and action",
+          "workspaces": "Data isolation per Workspace, with server-side guards (requireWorkspace / requireAuth) on every action",
           "cron": "Cron jobs via API route for generating recurrences and processing due dates"
         },
         "outcome": {
@@ -177,8 +177,8 @@
           "solutionTitle": "Solution",
           "resultTitle": "Result",
           "context": "Account Management v1 was a React + Vite SPA with a serverless Express backend. It worked well as a reference project, but had clear limitations: no ORM, no server-side rendering, basic features, and a split frontend/backend architecture.",
-          "solution": "A full rewrite using Next.js 16 App Router, Prisma 7, and Supabase Auth. The integration of Server Components and Server Actions eliminated the Express layer for most operations, while Prisma brought typed queries and versioned migrations. The scope was expanded with budgets, analytics, notifications, recurrences, and an admin area.",
-          "result": "The project is in active development with a deployment coming soon. The new architecture is significantly more maintainable, testable, and scalable than v1."
+          "solution": "The rewrite used Next.js 16 App Router, Prisma 7, and Supabase Auth, with Server Components and Server Actions eliminating the Express layer. The scope was expanded with budgets, analytics, notifications, cron-based recurrences, and Cloudflare Turnstile for bot protection. The Workspaces feature emerged during development, after a friend asked whether two people could manage a shared business alongside their personal finances — it now fully isolates the financial ecosystem per context. The whole project followed TDD with Vitest, React Testing Library, and MSW, reaching 531 tests, plus Gitflow and GitHub Actions CI.",
+          "result": "BillWise Dashboard is now in production and in real use: my sister replaced Account Management with it for her daily finances, and my mother is moving away from Excel to use the system. Workspaces solved both my friend's use case and my family's — personal and business finances now live in fully isolated contexts. The new architecture is significantly more maintainable, testable, and scalable than v1."
         }
       },
       "consulta-nfe-cte": {
