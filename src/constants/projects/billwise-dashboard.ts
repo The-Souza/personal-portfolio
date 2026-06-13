@@ -10,7 +10,7 @@ export const billwiseDashboardProject: Project = {
   longDescriptionKey: "projects.data.billwise-dashboard.longDescription",
 
   role: "Fullstack",
-  status: "inDevelopment",
+  status: "completed",
 
   outcome: {
     context: "projects.data.billwise-dashboard.outcome.context",
@@ -22,8 +22,8 @@ export const billwiseDashboardProject: Project = {
     "projects.data.billwise-dashboard.highlights.nextjs",
     "projects.data.billwise-dashboard.highlights.prisma",
     "projects.data.billwise-dashboard.highlights.supabase",
-    "projects.data.billwise-dashboard.highlights.serverActions",
-    "projects.data.billwise-dashboard.highlights.inDevelopment",
+    "projects.data.billwise-dashboard.highlights.workspaces",
+    "projects.data.billwise-dashboard.highlights.production",
   ],
 
   techs: [
@@ -33,36 +33,39 @@ export const billwiseDashboardProject: Project = {
     "PostgreSQL",
     "Supabase",
     "Tailwind CSS",
+    "Radix UI",
     "React Hook Form",
     "Zod",
-    "SWR",
+    "TanStack Query",
     "Recharts",
     "Vitest",
   ],
 
   features: [
     "projects.data.billwise-dashboard.features.auth",
+    "projects.data.billwise-dashboard.features.workspaces",
     "projects.data.billwise-dashboard.features.dashboard",
     "projects.data.billwise-dashboard.features.budgets",
     "projects.data.billwise-dashboard.features.analytics",
     "projects.data.billwise-dashboard.features.recurrences",
     "projects.data.billwise-dashboard.features.notifications",
-    "projects.data.billwise-dashboard.features.admin",
   ],
 
   architecture: [
     "projects.data.billwise-dashboard.architecture.appRouter",
     "projects.data.billwise-dashboard.architecture.serverActions",
     "projects.data.billwise-dashboard.architecture.prisma",
-    "projects.data.billwise-dashboard.architecture.rbac",
+    "projects.data.billwise-dashboard.architecture.workspaces",
     "projects.data.billwise-dashboard.architecture.cron",
   ],
 
   media: {
     previewImage: "/images/billwise-dashboard-preview.png",
+    video: "/videos/billwise-dashboard-demo.mp4",
   },
 
   links: {
     github: "https://github.com/The-Souza/billwise-dashboard",
+    demo: "https://billwise-dashboard.vercel.app",
   },
 };
