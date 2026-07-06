@@ -5,17 +5,15 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { TextAnimate } from "@/components/effects/text-animate";
-import { Github, Linkedin, FileText, Briefcase } from "lucide-react";
+import { Github, Linkedin, Briefcase, Mail } from "lucide-react";
 import { BlurFade } from "@/components/effects/blur-fade";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Trans, useTranslation } from "react-i18next";
-import { useCvPath } from "@/hooks/use-cv-path";
 import { socialLinks } from "@/constants/social-links";
 import { STACKS } from "@/constants/stacks";
 
 export function HeroSection() {
   const { t, i18n } = useTranslation();
-  const cvPath = useCvPath();
   const Highlight = <span className="text-primary font-semibold" />;
 
   return (
@@ -72,6 +70,26 @@ export function HeroSection() {
         <div className="flex flex-wrap justify-center xl:justify-start gap-4 pt-4">
           <Button asChild>
             <Link
+              href="/contact"
+              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+            >
+              <Mail className="h-4 w-4" />
+              {t("navigation.contact")}
+            </Link>
+          </Button>
+
+          <Button asChild>
+            <Link
+              href="/projects"
+              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+            >
+              <Briefcase className="h-4 w-4" />
+              {t("viewProjects")}
+            </Link>
+          </Button>
+
+          <Button asChild variant="outline">
+            <Link
               href={socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -82,7 +100,7 @@ export function HeroSection() {
             </Link>
           </Button>
 
-          <Button asChild>
+          <Button asChild variant="outline">
             <Link
               href={socialLinks.github}
               target="_blank"
@@ -91,29 +109,6 @@ export function HeroSection() {
             >
               <Github className="h-4 w-4" />
               GitHub
-            </Link>
-          </Button>
-
-          <Button asChild variant="secondary">
-            <Link
-              href="/projects"
-              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
-            >
-              <Briefcase className="h-4 w-4" />
-              {t("viewProjects")}
-            </Link>
-          </Button>
-
-          <Button asChild variant="secondary">
-            <Link
-              href={cvPath}
-              prefetch={false}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
-            >
-              <FileText className="h-4 w-4" />
-              {t("viewCv")}
             </Link>
           </Button>
         </div>
