@@ -65,6 +65,8 @@ claude*
 .impeccable/live/pending-manual-edits.json
 .impeccable/live/deferred-svelte-component-accepts.json
 .impeccable/live/*.png
+impeccable*
+.impeccable
 # impeccable-ignore-end
 
 # Ignore design and product docs, which are generated from the design system and product spec.
