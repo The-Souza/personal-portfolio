@@ -21,7 +21,8 @@ export function AboutExperienceSection() {
       {EXPERIENCES.map((experience: Experience) => (
         <Card
           key={experience.id}
-          className="group z-1 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary shadow-md hover:shadow-primary"
+          interactive
+          className="group z-1"
         >
           <CardHeader>
             <CardTitle className="text-lg font-heading group-hover:text-primary">

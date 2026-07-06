@@ -24,6 +24,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
 
   return (
     <Card
+      interactive
       role="button"
       tabIndex={0}
       onClick={onSelect}
@@ -34,7 +35,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
           onSelect();
         }
       }}
-      className="z-1 pt-0 gap-4 group flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary shadow-md hover:shadow-primary"
+      className="z-1 pt-0 gap-4 group flex flex-col justify-between"
     >
       <div className="relative aspect-video w-full max-h-48 sm:max-h-52 lg:max-h-56 xl:max-h-60 overflow-hidden bg-muted rounded-t-xl">
         {project.media?.previewImage && (

@@ -25,7 +25,8 @@ export function ProcessSection() {
         {processSteps.map((step) => (
           <Card
             key={step.step}
-            className="z-1 h-64 flex flex-col justify-between lg:justify-normal transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary shadow-md hover:shadow-primary"
+            interactive
+            className="z-1 h-64 flex flex-col justify-between lg:justify-normal"
           >
             <CardHeader className="gap-3">
               <CardTitle className="flex items-center gap-3">

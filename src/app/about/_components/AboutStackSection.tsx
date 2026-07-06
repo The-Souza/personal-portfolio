@@ -25,7 +25,8 @@ export function AboutStackSection() {
           return (
             <Card
               key={category}
-              className="group z-1 h-64 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary shadow-md hover:shadow-primary"
+              interactive
+              className="group z-1 h-64"
             >
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 uppercase font-heading text-muted-foreground transition-colors group-hover:text-primary">
