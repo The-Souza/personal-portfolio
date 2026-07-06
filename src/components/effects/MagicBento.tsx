@@ -1,4 +1,5 @@
 import { BentoItem } from "@/constants/service-data";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { gsap } from "gsap";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
@@ -663,7 +664,8 @@ const MagicBento: React.FC<BentoProps> = ({
 }) => {
   const gridRef = useRef<HTMLDivElement>(null);
   const isMobile = useMobileDetection();
-  const shouldDisableAnimations = disableAnimations || isMobile;
+  const reducedMotion = useReducedMotion();
+  const shouldDisableAnimations = disableAnimations || isMobile || reducedMotion;
 
   return (
     <>

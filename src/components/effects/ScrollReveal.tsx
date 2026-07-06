@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useMemo, ReactNode, RefObject } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,6 +30,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   wordAnimationEnd = "bottom bottom",
 }) => {
   const containerRef = useRef<HTMLHeadingElement>(null);
+  const reducedMotion = useReducedMotion();
 
   const splitText = useMemo(() => {
     const text = typeof children === "string" ? children : "";
@@ -45,6 +47,13 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+
+    if (reducedMotion) {
+      const wordElements = el.querySelectorAll<HTMLElement>(".word");
+      gsap.set(el, { rotate: 0 });
+      gsap.set(wordElements, { opacity: 1, filter: "blur(0px)" });
+      return;
+    }
 
     const scroller =
       scrollContainerRef && scrollContainerRef.current
@@ -109,6 +118,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, [
+    reducedMotion,
     scrollContainerRef,
     enableBlur,
     baseRotation,
