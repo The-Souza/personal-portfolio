@@ -67,7 +67,7 @@ export function ContactForm() {
   const formSchema = createFormSchema(t);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    mode: "onSubmit",
+    mode: "onChange",
     defaultValues: {
       name: "",
       email: "",

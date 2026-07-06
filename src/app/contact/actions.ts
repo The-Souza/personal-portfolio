@@ -31,18 +31,28 @@ export async function sendContactEmail(data: unknown) {
 
   const { name, email, message } = parsed.data;
 
-  await resend.emails.send({
-    from: "Portfolio <onboarding@resend.dev>",
-    to: process.env.CONTACT_EMAIL,
-    subject: `Novo contato — ${name}`,
-    replyTo: email,
-    html: `
-      <strong>Nome:</strong> ${name}<br />
-      <strong>Email:</strong> ${email}<br /><br />
-      <strong>Mensagem:</strong><br />
-      ${message}
-    `,
-  });
+  try {
+    const { error } = await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
+      to: process.env.CONTACT_EMAIL,
+      subject: `Novo contato — ${name}`,
+      replyTo: email,
+      html: `
+        <strong>Nome:</strong> ${name}<br />
+        <strong>Email:</strong> ${email}<br /><br />
+        <strong>Mensagem:</strong><br />
+        ${message}
+      `,
+    });
 
-  return { success: true };
+    if (error) {
+      console.error("Resend send error:", error);
+      return { success: false, error: "SEND_FAILED" };
+    }
+
+    return { success: true };
+  } catch (err) {
+    console.error("Unexpected error sending contact email:", err);
+    return { success: false, error: "SEND_FAILED" };
+  }
 }
