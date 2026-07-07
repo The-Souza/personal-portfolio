@@ -28,7 +28,7 @@ export function AboutHeroSection() {
           animation="blurInUp"
           by="word"
           once
-          className="text-3xl md:text-4xl xl:text-5xl font-bold font-heading"
+          className="text-[clamp(2rem,3.5vw+1rem,3.25rem)] font-bold font-heading"
         >
           {t("about.title")}
         </TextAnimate>

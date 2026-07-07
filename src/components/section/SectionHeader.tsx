@@ -28,7 +28,7 @@ export function SectionHeader({
         className,
       )}
     >
-      <h2 className="font-heading text-4xl md:text-5xl leading-tight">
+      <h2 className="font-heading text-[clamp(1.5rem,2.5vw+0.75rem,2.25rem)] leading-tight">
         <ScrollReveal
           baseOpacity={0.1}
           enableBlur={true}

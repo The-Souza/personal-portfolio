@@ -26,7 +26,7 @@ export function HeroSection() {
           animation="blurInUp"
           by="word"
           once
-          className="text-4xl md:text-5xl font-bold font-heading"
+          className="text-[clamp(2rem,3.5vw+1rem,3.25rem)] font-bold font-heading"
         >
           {t("home.head")}
         </TextAnimate>
