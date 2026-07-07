@@ -39,7 +39,12 @@ export function MobileSidebar() {
         <div className="items-center justify-center gap-2 flex">
           <ToggleTheme />
 
-          <Button size="icon" variant="outline" onClick={toggleLanguage}>
+          <Button
+            size="icon"
+            variant="outline"
+            aria-label="Switch language"
+            onClick={toggleLanguage}
+          >
             {language?.toUpperCase()}
           </Button>
 
@@ -88,6 +93,7 @@ export function MobileSidebar() {
           <Link
             href={socialLinks.github}
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-primary"
           >
             <Github className="w-4 h-4" />
@@ -97,6 +103,7 @@ export function MobileSidebar() {
           <Link
             href={socialLinks.linkedin}
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-primary"
           >
             <LinkedinIcon className="w-4 h-4" />

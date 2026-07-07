@@ -40,7 +40,7 @@ export function Header() {
             onClick={toggleSidebar}
             size="icon"
             variant="hover"
-            asChild
+            aria-label="Open menu"
           >
             <Menu className="w-5 h-5" />
           </Button>
@@ -103,6 +103,7 @@ export function Header() {
             <Button
               size="icon"
               variant="outline"
+              aria-label="Switch language"
               onClick={toggleLanguage}
               className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
