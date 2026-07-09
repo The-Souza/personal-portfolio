@@ -55,7 +55,6 @@ export function ProjectHero({ project }: ProjectHeroProps) {
               href={project.links.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
               {t("projects.liveDemo")}
             </Link>
@@ -68,7 +67,6 @@ export function ProjectHero({ project }: ProjectHeroProps) {
               href={project.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
               GitHub
             </Link>

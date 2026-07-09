@@ -12,7 +12,7 @@ export function ContactLinks() {
           href={socialLinks.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+          className="z-1"
         >
           <Linkedin className="h-4 w-4" />
           LinkedIn
@@ -24,7 +24,7 @@ export function ContactLinks() {
           href={socialLinks.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+          className="z-1"
         >
           <Github className="h-4 w-4" />
           GitHub
@@ -36,7 +36,7 @@ export function ContactLinks() {
           href={`mailto:${socialLinks.email}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+          className="z-1"
         >
           <Mail className="h-4 w-4" />
           Email

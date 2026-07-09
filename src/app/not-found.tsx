@@ -57,10 +57,7 @@ export default function NotFound() {
       </GlassCard>
 
       {/* CTA */}
-      <Button
-        asChild
-        className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
-      >
+      <Button asChild className="z-1">
         <Link href="/">{t("notFound.goBackButton")}</Link>
       </Button>
     </section>

@@ -50,7 +50,7 @@ export function Header() {
               <Button asChild variant="hover">
                 <Link
                   href="/"
-                  className="flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
+                  className="flex items-center gap-2 font-semibold hover:text-primary"
                 >
                   <CodeXml className="w-5 h-5 opacity-80" />
                   Guilherme Campos
@@ -105,7 +105,6 @@ export function Header() {
               variant="outline"
               aria-label="Switch language"
               onClick={toggleLanguage}
-              className="hover:scale-105 transition-transform active:scale-[0.97]"
             >
               {language?.toUpperCase()}
             </Button>
@@ -115,7 +114,6 @@ export function Header() {
             <Link
               href={cvPath}
               prefetch={false}
-              className="hover:scale-105 transition-transform active:scale-[0.97]"
               download
             >
               <FileDown className="w-4 h-4" />

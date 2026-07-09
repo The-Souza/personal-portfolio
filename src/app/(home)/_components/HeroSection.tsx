@@ -71,7 +71,7 @@ export function HeroSection() {
           <Button asChild>
             <Link
               href="/contact"
-              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+              className="z-1"
             >
               <Mail className="h-4 w-4" />
               {t("navigation.contact")}
@@ -81,7 +81,7 @@ export function HeroSection() {
           <Button asChild>
             <Link
               href="/projects"
-              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+              className="z-1"
             >
               <Briefcase className="h-4 w-4" />
               {t("viewProjects")}
@@ -93,7 +93,7 @@ export function HeroSection() {
               href={socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+              className="z-1"
             >
               <Linkedin className="h-4 w-4" />
               LinkedIn
@@ -105,7 +105,7 @@ export function HeroSection() {
               href={socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+              className="z-1"
             >
               <Github className="h-4 w-4" />
               GitHub

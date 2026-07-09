@@ -17,7 +17,7 @@ export function CallToActionSection() {
         <Button asChild>
           <Link
             href="/contact"
-            className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+            className="z-1"
           >
             <Mail className="h-4 w-4" />
             {t("cta.primary")}
@@ -27,7 +27,7 @@ export function CallToActionSection() {
         <Button asChild variant="secondary">
           <Link
             href="/projects"
-            className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
+            className="z-1"
           >
             <Briefcase className="h-4 w-4" />
             {t("viewProjects")}
