@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { SectionHeader } from "@/components/section/SectionHeader";
 import { Briefcase, Mail } from "lucide-react";
+import { BlurFade } from "@/components/effects/blur-fade";
 
 export function CallToActionSection() {
   const { t } = useTranslation();
@@ -13,27 +14,29 @@ export function CallToActionSection() {
     <section className="min-h-[60vh] sm:min-h-[65vh] w-full py-14 md:py-20 flex flex-col items-center gap-12">
       <SectionHeader title={t("cta.title")} subtitle={t("cta.description")} />
 
-      <div className="flex justify-center gap-4">
-        <Button asChild>
-          <Link
-            href="/contact"
-            className="z-1"
-          >
-            <Mail className="h-4 w-4" />
-            {t("cta.primary")}
-          </Link>
-        </Button>
+      <BlurFade inView delay={0.2}>
+        <div className="flex justify-center gap-4">
+          <Button asChild>
+            <Link
+              href="/contact"
+              className="z-1"
+            >
+              <Mail className="h-4 w-4" />
+              {t("cta.primary")}
+            </Link>
+          </Button>
 
-        <Button asChild variant="secondary">
-          <Link
-            href="/projects"
-            className="z-1"
-          >
-            <Briefcase className="h-4 w-4" />
-            {t("viewProjects")}
-          </Link>
-        </Button>
-      </div>
+          <Button asChild variant="secondary">
+            <Link
+              href="/projects"
+              className="z-1"
+            >
+              <Briefcase className="h-4 w-4" />
+              {t("viewProjects")}
+            </Link>
+          </Button>
+        </div>
+      </BlurFade>
     </section>
   );
 }

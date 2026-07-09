@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { BlurFade } from "@/components/effects/blur-fade";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import {
   Field,
@@ -92,85 +93,87 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="w-full flex flex-col z-1">
-      <CardContent>
-        <form id="form-contact" onSubmit={form.handleSubmit(onSubmit)}>
-          <FieldGroup>
-            <ContactField
-              name="name"
-              control={form.control}
-              label={t("contact.form.name")}
-            >
-              {(field, fieldState) => (
-                <Input
-                  {...field}
-                  id={field.name}
-                  aria-invalid={fieldState.invalid}
-                />
-              )}
-            </ContactField>
-
-            <ContactField
-              name="email"
-              control={form.control}
-              label={t("contact.form.email")}
-            >
-              {(field, fieldState) => (
-                <Input
-                  {...field}
-                  id={field.name}
-                  type="email"
-                  aria-invalid={fieldState.invalid}
-                />
-              )}
-            </ContactField>
-
-            <ContactField
-              name="message"
-              control={form.control}
-              label={t("contact.form.message.label")}
-            >
-              {(field, fieldState) => (
-                <InputGroup>
-                  <InputGroupTextarea
+    <BlurFade inView delay={0.1} direction="left">
+      <Card className="w-full flex flex-col z-1">
+        <CardContent>
+          <form id="form-contact" onSubmit={form.handleSubmit(onSubmit)}>
+            <FieldGroup>
+              <ContactField
+                name="name"
+                control={form.control}
+                label={t("contact.form.name")}
+              >
+                {(field, fieldState) => (
+                  <Input
                     {...field}
                     id={field.name}
-                    placeholder={t("contact.form.message.placeholder")}
-                    className="min-h-24 resize-none"
-                    maxLength={250}
                     aria-invalid={fieldState.invalid}
                   />
-                  <InputGroupAddon align="block-end">
-                    <InputGroupText className="tabular-nums">
-                      {field.value.length ?? 0}/250
-                    </InputGroupText>
-                  </InputGroupAddon>
-                </InputGroup>
-              )}
-            </ContactField>
-          </FieldGroup>
-        </form>
-      </CardContent>
-      <CardFooter>
-        <Field orientation="horizontal">
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => form.reset()}
-            disabled={isSubmitting}
-          >
-            {t("contact.buttons.reset")}
-          </Button>
+                )}
+              </ContactField>
 
-          <Button
-            type="submit"
-            form="form-contact"
-            disabled={!form.formState.isValid || isSubmitting}
-          >
-            {t("contact.buttons.submit")}
-          </Button>
-        </Field>
-      </CardFooter>
-    </Card>
+              <ContactField
+                name="email"
+                control={form.control}
+                label={t("contact.form.email")}
+              >
+                {(field, fieldState) => (
+                  <Input
+                    {...field}
+                    id={field.name}
+                    type="email"
+                    aria-invalid={fieldState.invalid}
+                  />
+                )}
+              </ContactField>
+
+              <ContactField
+                name="message"
+                control={form.control}
+                label={t("contact.form.message.label")}
+              >
+                {(field, fieldState) => (
+                  <InputGroup>
+                    <InputGroupTextarea
+                      {...field}
+                      id={field.name}
+                      placeholder={t("contact.form.message.placeholder")}
+                      className="min-h-24 resize-none"
+                      maxLength={250}
+                      aria-invalid={fieldState.invalid}
+                    />
+                    <InputGroupAddon align="block-end">
+                      <InputGroupText className="tabular-nums">
+                        {field.value.length ?? 0}/250
+                      </InputGroupText>
+                    </InputGroupAddon>
+                  </InputGroup>
+                )}
+              </ContactField>
+            </FieldGroup>
+          </form>
+        </CardContent>
+        <CardFooter>
+          <Field orientation="horizontal">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => form.reset()}
+              disabled={isSubmitting}
+            >
+              {t("contact.buttons.reset")}
+            </Button>
+
+            <Button
+              type="submit"
+              form="form-contact"
+              disabled={!form.formState.isValid || isSubmitting}
+            >
+              {t("contact.buttons.submit")}
+            </Button>
+          </Field>
+        </CardFooter>
+      </Card>
+    </BlurFade>
   );
 }

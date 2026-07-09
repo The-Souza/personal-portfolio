@@ -35,7 +35,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
           onSelect();
         }
       }}
-      className="z-1 pt-0 gap-4 group flex flex-col justify-between"
+      className="z-1 pt-0 gap-4 group flex flex-col justify-between h-full"
     >
       <div className="relative aspect-video w-full max-h-48 sm:max-h-52 lg:max-h-56 xl:max-h-60 overflow-hidden bg-muted rounded-t-xl">
         {project.media?.previewImage && (

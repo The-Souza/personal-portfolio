@@ -3,6 +3,7 @@
 import { Project } from "@/constants/projects/types";
 import { useTranslation } from "react-i18next";
 import { GlassCard } from "@/components/ui/glass-card";
+import { BlurFade } from "@/components/effects/blur-fade";
 
 interface ProjectDetailsProps {
   project: Project;
@@ -16,7 +17,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
       <div className="flex flex-col sm:flex-row justify-between gap-6 w-full">
         {/* Features */}
         {project.features && (
-          <div className="flex flex-col gap-2">
+          <BlurFade inView delay={0.1} className="flex flex-col gap-2">
             <h4 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
               {t("projects.keyFeatures")}
             </h4>
@@ -27,12 +28,12 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                 ))}
               </ul>
             </GlassCard>
-          </div>
+          </BlurFade>
         )}
 
         {/* Architecture */}
         {project.architecture && (
-          <div className="flex flex-col gap-2">
+          <BlurFade inView delay={0.2} className="flex flex-col gap-2">
             <h4 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
               {t("projects.technicalDecisions")}
             </h4>
@@ -43,7 +44,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
                 ))}
               </ul>
             </GlassCard>
-          </div>
+          </BlurFade>
         )}
       </div>
     </section>

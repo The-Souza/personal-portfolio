@@ -6,6 +6,7 @@ import {
   CodeHeader,
 } from "@/components/animate-ui/components/animate/code";
 import { TextAnimate } from "@/components/effects/text-animate";
+import { BlurFade } from "@/components/effects/blur-fade";
 import { GlassCard } from "@/components/ui/glass-card";
 import { developerCode } from "@/constants/developer-code";
 import { TypeScriptIcon } from "@/icons/TypeScriptIcon";
@@ -33,29 +34,35 @@ export function AboutHeroSection() {
           {t("about.title")}
         </TextAnimate>
 
-        <GlassCard className="flex flex-col gap-2">
-          {(["part1", "part2", "part3"] as const).map((key) => (
-            <p key={key} className="text-lg leading-relaxed">
-              <Trans
-                key={language}
-                i18nKey={`about.text.${key}`}
-                ns="translation"
-                components={{ strong: Highlight }}
-              />
-            </p>
-          ))}
-        </GlassCard>
+        <BlurFade inView delay={0.15}>
+          <GlassCard className="flex flex-col gap-2">
+            {(["part1", "part2", "part3"] as const).map((key, i) => (
+              <BlurFade key={key} inView delay={0.05 * i}>
+                <p className="text-lg leading-relaxed">
+                  <Trans
+                    key={language}
+                    i18nKey={`about.text.${key}`}
+                    ns="translation"
+                    components={{ strong: Highlight }}
+                  />
+                </p>
+              </BlurFade>
+            ))}
+          </GlassCard>
+        </BlurFade>
       </div>
 
       {/* RIGHT — TERMINAL */}
-      <Code
-        className="w-full h-128.5 transition-all duration-300 ease-out hover:border-primary shadow-md hover:shadow-primary"
-        code={developerCode[locale]}
-      >
-        <CodeHeader icon={TypeScriptIcon}>developer.ts</CodeHeader>
+      <BlurFade inView delay={0.2} direction="left">
+        <Code
+          className="w-full h-128.5 transition-all duration-300 ease-out hover:border-primary shadow-md hover:shadow-primary"
+          code={developerCode[locale]}
+        >
+          <CodeHeader icon={TypeScriptIcon}>developer.ts</CodeHeader>
 
-        <CodeBlock lang="ts" />
-      </Code>
+          <CodeBlock lang="ts" />
+        </Code>
+      </BlurFade>
     </section>
   );
 }

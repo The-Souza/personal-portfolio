@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { TextAnimate } from "@/components/effects/text-animate";
+import { BlurFade } from "@/components/effects/blur-fade";
 import { GlassCard } from "@/components/ui/glass-card";
 import Link from "next/link";
 
@@ -29,50 +30,55 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           {t(project.titleKey)}
         </TextAnimate>
 
-        <GlassCard>
-          <p className="text-lg leading-relaxed">
-            {t(project.longDescriptionKey)}
-          </p>
-        </GlassCard>
+        <BlurFade inView delay={0.15}>
+          <GlassCard>
+            <p className="text-lg leading-relaxed">
+              {t(project.longDescriptionKey)}
+            </p>
+          </GlassCard>
+        </BlurFade>
       </div>
 
       <div className="z-1 flex flex-wrap gap-2 items-center justify-center">
-        {project.techs.map((tech) => (
-          <Badge
-            key={tech}
-            variant="secondary"
-            className="transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
-          >
-            {tech}
-          </Badge>
+        {project.techs.map((tech, i) => (
+          <BlurFade key={tech} inView delay={0.2 + i * 0.05}>
+            <Badge
+              variant="secondary"
+              className="transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
+            >
+              {tech}
+            </Badge>
+          </BlurFade>
         ))}
       </div>
 
-      <div className="z-1 flex gap-3 pt-2">
-        {project.links?.demo && (
-          <Button asChild>
-            <Link
-              href={project.links.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("projects.liveDemo")}
-            </Link>
-          </Button>
-        )}
+      <BlurFade inView delay={0.3}>
+        <div className="z-1 flex gap-3 pt-2">
+          {project.links?.demo && (
+            <Button asChild>
+              <Link
+                href={project.links.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("projects.liveDemo")}
+              </Link>
+            </Button>
+          )}
 
-        {project.links?.github && (
-          <Button asChild variant="outline">
-            <Link
-              href={project.links.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </Link>
-          </Button>
-        )}
-      </div>
+          {project.links?.github && (
+            <Button asChild variant="outline">
+              <Link
+                href={project.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </Link>
+            </Button>
+          )}
+        </div>
+      </BlurFade>
     </section>
   );
 }

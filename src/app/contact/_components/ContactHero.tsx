@@ -1,6 +1,7 @@
 "use client"
 
 import { TextAnimate } from "@/components/effects/text-animate";
+import { BlurFade } from "@/components/effects/blur-fade";
 import { GlassCard } from "@/components/ui/glass-card";
 import { useTranslation } from "react-i18next";
 
@@ -20,11 +21,13 @@ export function ContactHero() {
         {t("contact.title")}
       </TextAnimate>
 
-      <GlassCard>
-        <p className="text-lg leading-relaxed">
-          {t("contact.text")}
-        </p>
-      </GlassCard>
+      <BlurFade inView delay={0.15}>
+        <GlassCard>
+          <p className="text-lg leading-relaxed">
+            {t("contact.text")}
+          </p>
+        </GlassCard>
+      </BlurFade>
     </div>
   );
 }

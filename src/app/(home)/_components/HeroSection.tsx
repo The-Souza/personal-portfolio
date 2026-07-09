@@ -40,78 +40,83 @@ export function HeroSection() {
             STACKS.frontend.tailwind.name,
             STACKS.backend.prisma.name,
             STACKS.database.supabase.name,
-          ].map((tech) => (
-            <Badge
-              key={tech}
-              variant="outline"
-              className="z-1 transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
-            >
-              {tech}
-            </Badge>
+          ].map((tech, i) => (
+            <BlurFade key={tech} inView delay={0.05 + i * 0.05}>
+              <Badge
+                variant="outline"
+                className="z-1 transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
+              >
+                {tech}
+              </Badge>
+            </BlurFade>
           ))}
         </div>
 
         {/* DESCRIPTION */}
-        <GlassCard>
-          <div className="flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed text-lg">
-            <p>{t("home.description.part1")}</p>
+        <BlurFade inView delay={0.15}>
+          <GlassCard>
+            <div className="flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed text-lg">
+              <p>{t("home.description.part1")}</p>
 
-            <p>
-              <Trans
-                key={i18n.language}
-                i18nKey="home.description.part2"
-                components={{ strong: Highlight }}
-              />
-            </p>
-          </div>
-        </GlassCard>
+              <p>
+                <Trans
+                  key={i18n.language}
+                  i18nKey="home.description.part2"
+                  components={{ strong: Highlight }}
+                />
+              </p>
+            </div>
+          </GlassCard>
+        </BlurFade>
 
         {/* CTA BUTTONS */}
-        <div className="flex flex-wrap justify-center xl:justify-start gap-4 pt-4">
-          <Button asChild>
-            <Link
-              href="/contact"
-              className="z-1"
-            >
-              <Mail className="h-4 w-4" />
-              {t("navigation.contact")}
-            </Link>
-          </Button>
+        <BlurFade inView delay={0.2}>
+          <div className="flex flex-wrap justify-center xl:justify-start gap-4 pt-4">
+            <Button asChild>
+              <Link
+                href="/contact"
+                className="z-1"
+              >
+                <Mail className="h-4 w-4" />
+                {t("navigation.contact")}
+              </Link>
+            </Button>
 
-          <Button asChild>
-            <Link
-              href="/projects"
-              className="z-1"
-            >
-              <Briefcase className="h-4 w-4" />
-              {t("viewProjects")}
-            </Link>
-          </Button>
+            <Button asChild>
+              <Link
+                href="/projects"
+                className="z-1"
+              >
+                <Briefcase className="h-4 w-4" />
+                {t("viewProjects")}
+              </Link>
+            </Button>
 
-          <Button asChild variant="outline">
-            <Link
-              href={socialLinks.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="z-1"
-            >
-              <Linkedin className="h-4 w-4" />
-              LinkedIn
-            </Link>
-          </Button>
+            <Button asChild variant="outline">
+              <Link
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="z-1"
+              >
+                <Linkedin className="h-4 w-4" />
+                LinkedIn
+              </Link>
+            </Button>
 
-          <Button asChild variant="outline">
-            <Link
-              href={socialLinks.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="z-1"
-            >
-              <Github className="h-4 w-4" />
-              GitHub
-            </Link>
-          </Button>
-        </div>
+            <Button asChild variant="outline">
+              <Link
+                href={socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="z-1"
+              >
+                <Github className="h-4 w-4" />
+                GitHub
+              </Link>
+            </Button>
+          </div>
+        </BlurFade>
       </div>
 
       {/* RIGHT — AVATAR */}
