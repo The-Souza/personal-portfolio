@@ -665,7 +665,8 @@ const MagicBento: React.FC<BentoProps> = ({
   const gridRef = useRef<HTMLDivElement>(null);
   const isMobile = useMobileDetection();
   const reducedMotion = useReducedMotion();
-  const shouldDisableAnimations = disableAnimations || isMobile || reducedMotion;
+  const shouldDisableAnimations =
+    disableAnimations || isMobile || reducedMotion;
 
   return (
     <>
@@ -776,7 +777,7 @@ const MagicBento: React.FC<BentoProps> = ({
           {items.map((card, index) => {
             const baseClassName = `group card bg-card text-card-foreground border-border flex flex-col justify-between relative min-h-[260px] sm:min-h-[280px] w-full max-w-full p-6 rounded-[20px] border font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${
               enableBorderGlow ? "card--border-glow" : ""
-            }`;
+            } ${card.featured ? "sm:col-span-2 sm:min-h-[220px] bg-accent/40" : ""}`;
 
             const cardStyle = {
               "--glow-x": "50%",

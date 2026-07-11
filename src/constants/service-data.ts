@@ -13,6 +13,7 @@ export interface BentoItem {
   descriptionKey: string;
   labelKey?: string;
   icon: React.ElementType;
+  featured?: boolean;
 }
 
 export const services: BentoItem[] = [
@@ -27,12 +28,14 @@ export const services: BentoItem[] = [
     labelKey: "services.data.backendIntegration.label",
     descriptionKey: "services.data.backendIntegration.description",
     icon: Database,
+    featured: true,
   },
   {
     titleKey: "services.data.projectsFullstack.title",
     labelKey: "services.data.projectsFullstack.label",
     descriptionKey: "services.data.projectsFullstack.description",
     icon: Layers,
+    featured: true,
   },
   {
     titleKey: "services.data.methodology.title",
