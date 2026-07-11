@@ -17,6 +17,7 @@ import {
   InputGroupTextarea,
 } from "@/components/ui/input-group";
 import { createFormSchema } from "@/schema/contact";
+import { socialLinks } from "@/constants/social-links";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Control,
@@ -84,7 +85,17 @@ export function ContactForm() {
     toast.promise(sendPromise, {
       loading: t("contact.toast.loading"),
       success: t("contact.toast.success"),
-      error: t("contact.toast.error"),
+      error: () => (
+        <div className="flex flex-col gap-1">
+          <span>{t("contact.toast.error")}</span>
+          <a
+            href={`mailto:${socialLinks.email}`}
+            className="text-sm underline"
+          >
+            {t("contact.toast.errorFallback")} {socialLinks.email}
+          </a>
+        </div>
+      ),
       position: "top-left",
     });
 
@@ -167,7 +178,15 @@ export function ContactForm() {
             <Button
               type="submit"
               form="form-contact"
-              disabled={!form.formState.isValid || isSubmitting}
+              className="aria-disabled:opacity-50"
+              disabled={isSubmitting}
+              aria-disabled={!form.formState.isValid}
+              onClick={(e) => {
+                if (!form.formState.isValid) {
+                  e.preventDefault();
+                  form.trigger();
+                }
+              }}
             >
               {t("contact.buttons.submit")}
             </Button>

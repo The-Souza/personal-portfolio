@@ -12,6 +12,9 @@
   "viewCv": "Ver CV",
   "viewProjects": "Ver Projetos",
   "previewProject": "Visualizar",
+  "intro": {
+    "skip": "Pular"
+  },
   "home": {
     "head": "Desenvolvedor Frontend",
     "description": {
@@ -322,6 +325,7 @@
     "toast": {
       "success": "Mensagem enviada com sucesso!",
       "error": "Erro ao enviar a mensagem.",
+      "errorFallback": "Me escreva direto em",
       "loading": "Carregando..."
     },
     "buttons": {

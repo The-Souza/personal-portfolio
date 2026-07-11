@@ -12,6 +12,9 @@
   "viewCv": "View CV",
   "viewProjects": "View Projects",
   "previewProject": "Preview",
+  "intro": {
+    "skip": "Skip"
+  },
   "home": {
     "head": "Frontend Developer",
     "description": {
@@ -325,6 +328,7 @@
     "toast": {
       "success": "Message sent successfully!",
       "error": "Failed to send the message.",
+      "errorFallback": "Email me directly at",
       "loading": "Loading..."
     },
     "buttons": {
