@@ -38,7 +38,10 @@ export function ProjectContentTabs({ project }: ProjectContentTabsProps) {
       <div className="flex-1 min-h-0 overflow-y-auto">
         {hasVideo && (
           <TabsContent value="video" className="h-full">
-            <ProjectVideo src={media!.video!} />
+            <ProjectVideo
+              src={media!.video!}
+              poster={media?.previewImage}
+            />
           </TabsContent>
         )}
 

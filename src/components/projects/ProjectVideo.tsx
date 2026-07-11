@@ -2,9 +2,10 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface ProjectVideoProps {
   src: string;
+  poster?: string;
 }
 
-export function ProjectVideo({ src }: ProjectVideoProps) {
+export function ProjectVideo({ src, poster }: ProjectVideoProps) {
   return (
     <div className="h-full w-full flex items-center justify-center border border-border rounded-2xl overflow-hidden">
       <AspectRatio
@@ -13,6 +14,7 @@ export function ProjectVideo({ src }: ProjectVideoProps) {
       >
         <video
           src={src}
+          poster={poster}
           controls
           preload="none"
           playsInline
