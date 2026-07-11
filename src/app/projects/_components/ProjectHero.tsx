@@ -40,7 +40,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
       </div>
 
       <BlurFade inView delay={0.2} duration={0.25} blur="3px" offset={4}>
-        <div className="z-1 flex flex-wrap gap-2 items-center justify-center">
+        <div className="z-1 flex flex-wrap gap-2 items-center justify-center max-w-2xl mx-auto">
           {project.techs.map((tech) => (
             <Badge
               key={tech}
