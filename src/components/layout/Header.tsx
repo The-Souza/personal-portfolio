@@ -1,6 +1,5 @@
 "use client";
 
-import { ToggleTheme } from "@/components/ui/themeToggle";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -9,19 +8,20 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { CodeXml, FileDown, Menu } from "lucide-react";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
 import { useSidebar } from "@/components/ui/sidebar";
-import { usePathname } from "next/navigation";
-import { menuItems } from "@/constants/menu-items";
+import { ToggleTheme } from "@/components/ui/themeToggle";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useLanguage } from "@/hooks/use-language";
+import { menuItems } from "@/constants/menu-items";
 import { useCvPath } from "@/hooks/use-cv-path";
+import { useLanguage } from "@/hooks/use-language";
+import { CodeXml, FileDown, Menu } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 
 export function Header() {
   const { t } = useTranslation();
@@ -32,7 +32,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full h-17.5 px-6 py-4 backdrop-blur-md border-b border-border">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mx-auto max-w-6xl">
         {/* Logo */}
         <div className="flex gap-2 items-center">
           <Button
@@ -111,11 +111,7 @@ export function Header() {
           </div>
 
           <Button asChild>
-            <Link
-              href={cvPath}
-              prefetch={false}
-              download
-            >
+            <Link href={cvPath} prefetch={false} download>
               <FileDown className="w-4 h-4" />
               {t("actions.downloadCv")}
             </Link>
