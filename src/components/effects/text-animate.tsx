@@ -397,7 +397,6 @@ const TextAnimateBase = ({
         aria-label={accessible ? children : undefined}
         {...props}
       >
-        {accessible && <span className="sr-only">{children}</span>}
         {segments.map((segment, i) => (
           <motion.span
             key={`${by}-${segment}-${i}`}
