@@ -1,7 +1,11 @@
 "use client";
 
-import PixelBlast from "@/components/effects/PixelBlast";
+import dynamic from "next/dynamic";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
+const PixelBlast = dynamic(() => import("@/components/effects/PixelBlast"), {
+  ssr: false,
+});
 
 export function Background() {
   const reducedMotion = useReducedMotion();
