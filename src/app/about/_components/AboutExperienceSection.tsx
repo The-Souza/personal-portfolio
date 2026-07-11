@@ -26,7 +26,7 @@ export function AboutExperienceSection() {
             className="group z-1"
           >
             <CardHeader>
-              <CardTitle className="text-lg font-heading group-hover:text-primary">
+              <CardTitle as="h3" className="text-lg font-heading group-hover:text-primary">
                 {t(experience.placeKey)}
               </CardTitle>
 

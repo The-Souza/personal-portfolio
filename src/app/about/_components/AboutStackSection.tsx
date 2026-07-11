@@ -30,7 +30,7 @@ export function AboutStackSection() {
                 className="group z-1 h-64"
               >
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 uppercase font-heading text-muted-foreground transition-colors group-hover:text-primary">
+                  <CardTitle as="h3" className="flex items-center gap-2 uppercase font-heading text-muted-foreground transition-colors group-hover:text-primary">
                     <meta.icon className="w-6 h-6" />
                     {t(meta.labelKey)}
                   </CardTitle>

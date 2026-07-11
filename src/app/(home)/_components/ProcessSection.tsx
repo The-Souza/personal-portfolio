@@ -37,7 +37,7 @@ export function ProcessSection() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex flex-col gap-2">
-                <CardTitle className="text-lg font-heading">
+                <CardTitle as="h3" className="text-lg font-heading">
                   {t(step.titleKey)}
                 </CardTitle>
 

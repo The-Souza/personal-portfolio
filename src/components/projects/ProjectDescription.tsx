@@ -27,9 +27,9 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
       {project.features && project.architecture && (
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col gap-2">
-            <h4 className="text-base font-semibold uppercase text-muted-foreground leading-tight">
+            <h3 className="text-base font-semibold uppercase text-muted-foreground leading-tight">
               {t("projects.keyFeatures")}
-            </h4>
+            </h3>
             <ul className="list-disc flex flex-col gap-1 pl-4 text-base">
               {project.features.map((feature) => (
                 <li key={feature}>{t(feature)}</li>
@@ -38,9 +38,9 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h4 className="text-base font-semibold uppercase text-muted-foreground leading-tight">
+            <h3 className="text-base font-semibold uppercase text-muted-foreground leading-tight">
               {t("projects.technicalDecisions")}
-            </h4>
+            </h3>
             <ul className="list-disc flex flex-col gap-1 pl-4 text-base">
               {project.architecture.map((item) => (
                 <li key={item}>{t(item)}</li>
@@ -51,9 +51,9 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
       )}
 
       <section className="flex flex-col gap-2">
-        <h4 className="text-base font-semibold uppercase text-muted-foreground leading-tight">
+        <h3 className="text-base font-semibold uppercase text-muted-foreground leading-tight">
           {t("projects.techStack")}
-        </h4>
+        </h3>
         <div className="flex flex-wrap gap-2">
           {project.techs.map((tech) => (
             <Badge
