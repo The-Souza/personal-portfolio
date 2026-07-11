@@ -5,6 +5,7 @@ import { ElementType, memo } from "react"
 import { AnimatePresence, motion, MotionProps, Variants } from "motion/react"
 
 import { cn } from "@/lib/utils"
+import { useReducedMotion } from "@/hooks/use-reduced-motion"
 
 type AnimationType = "text" | "word" | "character" | "line"
 type AnimationVariant =
@@ -319,6 +320,7 @@ const TextAnimateBase = ({
   ...props
 }: TextAnimateProps) => {
   const MotionComponent = motion.create(Component)
+  const reducedMotion = useReducedMotion()
 
   let segments: string[] = []
   switch (by) {
@@ -386,9 +388,9 @@ const TextAnimateBase = ({
     <AnimatePresence mode="popLayout">
       <MotionComponent
         variants={finalVariants.container as Variants}
-        initial="hidden"
-        whileInView={startOnView ? "show" : undefined}
-        animate={startOnView ? undefined : "show"}
+        initial={reducedMotion ? false : "hidden"}
+        whileInView={startOnView && !reducedMotion ? "show" : undefined}
+        animate={!startOnView || reducedMotion ? "show" : undefined}
         exit="exit"
         className={cn("whitespace-pre-wrap", className)}
         viewport={{ once }}
