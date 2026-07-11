@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useCssColor } from "@/hooks/use-css-color";
 
 const PixelBlast = dynamic(() => import("@/components/effects/PixelBlast"), {
   ssr: false,
@@ -9,6 +10,7 @@ const PixelBlast = dynamic(() => import("@/components/effects/PixelBlast"), {
 
 export function Background() {
   const reducedMotion = useReducedMotion();
+  const color = useCssColor("--primary", "#7f22fe");
 
   return (
     <div
@@ -23,7 +25,7 @@ export function Background() {
         <PixelBlast
           variant="diamond"
           pixelSize={4}
-          color="#7f22fe"
+          color={color}
           patternScale={2}
           patternDensity={1}
           enableRipples
