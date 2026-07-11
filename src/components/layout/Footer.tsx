@@ -17,7 +17,7 @@ export function Footer() {
           href={socialLinks.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:text-primary transition-colors z-1"
+          className="relative flex items-center gap-2 hover:text-primary transition-colors z-1 before:absolute before:-inset-y-3 before:-inset-x-1 before:content-['']"
         >
           <Github className="w-4 h-4" />
           GitHub
@@ -27,7 +27,7 @@ export function Footer() {
           href={socialLinks.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:text-primary transition-colors z-1"
+          className="relative flex items-center gap-2 hover:text-primary transition-colors z-1 before:absolute before:-inset-y-3 before:-inset-x-1 before:content-['']"
         >
           <LinkedinIcon className="w-4 h-4" />
           LinkedIn
@@ -38,7 +38,7 @@ export function Footer() {
           target="_blank"
           prefetch={false}
           rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:text-primary transition-colors z-1"
+          className="relative flex items-center gap-2 hover:text-primary transition-colors z-1 before:absolute before:-inset-y-3 before:-inset-x-1 before:content-['']"
         >
           <FileText className="w-4 h-4" />
           {t("viewCv")}

@@ -94,7 +94,7 @@ export function MobileSidebar() {
             href={socialLinks.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-primary"
+            className="relative flex items-center gap-2 hover:text-primary before:absolute before:-inset-y-3 before:-inset-x-1 before:content-['']"
           >
             <Github className="w-4 h-4" />
             GitHub
@@ -104,7 +104,7 @@ export function MobileSidebar() {
             href={socialLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-primary"
+            className="relative flex items-center gap-2 hover:text-primary before:absolute before:-inset-y-3 before:-inset-x-1 before:content-['']"
           >
             <LinkedinIcon className="w-4 h-4" />
             LinkedIn
@@ -115,7 +115,7 @@ export function MobileSidebar() {
             target="_blank"
             prefetch={false}
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-primary"
+            className="relative flex items-center gap-2 hover:text-primary before:absolute before:-inset-y-3 before:-inset-x-1 before:content-['']"
           >
             <FileText className="w-4 h-4" />
             {t("viewCv")}
