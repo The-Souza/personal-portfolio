@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import { statusConfig } from "@/constants/status-variants";
 
@@ -87,16 +87,12 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
           </Badge>
         )}
 
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={(e) => {
-            e.stopPropagation();
-            onSelect();
-          }}
+        <span
+          aria-hidden="true"
+          className={buttonVariants({ variant: "outline", size: "sm" })}
         >
           {t("previewProject")}
-        </Button>
+        </span>
       </CardFooter>
     </Card>
   );

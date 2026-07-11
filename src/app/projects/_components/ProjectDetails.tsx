@@ -18,9 +18,9 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
         {/* Features */}
         {project.features && (
           <BlurFade inView delay={0.1} className="flex flex-col gap-2">
-            <h4 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
+            <h2 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
               {t("projects.keyFeatures")}
-            </h4>
+            </h2>
             <GlassCard>
               <ul className="list-disc pl-4 flex flex-col gap-1 text-lg">
                 {project.features.map((feature) => (
@@ -34,9 +34,9 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
         {/* Architecture */}
         {project.architecture && (
           <BlurFade inView delay={0.2} className="flex flex-col gap-2">
-            <h4 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
+            <h2 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
               {t("projects.technicalDecisions")}
-            </h4>
+            </h2>
             <GlassCard>
               <ul className="list-disc pl-4 flex flex-col gap-1 text-lg">
                 {project.architecture.map((item) => (

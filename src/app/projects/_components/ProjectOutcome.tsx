@@ -17,9 +17,9 @@ export function ProjectOutcome({ project }: ProjectOutcomeProps) {
   return (
     <section className="w-full flex flex-col gap-8">
       <BlurFade inView delay={0.1} className="flex flex-col gap-2">
-        <h3 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
+        <h2 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
           {t(`projects.data.${project.id}.outcome.contextTitle`)}
-        </h3>
+        </h2>
         <GlassCard>
           <p className="text-lg leading-relaxed">
             {t(project.outcome.context)}
@@ -28,9 +28,9 @@ export function ProjectOutcome({ project }: ProjectOutcomeProps) {
       </BlurFade>
 
       <BlurFade inView delay={0.2} className="flex flex-col gap-2">
-        <h3 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
+        <h2 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
           {t(`projects.data.${project.id}.outcome.solutionTitle`)}
-        </h3>
+        </h2>
         <GlassCard>
           <p className="text-lg leading-relaxed">
             {t(project.outcome.solution)}
@@ -39,9 +39,9 @@ export function ProjectOutcome({ project }: ProjectOutcomeProps) {
       </BlurFade>
 
       <BlurFade inView delay={0.3} className="flex flex-col gap-2">
-        <h3 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
+        <h2 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
           {t(`projects.data.${project.id}.outcome.resultTitle`)}
-        </h3>
+        </h2>
         <GlassCard>
           <p className="text-lg leading-relaxed">{t(project.outcome.result)}</p>
         </GlassCard>

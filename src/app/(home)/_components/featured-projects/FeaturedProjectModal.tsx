@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { Project } from "@/constants/projects/types";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { useTranslation } from "react-i18next";
 
 interface FeaturedProjectModalProps {
   project: Project | null;
@@ -21,14 +22,16 @@ export function FeaturedProjectModal({
   open,
   onOpenChange,
 }: FeaturedProjectModalProps) {
+  const { t } = useTranslation();
+
   if (!project) return null;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="w-[90vw] max-w-5xl max-h-[70vh] sm:max-h-[90vh] flex flex-col">
         <VisuallyHidden>
-          <DialogTitle />
-          <DialogDescription />
+          <DialogTitle>{t(project.titleKey)}</DialogTitle>
+          <DialogDescription>{t(project.descriptionKey)}</DialogDescription>
         </VisuallyHidden>
 
         <ProjectContentTabs project={project} />
