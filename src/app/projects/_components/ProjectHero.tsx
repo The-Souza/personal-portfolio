@@ -39,18 +39,19 @@ export function ProjectHero({ project }: ProjectHeroProps) {
         </BlurFade>
       </div>
 
-      <div className="z-1 flex flex-wrap gap-2 items-center justify-center">
-        {project.techs.map((tech, i) => (
-          <BlurFade key={tech} inView delay={0.2 + i * 0.05}>
+      <BlurFade inView delay={0.2} duration={0.25} blur="3px" offset={4}>
+        <div className="z-1 flex flex-wrap gap-2 items-center justify-center">
+          {project.techs.map((tech) => (
             <Badge
+              key={tech}
               variant="secondary"
               className="transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
             >
               {tech}
             </Badge>
-          </BlurFade>
-        ))}
-      </div>
+          ))}
+        </div>
+      </BlurFade>
 
       <BlurFade inView delay={0.3}>
         <div className="z-1 flex gap-3 pt-2">

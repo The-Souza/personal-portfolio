@@ -32,25 +32,26 @@ export function HeroSection() {
         </TextAnimate>
 
         {/* STACKS */}
-        <div className="flex flex-wrap justify-center xl:justify-start gap-2">
-          {[
-            STACKS.frontend.nextjs.name,
-            STACKS.frontend.react.name,
-            STACKS.frontend.typescript.name,
-            STACKS.frontend.tailwind.name,
-            STACKS.backend.prisma.name,
-            STACKS.database.supabase.name,
-          ].map((tech, i) => (
-            <BlurFade key={tech} inView delay={0.05 + i * 0.05}>
+        <BlurFade inView delay={0.05} duration={0.25} blur="3px" offset={4}>
+          <div className="flex flex-wrap justify-center xl:justify-start gap-2">
+            {[
+              STACKS.frontend.nextjs.name,
+              STACKS.frontend.react.name,
+              STACKS.frontend.typescript.name,
+              STACKS.frontend.tailwind.name,
+              STACKS.backend.prisma.name,
+              STACKS.database.supabase.name,
+            ].map((tech) => (
               <Badge
+                key={tech}
                 variant="outline"
                 className="z-1 transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
               >
                 {tech}
               </Badge>
-            </BlurFade>
-          ))}
-        </div>
+            ))}
+          </div>
+        </BlurFade>
 
         {/* DESCRIPTION */}
         <BlurFade inView delay={0.15}>
