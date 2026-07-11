@@ -1,14 +1,14 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import FuzzyText from "@/components/effects/FuzzyText";
-import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
+import { GlassCard } from "@/components/ui/glass-card";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { GlassCard } from "@/components/ui/glass-card";
 
 export default function NotFound() {
   const { theme } = useTheme();
@@ -30,10 +30,7 @@ export default function NotFound() {
     <section className="flex min-h-[70vh] flex-col items-center justify-center gap-4 text-center">
       {/* Animated 404 */}
       {reducedMotion ? (
-        <h1
-          className="z-1 max-w-70 sm:max-w-none font-black leading-none text-[100px] sm:text-[120px]"
-          style={{ color: isDark ? "#fff" : "#000" }}
-        >
+        <h1 className="z-1 max-w-70 sm:max-w-none font-black leading-none text-[6.25rem] sm:text-[3.5rem] text-foreground">
           404
         </h1>
       ) : (
@@ -50,10 +47,7 @@ export default function NotFound() {
       )}
 
       {reducedMotion ? (
-        <h2
-          className="z-1 max-w-70 sm:max-w-170 font-bold leading-none text-[60px]"
-          style={{ color: isDark ? "#fff" : "#000" }}
-        >
+        <h2 className="z-1 max-w-70 sm:max-w-170 font-bold leading-none text-[3.75rem] text-foreground">
           {t("notFound.title")}
         </h2>
       ) : (
