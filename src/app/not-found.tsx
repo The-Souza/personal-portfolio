@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { GlassCard } from "@/components/ui/glass-card";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useCssColor } from "@/hooks/use-css-color";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -13,9 +14,9 @@ import { useTranslation } from "react-i18next";
 export default function NotFound() {
   const { theme } = useTheme();
   const { t } = useTranslation();
-  const isDark = theme === "dark";
   const isMobile = useIsMobile(768);
   const reducedMotion = useReducedMotion();
+  const foregroundColor = useCssColor("--foreground", "#000");
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -37,7 +38,7 @@ export default function NotFound() {
         <FuzzyText
           fontWeight={900}
           fontSize={isMobile ? 100 : 120}
-          color={isDark ? "#fff" : "#000"}
+          color={foregroundColor}
           className="z-1 max-w-70 sm:max-w-none"
           glitchMode
           clickEffect
@@ -54,7 +55,7 @@ export default function NotFound() {
         <FuzzyText
           fontWeight={700}
           fontSize={60}
-          color={isDark ? "#fff" : "#000"}
+          color={foregroundColor}
           className="z-1 max-w-70 sm:max-w-170"
           glitchMode
           clickEffect
