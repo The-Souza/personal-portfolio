@@ -17,9 +17,14 @@ import { statusConfig } from "@/constants/status-variants";
 interface ProjectCardProps {
   project: Project;
   onSelect: () => void;
+  titleAs?: "h2" | "h3";
 }
 
-export function ProjectCard({ project, onSelect }: ProjectCardProps) {
+export function ProjectCard({
+  project,
+  onSelect,
+  titleAs = "h3",
+}: ProjectCardProps) {
   const { t } = useTranslation();
 
   return (
@@ -50,14 +55,16 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
         )}
       </div>
       <CardContent className="flex flex-col gap-3 flex-1">
-        <CardTitle as="h2" className="font-heading flex items-center gap-2">
-          {t(project.titleKey)}
+        <div className="flex items-center gap-2">
+          <CardTitle as={titleAs} className="font-heading">
+            {t(project.titleKey)}
+          </CardTitle>
           {project.role && (
             <Badge variant="outline" className="border-border py-1 px-3">
               {project.role}
             </Badge>
           )}
-        </CardTitle>
+        </div>
 
         {/* HIGHLIGHTS */}
         {project.highlights && (

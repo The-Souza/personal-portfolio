@@ -40,6 +40,7 @@ export function ProjectsSection() {
             <ProjectCard
               project={project}
               onSelect={() => router.push(`/projects/${project.id}`)}
+              titleAs="h2"
             />
           </BlurFade>
         ))}
