@@ -6,7 +6,6 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { useSidebar } from "@/components/ui/sidebar";
 import { ToggleTheme } from "@/components/ui/themeToggle";
@@ -69,7 +68,7 @@ export function Header() {
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:flex"
         >
           <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList className="gap-1">
               {menuItems.map((item) => {
                 const isActive = pathname === item.url;
 
@@ -79,13 +78,13 @@ export function Header() {
                       asChild
                       data-active={isActive}
                       aria-current={isActive ? "page" : undefined}
-                      className={navigationMenuTriggerStyle()}
+                      className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium tracking-wide text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] data-[active=true]:text-primary data-[active=true]:font-semibold"
                     >
-                      <Link
-                        href={item.url}
-                        className="border active:scale-[0.97] bg-sidebar hover:scale-105 hover:bg-accent border-input"
-                      >
+                      <Link href={item.url} className="z-1 relative">
                         {t(`navigation.${item.title}`)}
+                        {isActive && (
+                          <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-primary" />
+                        )}
                       </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
