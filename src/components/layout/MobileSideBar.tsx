@@ -27,10 +27,12 @@ import { socialLinks } from "@/constants/social-links";
 
 export function MobileSidebar() {
   const { t } = useTranslation();
-  const { toggleSidebar } = useSidebar();
+  const { toggleSidebar, isMobile } = useSidebar();
   const pathname = usePathname();
   const { language, toggleLanguage } = useLanguage();
   const cvPath = useCvPath();
+
+  if (!isMobile) return null;
 
   return (
     <Sidebar>
