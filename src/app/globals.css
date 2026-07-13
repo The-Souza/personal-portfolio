@@ -124,7 +124,6 @@
     font-optical-sizing: auto;
   }
   html {
-    @apply scroll-smooth;
     scrollbar-gutter: stable;
   }
   /* react-remove-scroll adds margin-right to compensate for hidden scrollbar,

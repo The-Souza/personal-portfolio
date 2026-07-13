@@ -20,9 +20,9 @@ export function AboutHeroSection() {
   const Highlight = <span className="text-primary font-semibold" />;
 
   return (
-    <section className="grid lg:grid-cols-2 w-full py-14 md:py-20 items-center gap-12 min-h-[80vh]">
+    <section className="grid grid-cols-1 lg:grid-cols-2 w-full py-14 md:py-20 items-center gap-12 min-h-[80vh]">
       {/* LEFT — TEXTO */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 min-w-0">
         <TextAnimate
           key={i18n.language}
           as="h1"
