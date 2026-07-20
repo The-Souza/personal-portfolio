@@ -17,6 +17,7 @@ import {
 import { menuItems } from "@/constants/menu-items";
 import { useCvPath } from "@/hooks/use-cv-path";
 import { useLanguage } from "@/hooks/use-language";
+import { isNavItemActive } from "@/lib/utils";
 import { CodeXml, FileDown, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -70,7 +71,7 @@ export function Header() {
           <NavigationMenu>
             <NavigationMenuList className="gap-1">
               {menuItems.map((item) => {
-                const isActive = pathname === item.url;
+                const isActive = isNavItemActive(pathname, item.url);
 
                 return (
                   <NavigationMenuItem key={item.title}>

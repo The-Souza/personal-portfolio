@@ -20,6 +20,7 @@ import { menuItems } from "@/constants/menu-items";
 import { socialLinks } from "@/constants/social-links";
 import { useCvPath } from "@/hooks/use-cv-path";
 import { useLanguage } from "@/hooks/use-language";
+import { isNavItemActive } from "@/lib/utils";
 import { FileDown, FileText, Github, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -69,7 +70,7 @@ export function MobileSidebar() {
                   <SidebarMenuButton
                     asChild
                     className="min-h-11 transition-colors duration-150"
-                    isActive={pathname === item.url}
+                    isActive={isNavItemActive(pathname, item.url)}
                     onClick={() => {
                       toggleSidebar();
                     }}
