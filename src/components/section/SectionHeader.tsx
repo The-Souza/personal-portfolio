@@ -35,11 +35,11 @@ export function SectionHeader({
       </BlurFade>
 
       {subtitle && (
-        <BlurFade inView delay={0.1}>
-          <GlassCard>
+        <GlassCard>
+          <BlurFade inView delay={0.1}>
             <p className="text-lg leading-relaxed">{subtitle}</p>
-          </GlassCard>
-        </BlurFade>
+          </BlurFade>
+        </GlassCard>
       )}
     </header>
   );

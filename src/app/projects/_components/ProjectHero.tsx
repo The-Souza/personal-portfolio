@@ -30,13 +30,13 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           {t(project.titleKey)}
         </TextAnimate>
 
-        <BlurFade inView delay={0.15}>
-          <GlassCard>
-            <p className="text-lg leading-relaxed">
+        <GlassCard>
+          <BlurFade inView delay={0.15}>
+            <p className="text-lg leading-relaxed max-w-prose mx-auto">
               {t(project.longDescriptionKey)}
             </p>
-          </GlassCard>
-        </BlurFade>
+          </BlurFade>
+        </GlassCard>
       </div>
 
       <BlurFade inView delay={0.2} duration={0.25} blur="3px" offset={4}>
