@@ -54,8 +54,8 @@ export function HeroSection() {
         </BlurFade>
 
         {/* DESCRIPTION */}
-        <BlurFade inView delay={0.15}>
-          <GlassCard>
+        <GlassCard>
+          <BlurFade inView delay={0.15}>
             <div className="flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed text-lg">
               <p>{t("home.description.part1")}</p>
 
@@ -67,8 +67,8 @@ export function HeroSection() {
                 />
               </p>
             </div>
-          </GlassCard>
-        </BlurFade>
+          </BlurFade>
+        </GlassCard>
 
         {/* CTA BUTTONS */}
         <BlurFade inView delay={0.2}>

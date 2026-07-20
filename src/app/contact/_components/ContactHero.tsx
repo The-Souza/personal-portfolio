@@ -21,13 +21,13 @@ export function ContactHero() {
         {t("contact.title")}
       </TextAnimate>
 
-      <BlurFade inView delay={0.15}>
-        <GlassCard>
+      <GlassCard>
+        <BlurFade inView delay={0.15}>
           <p className="text-lg leading-relaxed">
             {t("contact.text")}
           </p>
-        </GlassCard>
-      </BlurFade>
+        </BlurFade>
+      </GlassCard>
     </div>
   );
 }

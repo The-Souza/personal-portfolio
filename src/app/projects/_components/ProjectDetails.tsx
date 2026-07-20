@@ -17,34 +17,42 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
       <div className="flex flex-col sm:flex-row justify-between gap-6 w-full">
         {/* Features */}
         {project.features && (
-          <BlurFade inView delay={0.1} className="flex flex-col gap-2">
-            <h2 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
-              {t("projects.keyFeatures")}
-            </h2>
+          <div className="flex flex-col gap-2">
+            <BlurFade inView delay={0.1}>
+              <h2 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
+                {t("projects.keyFeatures")}
+              </h2>
+            </BlurFade>
             <GlassCard>
-              <ul className="list-disc pl-4 flex flex-col gap-1 text-lg">
-                {project.features.map((feature) => (
-                  <li key={feature}>{t(feature)}</li>
-                ))}
-              </ul>
+              <BlurFade inView delay={0.1}>
+                <ul className="list-disc pl-4 flex flex-col gap-1 text-lg">
+                  {project.features.map((feature) => (
+                    <li key={feature}>{t(feature)}</li>
+                  ))}
+                </ul>
+              </BlurFade>
             </GlassCard>
-          </BlurFade>
+          </div>
         )}
 
         {/* Architecture */}
         {project.architecture && (
-          <BlurFade inView delay={0.2} className="flex flex-col gap-2">
-            <h2 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
-              {t("projects.technicalDecisions")}
-            </h2>
+          <div className="flex flex-col gap-2">
+            <BlurFade inView delay={0.2}>
+              <h2 className="z-1 text-xl sm:text-2xl font-semibold uppercase leading-tight">
+                {t("projects.technicalDecisions")}
+              </h2>
+            </BlurFade>
             <GlassCard>
-              <ul className="list-disc pl-4 flex flex-col gap-1 text-lg">
-                {project.architecture.map((item) => (
-                  <li key={item}>{t(item)}</li>
-                ))}
-              </ul>
+              <BlurFade inView delay={0.2}>
+                <ul className="list-disc pl-4 flex flex-col gap-1 text-lg">
+                  {project.architecture.map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
+                </ul>
+              </BlurFade>
             </GlassCard>
-          </BlurFade>
+          </div>
         )}
       </div>
     </section>

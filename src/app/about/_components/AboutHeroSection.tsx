@@ -34,20 +34,22 @@ export function AboutHeroSection() {
           {t("about.title")}
         </TextAnimate>
 
-        <BlurFade inView delay={0.15}>
-          <GlassCard className="flex flex-col gap-2">
-            {(["part1", "part2", "part3"] as const).map((key) => (
-              <p key={key} className="text-lg leading-relaxed">
-                <Trans
-                  key={language}
-                  i18nKey={`about.text.${key}`}
-                  ns="translation"
-                  components={{ strong: Highlight }}
-                />
-              </p>
-            ))}
-          </GlassCard>
-        </BlurFade>
+        <GlassCard className="flex flex-col gap-2">
+          <BlurFade inView delay={0.15}>
+            <div className="flex flex-col gap-2">
+              {(["part1", "part2", "part3"] as const).map((key) => (
+                <p key={key} className="text-lg leading-relaxed">
+                  <Trans
+                    key={language}
+                    i18nKey={`about.text.${key}`}
+                    ns="translation"
+                    components={{ strong: Highlight }}
+                  />
+                </p>
+              ))}
+            </div>
+          </BlurFade>
+        </GlassCard>
       </div>
 
       {/* RIGHT — TERMINAL */}

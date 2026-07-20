@@ -24,8 +24,12 @@ export function AboutStackSection() {
           const meta = CATEGORY_META[category];
 
           return (
-            <BlurFade key={category} inView delay={0.1 + i * 0.1}>
-              <GlassCard className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 p-4 sm:p-5">
+            <GlassCard key={category} className="p-4 sm:p-5">
+              <BlurFade
+                inView
+                delay={0.1 + i * 0.1}
+                className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6"
+              >
                 <h3 className="flex items-center gap-2 sm:w-44 shrink-0 uppercase font-heading text-sm tracking-wide text-muted-foreground">
                   <meta.icon className="w-5 h-5 text-primary" />
                   {t(meta.labelKey)}
@@ -42,8 +46,8 @@ export function AboutStackSection() {
                     </li>
                   ))}
                 </ul>
-              </GlassCard>
-            </BlurFade>
+              </BlurFade>
+            </GlassCard>
           );
         })}
       </div>
