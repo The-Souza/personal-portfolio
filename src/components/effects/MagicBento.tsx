@@ -1,3 +1,4 @@
+import { BlurFade } from "@/components/effects/blur-fade";
 import { BentoItem } from "@/constants/service-data";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { gsap } from "gsap";
@@ -775,9 +776,13 @@ const MagicBento: React.FC<BentoProps> = ({
       <BentoCardGrid gridRef={gridRef}>
         <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-6 px-6 pb-2 lg:grid lg:grid-cols-3 lg:overflow-visible lg:mx-0 lg:px-0 lg:pb-0">
           {items.map((card, index) => {
-            const baseClassName = `group card bg-card text-card-foreground border-border flex flex-col justify-between relative min-h-[260px] sm:min-h-[280px] w-[78%] sm:w-[45%] lg:w-full max-w-full shrink-0 lg:shrink snap-center p-6 rounded-[20px] border font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${
+            const wrapperClassName = `w-[78%] sm:w-[45%] lg:w-full max-w-full shrink-0 lg:shrink snap-center ${
+              card.featured ? "lg:col-span-2" : ""
+            }`;
+
+            const baseClassName = `group card bg-card text-card-foreground border-border flex flex-col justify-between relative min-h-[260px] sm:min-h-[280px] w-full h-full p-6 rounded-[20px] border font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${
               enableBorderGlow ? "card--border-glow" : ""
-            } ${card.featured ? "lg:col-span-2 sm:min-h-[220px] bg-accent/40" : ""}`;
+            } ${card.featured ? "sm:min-h-[220px] bg-accent/40" : ""}`;
 
             const cardStyle = {
               "--glow-x": "50%",
@@ -788,70 +793,82 @@ const MagicBento: React.FC<BentoProps> = ({
 
             if (enableStars) {
               return (
-                <ParticleCard
+                <BlurFade
                   key={index}
-                  className={baseClassName}
-                  style={cardStyle}
-                  disableAnimations={shouldDisableAnimations}
-                  particleCount={particleCount}
-                  glowColor={glowColor}
-                  enableTilt={enableTilt}
-                  clickEffect={clickEffect}
-                  enableMagnetism={enableMagnetism}
+                  inView
+                  delay={0.1 + index * 0.1}
+                  className={wrapperClassName}
                 >
-                  <div className="card__header flex gap-2 relative">
-                    <card.icon className="w-6 h-6 text-muted-foreground transition-colors duration-300 group-hover:text-primary/80" />
-                    <span className="card__label uppercase text-base tracking-wider text-muted-foreground transition-colors duration-300 group-hover:text-primary/80">
-                      {card.labelKey}
-                    </span>
-                  </div>
+                  <ParticleCard
+                    className={baseClassName}
+                    style={cardStyle}
+                    disableAnimations={shouldDisableAnimations}
+                    particleCount={particleCount}
+                    glowColor={glowColor}
+                    enableTilt={enableTilt}
+                    clickEffect={clickEffect}
+                    enableMagnetism={enableMagnetism}
+                  >
+                    <div className="card__header flex gap-2 relative">
+                      <card.icon className="w-6 h-6 text-muted-foreground transition-colors duration-300 group-hover:text-primary/80" />
+                      <span className="card__label uppercase text-base tracking-wider text-muted-foreground transition-colors duration-300 group-hover:text-primary/80">
+                        {card.labelKey}
+                      </span>
+                    </div>
 
-                  <div className="card__content flex flex-col gap-2 relative">
-                    <h3
-                      className={`card__title font-heading leading-tight lg:text-lg transition-colors duration-300 group-hover:text-primary ${textAutoHide ? "text-clamp-1" : ""}`}
-                    >
-                      {card.titleKey}
-                    </h3>
-                    <p
-                      className={`card__description text-xs lg:text-sm leading-relaxed text-muted-foreground text-clamp-4`}
-                    >
-                      {card.descriptionKey}
-                    </p>
-                  </div>
-                </ParticleCard>
+                    <div className="card__content flex flex-col gap-2 relative">
+                      <h3
+                        className={`card__title font-heading leading-tight lg:text-lg transition-colors duration-300 group-hover:text-primary ${textAutoHide ? "text-clamp-1" : ""}`}
+                      >
+                        {card.titleKey}
+                      </h3>
+                      <p
+                        className={`card__description text-xs lg:text-sm leading-relaxed text-muted-foreground text-clamp-4`}
+                      >
+                        {card.descriptionKey}
+                      </p>
+                    </div>
+                  </ParticleCard>
+                </BlurFade>
               );
             }
 
             return (
-              <BentoInteractiveCard
+              <BlurFade
                 key={index}
-                className={baseClassName}
-                style={cardStyle}
-                enableTilt={enableTilt}
-                enableMagnetism={enableMagnetism}
-                clickEffect={clickEffect}
-                glowColor={glowColor}
-                shouldDisableAnimations={shouldDisableAnimations}
+                inView
+                delay={0.1 + index * 0.1}
+                className={wrapperClassName}
               >
-                <div className="card__header flex gap-2 relative">
-                  <card.icon className="w-6 h-6 text-muted-foreground transition-colors duration-300 group-hover:text-primary" />
-                  <span className="card__label uppercase text-base tracking-wider text-muted-foreground transition-colors duration-300 group-hover:text-primary">
-                    {card.labelKey}
-                  </span>
-                </div>
-                <div className="card__content flex flex-col gap-2 relative">
-                  <h3
-                    className={`card__title font-heading leading-tight text-base lg:text-lg ${textAutoHide ? "text-clamp-1" : ""}`}
-                  >
-                    {card.titleKey}
-                  </h3>
-                  <p
-                    className={`card__description text-xs lg:text-sm leading-relaxed ${textAutoHide ? "text-clamp-4" : ""}`}
-                  >
-                    {card.descriptionKey}
-                  </p>
-                </div>
-              </BentoInteractiveCard>
+                <BentoInteractiveCard
+                  className={baseClassName}
+                  style={cardStyle}
+                  enableTilt={enableTilt}
+                  enableMagnetism={enableMagnetism}
+                  clickEffect={clickEffect}
+                  glowColor={glowColor}
+                  shouldDisableAnimations={shouldDisableAnimations}
+                >
+                  <div className="card__header flex gap-2 relative">
+                    <card.icon className="w-6 h-6 text-muted-foreground transition-colors duration-300 group-hover:text-primary" />
+                    <span className="card__label uppercase text-base tracking-wider text-muted-foreground transition-colors duration-300 group-hover:text-primary">
+                      {card.labelKey}
+                    </span>
+                  </div>
+                  <div className="card__content flex flex-col gap-2 relative">
+                    <h3
+                      className={`card__title font-heading leading-tight text-base lg:text-lg ${textAutoHide ? "text-clamp-1" : ""}`}
+                    >
+                      {card.titleKey}
+                    </h3>
+                    <p
+                      className={`card__description text-xs lg:text-sm leading-relaxed ${textAutoHide ? "text-clamp-4" : ""}`}
+                    >
+                      {card.descriptionKey}
+                    </p>
+                  </div>
+                </BentoInteractiveCard>
+              </BlurFade>
             );
           })}
         </div>
