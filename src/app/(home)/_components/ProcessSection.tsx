@@ -18,10 +18,14 @@ export function ProcessSection() {
 
       <GlassCard className="p-6">
         <ol className="relative w-full max-w-5xl flex flex-col lg:flex-row gap-10 lg:gap-6">
-          <div
+          <BlurFade
             aria-hidden="true"
-            className="absolute left-7 top-2 bottom-2 w-px bg-primary lg:left-0 lg:right-0 lg:top-7 lg:bottom-auto lg:h-px lg:w-auto"
-          />
+            inView
+            delay={0.1}
+            className="absolute left-7 top-2 bottom-2 w-px lg:left-0 lg:right-0 lg:top-7 lg:bottom-auto lg:h-px lg:w-auto"
+          >
+            <div className="w-full h-full bg-primary" />
+          </BlurFade>
 
           {processSteps.map((step, i) => (
             <BlurFade
