@@ -35,12 +35,12 @@ export function ProcessSection() {
               className="relative flex-1"
             >
               <li className="flex flex-row lg:flex-col items-start lg:items-center gap-4 lg:text-center">
-                <div className="relative z-1 shrink-0 flex items-center justify-center size-14 rounded-full bg-background border-2 border-primary text-primary">
+                <div className="relative z-1 shrink-0 flex items-center justify-center size-14 rounded-full bg-background border-2 border-primary dark:border-chart-2 text-primary dark:text-chart-2">
                   <step.icon className="w-6 h-6" />
                 </div>
 
                 <div className="flex flex-col gap-1">
-                  <span className="text-xs font-semibold text-primary tracking-wide">
+                  <span className="text-xs font-semibold text-primary dark:text-chart-2 tracking-wide">
                     {step.step}
                   </span>
                   <h3 className="font-heading text-lg font-semibold">

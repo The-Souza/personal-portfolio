@@ -39,7 +39,7 @@ export function AboutStackSection() {
                   {Object.values(stacks).map(({ name, icon: Icon }) => (
                     <li
                       key={`${category}-${name}`}
-                      className="inline-flex items-center gap-1.5 rounded-md border border-border bg-sidebar px-2.5 py-1 text-sm transition-colors hover:border-primary hover:text-primary"
+                      className="inline-flex items-center gap-1.5 rounded-md border border-border bg-sidebar px-2.5 py-1 text-sm transition-colors hover:border-primary hover:text-primary dark:hover:border-chart-2 dark:hover:text-chart-2"
                     >
                       <Icon className="w-4 h-4" />
                       {name}

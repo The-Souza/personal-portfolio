@@ -45,7 +45,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
             <Badge
               key={tech}
               variant="secondary"
-              className="transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
+              className="transition-colors border-border hover:border-primary hover:text-primary dark:hover:border-chart-2 dark:hover:text-chart-2 py-1 px-3 bg-sidebar"
             >
               {tech}
             </Badge>

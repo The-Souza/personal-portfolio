@@ -14,7 +14,7 @@ import { STACKS } from "@/constants/stacks";
 
 export function HeroSection() {
   const { t, i18n } = useTranslation();
-  const Highlight = <span className="text-primary font-semibold" />;
+  const Highlight = <span className="text-primary dark:text-chart-2 font-semibold" />;
 
   return (
     <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full flex flex-col-reverse xl:flex-row items-center justify-between py-14 md:py-20 gap-6 sm:gap-12">
@@ -45,7 +45,7 @@ export function HeroSection() {
               <Badge
                 key={tech}
                 variant="outline"
-                className="z-1 transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
+                className="z-1 transition-colors border-border hover:border-primary hover:text-primary dark:hover:border-chart-2 dark:hover:text-chart-2 py-1 px-3 bg-sidebar"
               >
                 {tech}
               </Badge>

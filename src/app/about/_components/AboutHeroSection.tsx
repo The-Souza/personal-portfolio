@@ -17,7 +17,7 @@ export function AboutHeroSection() {
 
   const locale = i18n.language.startsWith("pt") ? "pt" : "en";
   const language = i18n.language;
-  const Highlight = <span className="text-primary font-semibold" />;
+  const Highlight = <span className="text-primary dark:text-chart-2 font-semibold" />;
 
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 w-full py-14 md:py-20 items-center gap-12 min-h-[80vh]">

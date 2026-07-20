@@ -8,7 +8,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { useSidebar } from "@/components/ui/sidebar";
-import { ToggleTheme } from "@/components/ui/themeToggle";
+import { ToggleTheme } from "@/components/ui/toggle-theme";
 import {
   Tooltip,
   TooltipContent,
@@ -78,12 +78,12 @@ export function Header() {
                       asChild
                       data-active={isActive}
                       aria-current={isActive ? "page" : undefined}
-                      className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium tracking-wide text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] data-[active=true]:text-primary data-[active=true]:font-semibold"
+                      className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium tracking-wide text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] data-[active=true]:text-primary dark:data-[active=true]:text-chart-2 data-[active=true]:font-semibold"
                     >
                       <Link href={item.url} className="z-1 relative">
                         {t(`navigation.${item.title}`)}
                         {isActive && (
-                          <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-primary" />
+                          <span className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-primary dark:bg-chart-2" />
                         )}
                       </Link>
                     </NavigationMenuLink>
@@ -101,7 +101,7 @@ export function Header() {
 
             <Button
               size="icon"
-              variant="outline"
+              variant="ghost"
               aria-label="Switch language"
               onClick={toggleLanguage}
             >
