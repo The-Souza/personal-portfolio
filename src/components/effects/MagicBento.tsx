@@ -514,7 +514,10 @@ const GlobalSpotlight: React.FC<{
     document.body.appendChild(spotlight);
     spotlightRef.current = spotlight;
 
-    const handleMouseMove = (e: MouseEvent) => {
+    let rafId: number | null = null;
+
+    const processMouseMove = (e: MouseEvent) => {
+      rafId = null;
       if (!spotlightRef.current || !gridRef.current) return;
 
       const section = gridRef.current.closest(".bento-section");
@@ -595,6 +598,11 @@ const GlobalSpotlight: React.FC<{
       });
     };
 
+    const handleMouseMove = (e: MouseEvent) => {
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => processMouseMove(e));
+    };
+
     const handleMouseLeave = () => {
       isInsideSection.current = false;
       gridRef.current?.querySelectorAll(".card").forEach((card) => {
@@ -613,6 +621,7 @@ const GlobalSpotlight: React.FC<{
     document.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
+      if (rafId !== null) cancelAnimationFrame(rafId);
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseleave", handleMouseLeave);
       spotlightRef.current?.parentNode?.removeChild(spotlightRef.current);
@@ -763,7 +772,7 @@ const MagicBento: React.FC<BentoProps> = ({
           }
           
           .card--border-glow:hover {
-            box-shadow: 0 4px 20px rgba(46, 24, 78, 0.4), 0 0 30px rgba(${glowColor}, 0.2);
+            box-shadow: 0 4px 20px rgba(${glowColor}, 0.4), 0 0 30px rgba(${glowColor}, 0.2);
           }
           
           .particle::before {
@@ -779,7 +788,7 @@ const MagicBento: React.FC<BentoProps> = ({
           }
           
           .particle-container:hover {
-            box-shadow: 0 4px 20px rgba(46, 24, 78, 0.2), 0 0 30px rgba(${glowColor}, 0.2);
+            box-shadow: 0 4px 20px rgba(${glowColor}, 0.2), 0 0 30px rgba(${glowColor}, 0.2);
           }
           
           .text-clamp-1 {
