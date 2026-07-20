@@ -2,7 +2,6 @@
 
 import { Project } from "@/constants/projects/types";
 import {
-  Card,
   CardContent,
   CardDescription,
   CardFooter,
@@ -11,36 +10,29 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import { statusConfig } from "@/constants/status-variants";
 
 interface ProjectCardProps {
   project: Project;
-  onSelect: () => void;
   titleAs?: "h2" | "h3";
 }
 
-export function ProjectCard({
-  project,
-  onSelect,
-  titleAs = "h3",
-}: ProjectCardProps) {
+export function ProjectCard({ project, titleAs = "h3" }: ProjectCardProps) {
   const { t } = useTranslation();
 
   return (
-    <Card
-      interactive
-      role="button"
-      tabIndex={0}
-      onClick={onSelect}
+    <Link
+      href={`/projects/${project.id}`}
       aria-label={t(project.titleKey)}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          onSelect();
-        }
-      }}
-      className="z-1 pt-0 gap-4 group flex flex-col justify-between h-full"
+      className={cn(
+        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
+        "transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary shadow-md hover:shadow-primary",
+        "focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50",
+        "z-1 pt-0 gap-4 group flex flex-col justify-between h-full",
+      )}
     >
       <div className="relative aspect-video w-full max-h-48 sm:max-h-52 lg:max-h-56 xl:max-h-60 overflow-hidden bg-muted rounded-t-xl">
         {project.media?.previewImage && (
@@ -101,6 +93,6 @@ export function ProjectCard({
           {t("previewProject")}
         </span>
       </CardFooter>
-    </Card>
+    </Link>
   );
 }
