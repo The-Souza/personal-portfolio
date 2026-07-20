@@ -1,29 +1,29 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
   Sidebar,
   SidebarContent,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarHeader,
   SidebarFooter,
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
   SidebarSeparator,
   useSidebar,
 } from "@/components/ui/sidebar";
+import { ToggleTheme } from "@/components/ui/toggle-theme";
+import { menuItems } from "@/constants/menu-items";
+import { socialLinks } from "@/constants/social-links";
+import { useCvPath } from "@/hooks/use-cv-path";
+import { useLanguage } from "@/hooks/use-language";
 import { FileDown, FileText, Github, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
-import { ToggleTheme } from "@/components/ui/themeToggle";
-import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
-import { menuItems } from "@/constants/menu-items";
-import { useLanguage } from "@/hooks/use-language";
-import { useCvPath } from "@/hooks/use-cv-path";
-import { socialLinks } from "@/constants/social-links";
+import { useTranslation } from "react-i18next";
 
 export function MobileSidebar() {
   const { t } = useTranslation();
@@ -51,11 +51,7 @@ export function MobileSidebar() {
           </Button>
 
           <Button asChild>
-            <Link
-              href={cvPath}
-              prefetch={false}
-              download
-            >
+            <Link href={cvPath} prefetch={false} download>
               <FileDown className="w-4 h-4" />
               {t("actions.downloadCv")}
             </Link>
