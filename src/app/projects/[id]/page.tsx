@@ -57,7 +57,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       {project.media?.video && (
         <section className="w-full">
           <BlurFade inView delay={0.1} className="block w-full">
-            <ProjectVideo src={project.media.video} />
+            <ProjectVideo
+              src={project.media.video}
+              poster={project.media.previewImage}
+            />
           </BlurFade>
         </section>
       )}
