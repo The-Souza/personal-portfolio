@@ -1,8 +1,10 @@
 import { BlurFade } from "@/components/effects/blur-fade";
+import { cn } from "@/lib/utils";
 import { BentoItem } from "@/constants/service-data";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { gsap } from "gsap";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface BentoInteractiveCardProps {
   className?: string;
@@ -663,11 +665,66 @@ const MagicBento: React.FC<BentoProps> = ({
   clickEffect = true,
   enableMagnetism = true,
 }) => {
+  const { t } = useTranslation();
   const gridRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
   const isMobile = useMobileDetection();
   const reducedMotion = useReducedMotion();
   const shouldDisableAnimations =
     disableAnimations || isMobile || reducedMotion;
+
+  useEffect(() => {
+    const scrollEl = scrollRef.current;
+    if (!scrollEl) return;
+
+    let frame: number | null = null;
+
+    const updateActiveIndex = () => {
+      frame = null;
+      const containerRect = scrollEl.getBoundingClientRect();
+      const containerCenter = containerRect.left + containerRect.width / 2;
+
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      cardRefs.current.forEach((card, index) => {
+        if (!card) return;
+        const cardRect = card.getBoundingClientRect();
+        const cardCenter = cardRect.left + cardRect.width / 2;
+        const distance = Math.abs(cardCenter - containerCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      setActiveIndex(closestIndex);
+    };
+
+    const handleScroll = () => {
+      if (frame !== null) return;
+      frame = requestAnimationFrame(updateActiveIndex);
+    };
+
+    updateActiveIndex();
+    scrollEl.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      if (frame !== null) cancelAnimationFrame(frame);
+      scrollEl.removeEventListener("scroll", handleScroll);
+    };
+  }, [items.length]);
+
+  const scrollToIndex = useCallback((index: number) => {
+    cardRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+  }, []);
 
   return (
     <>
@@ -774,7 +831,13 @@ const MagicBento: React.FC<BentoProps> = ({
       )}
 
       <BentoCardGrid gridRef={gridRef}>
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-6 px-6 pb-2 lg:grid lg:grid-cols-3 lg:overflow-visible lg:mx-0 lg:px-0 lg:pb-0">
+        <div
+          ref={scrollRef}
+          role="region"
+          tabIndex={0}
+          aria-label={t("services.carouselLabel")}
+          className="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-6 px-6 pb-2 lg:grid lg:grid-cols-3 lg:overflow-visible lg:mx-0 lg:px-0 lg:pb-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 rounded-2xl"
+        >
           {items.map((card, index) => {
             const wrapperClassName = `w-[78%] sm:w-[45%] lg:w-full max-w-full shrink-0 lg:shrink snap-center ${
               card.featured ? "lg:col-span-2" : ""
@@ -793,11 +856,17 @@ const MagicBento: React.FC<BentoProps> = ({
 
             if (enableStars) {
               return (
-                <BlurFade
+                <div
                   key={index}
+                  ref={(el) => {
+                    cardRefs.current[index] = el;
+                  }}
+                  className={wrapperClassName}
+                >
+                <BlurFade
                   inView
                   delay={0.1 + index * 0.1}
-                  className={wrapperClassName}
+                  className="block w-full h-full"
                 >
                   <ParticleCard
                     className={baseClassName}
@@ -830,16 +899,19 @@ const MagicBento: React.FC<BentoProps> = ({
                     </div>
                   </ParticleCard>
                 </BlurFade>
+                </div>
               );
             }
 
             return (
-              <BlurFade
+              <div
                 key={index}
-                inView
-                delay={0.1 + index * 0.1}
+                ref={(el) => {
+                  cardRefs.current[index] = el;
+                }}
                 className={wrapperClassName}
               >
+              <BlurFade inView delay={0.1 + index * 0.1} className="block w-full h-full">
                 <BentoInteractiveCard
                   className={baseClassName}
                   style={cardStyle}
@@ -869,8 +941,27 @@ const MagicBento: React.FC<BentoProps> = ({
                   </div>
                 </BentoInteractiveCard>
               </BlurFade>
+              </div>
             );
           })}
+        </div>
+
+        <div className="flex lg:hidden justify-center items-center gap-2 mt-4">
+          {items.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => scrollToIndex(index)}
+              aria-label={t("services.goToCard", { index: index + 1 })}
+              aria-current={index === activeIndex}
+              className={cn(
+                "size-2 rounded-full transition-all duration-300",
+                index === activeIndex
+                  ? "bg-primary dark:bg-chart-2 w-5"
+                  : "bg-border hover:bg-muted-foreground",
+              )}
+            />
+          ))}
         </div>
       </BentoCardGrid>
     </>

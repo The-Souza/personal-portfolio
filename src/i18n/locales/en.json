@@ -30,6 +30,8 @@
   "services": {
     "title": "My Services",
     "subtitle": "Solutions focused on performance, scalability and clean architecture.",
+    "carouselLabel": "Services carousel",
+    "goToCard": "Go to service {{index}}",
     "data": {
       "frontendDevelopment": {
         "title": "Frontend Development",
