@@ -23,10 +23,17 @@ interface ProjectCardProps {
 export function ProjectCard({ project, titleAs = "h3" }: ProjectCardProps) {
   const { t } = useTranslation();
 
+  const statusLabel = project.status
+    ? t(`projects.data.${project.id}.status.${project.status}`)
+    : null;
+  const accessibleName = [t(project.titleKey), project.role, statusLabel]
+    .filter(Boolean)
+    .join(" — ");
+
   return (
     <Link
       href={`/projects/${project.id}`}
-      aria-label={t(project.titleKey)}
+      aria-label={accessibleName}
       className={cn(
         "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
         "transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary shadow-md hover:shadow-primary",
