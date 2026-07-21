@@ -77,7 +77,8 @@ export function ContactForm() {
     },
   });
 
-  const { isSubmitting } = form.formState;
+  const { isSubmitting, isValid, isDirty, isSubmitted } = form.formState;
+  const showInvalidState = !isValid && (isDirty || isSubmitted);
 
   async function onSubmit(data: z.infer<typeof formSchema>) {
     const sendPromise = sendContactEmail(data);
@@ -180,7 +181,7 @@ export function ContactForm() {
               form="form-contact"
               className="aria-disabled:opacity-50"
               disabled={isSubmitting}
-              aria-disabled={!form.formState.isValid}
+              aria-disabled={showInvalidState}
               onClick={(e) => {
                 if (!form.formState.isValid) {
                   e.preventDefault();
