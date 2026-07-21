@@ -7,7 +7,11 @@
     "button": "Voltar para a página inicial"
   },
   "actions": {
-    "downloadCv": "Baixar CV"
+    "downloadCv": "Baixar CV",
+    "openMenu": "Abrir menu",
+    "switchLanguage": "Alternar idioma",
+    "toggleTheme": "Alternar tema",
+    "loadingPortfolio": "Carregando portfólio"
   },
   "viewCv": "Ver CV",
   "viewProjects": "Ver Projetos",

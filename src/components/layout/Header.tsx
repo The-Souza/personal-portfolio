@@ -40,7 +40,7 @@ export function Header() {
             onClick={toggleSidebar}
             size="icon"
             variant="hover"
-            aria-label="Open menu"
+            aria-label={t("actions.openMenu")}
           >
             <Menu className="w-5 h-5" />
           </Button>
@@ -103,7 +103,7 @@ export function Header() {
             <Button
               size="icon"
               variant="ghost"
-              aria-label="Switch language"
+              aria-label={t("actions.switchLanguage")}
               onClick={toggleLanguage}
             >
               {language?.toUpperCase()}

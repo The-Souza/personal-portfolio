@@ -3,8 +3,10 @@
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 
 export function ToggleTheme() {
+  const { t } = useTranslation();
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
 
@@ -12,7 +14,7 @@ export function ToggleTheme() {
     <Button
       variant="ghost"
       size="icon"
-      aria-label="Toggle theme"
+      aria-label={t("actions.toggleTheme")}
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
       <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
