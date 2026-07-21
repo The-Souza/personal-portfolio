@@ -30,8 +30,6 @@
   "services": {
     "title": "Meus Serviços",
     "subtitle": "Soluções focadas em performance, escalabilidade e arquitetura limpa.",
-    "carouselLabel": "Carrossel de serviços",
-    "goToCard": "Ir para o serviço {{index}}",
     "data": {
       "frontendDevelopment": {
         "title": "Desenvolvimento Frontend",
