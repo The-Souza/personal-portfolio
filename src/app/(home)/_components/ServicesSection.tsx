@@ -1,7 +1,7 @@
 "use client";
 
-import { SectionHeader } from "@/components/section/SectionHeader";
 import { BlurFade } from "@/components/effects/blur-fade";
+import { SectionHeader } from "@/components/section/SectionHeader";
 import { GlassCard } from "@/components/ui/glass-card";
 import { services } from "@/constants/service-data";
 import { useTranslation } from "react-i18next";
@@ -18,21 +18,21 @@ export function ServicesSection() {
         subtitle={t("services.subtitle")}
       />
 
-      <div className="w-full max-w-3xl flex flex-col gap-3">
-        <ul className="flex flex-col gap-3">
-          {primaryServices.map((service, i) => (
-            <li key={service.titleKey}>
-              <GlassCard className="p-5 sm:p-6 border border-primary/25">
+      <div className="w-full max-w-3xl flex flex-col gap-6">
+        <GlassCard className="p-4 sm:p-5 border border-primary/25">
+          <ul className="flex flex-col divide-y divide-primary/15">
+            {primaryServices.map((service, i) => (
+              <li key={service.titleKey} className="py-4 first:pt-0 last:pb-0">
                 <BlurFade
                   inView
                   delay={0.05 + i * 0.05}
-                  className="group flex items-start gap-5"
+                  className="group flex items-start gap-4"
                 >
-                  <service.icon className="w-8 h-8 shrink-0 mt-1 text-primary transition-transform duration-300 group-hover:scale-110" />
+                  <service.icon className="w-6 h-6 shrink-0 mt-1 text-primary transition-transform duration-300 group-hover:scale-110" />
 
                   <div className="flex flex-col gap-2">
                     <div className="flex items-baseline gap-2 flex-wrap">
-                      <h3 className="font-heading text-xl font-semibold transition-colors duration-300 group-hover:text-primary">
+                      <h3 className="font-heading text-lg font-semibold transition-colors duration-300 group-hover:text-primary">
                         {t(service.titleKey)}
                       </h3>
                       {service.labelKey && (
@@ -46,26 +46,26 @@ export function ServicesSection() {
                     </p>
                   </div>
                 </BlurFade>
-              </GlassCard>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+        </GlassCard>
 
         {secondaryServices.length > 0 && (
-          <GlassCard className="p-4 sm:p-5">
-            <BlurFade inView delay={0.05 + primaryServices.length * 0.05}>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+          <GlassCard className="p-4 sm:p-5 border border-primary/25">
+            <BlurFade inView delay={0.1 + primaryServices.length * 0.05}>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
                 {secondaryServices.map((service) => (
                   <li
                     key={service.titleKey}
                     className="group flex items-start gap-3"
                   >
-                    <service.icon className="w-4 h-4 shrink-0 mt-0.5 text-primary transition-transform duration-300 group-hover:scale-110" />
+                    <service.icon className="w-5 h-5 shrink-0 mt-0.5 text-primary transition-transform duration-300 group-hover:scale-110" />
                     <div className="flex flex-col gap-0.5">
-                      <h3 className="text-sm font-semibold transition-colors duration-300 group-hover:text-primary">
+                      <h3 className="text-base font-semibold transition-colors duration-300 group-hover:text-primary">
                         {t(service.titleKey)}
                       </h3>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
                         {t(service.descriptionKey)}
                       </p>
                     </div>
