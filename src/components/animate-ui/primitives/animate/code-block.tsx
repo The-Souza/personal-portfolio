@@ -64,6 +64,11 @@ function CodeBlock({
           lang,
           themes,
           defaultColor: theme,
+          colorReplacements: {
+            // github-light's key/property-name orange (#e36209) fails WCAG AA
+            // (3.49:1 on white); darkened to #b64e07 (5.14:1) while staying orange.
+            '#e36209': '#b64e07',
+          },
         });
 
         setHighlightedCode(highlighted);

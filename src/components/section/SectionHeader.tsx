@@ -1,6 +1,6 @@
 "use client";
 
-import ScrollReveal from "@/components/effects/ScrollReveal";
+import { BlurFade } from "@/components/effects/blur-fade";
 import { cn } from "@/lib/utils";
 import { GlassCard } from "@/components/ui/glass-card";
 
@@ -28,29 +28,17 @@ export function SectionHeader({
         className,
       )}
     >
-      <h2 className="font-heading text-4xl md:text-5xl leading-tight">
-        <ScrollReveal
-          baseOpacity={0.1}
-          enableBlur={true}
-          baseRotation={0}
-          blurStrength={4}
-        >
+      <BlurFade inView>
+        <h2 className="font-heading text-[clamp(1.5rem,2.5vw+0.75rem,2.25rem)] leading-tight">
           {title}
-        </ScrollReveal>
-      </h2>
+        </h2>
+      </BlurFade>
 
       {subtitle && (
         <GlassCard>
-          <p className="text-lg leading-relaxed">
-            <ScrollReveal
-              baseOpacity={0.1}
-              enableBlur={true}
-              baseRotation={0}
-              blurStrength={4}
-            >
-              {subtitle}
-            </ScrollReveal>
-          </p>
+          <BlurFade inView delay={0.1}>
+            <p className="text-lg leading-relaxed">{subtitle}</p>
+          </BlurFade>
         </GlassCard>
       )}
     </header>

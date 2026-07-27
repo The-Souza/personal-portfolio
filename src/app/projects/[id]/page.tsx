@@ -8,6 +8,7 @@ import {
   ProjectNavigation,
 } from "../_components";
 import { ProjectVideo } from "@/components/projects/ProjectVideo";
+import { BlurFade } from "@/components/effects/blur-fade";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -55,7 +56,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       {project.media?.video && (
         <section className="w-full">
-          <ProjectVideo src={project.media.video} />
+          <BlurFade inView delay={0.1} className="block w-full">
+            <ProjectVideo
+              src={project.media.video}
+              poster={project.media.previewImage}
+            />
+          </BlurFade>
         </section>
       )}
 

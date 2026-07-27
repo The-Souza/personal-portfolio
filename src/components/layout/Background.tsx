@@ -1,8 +1,17 @@
 "use client";
 
-import PixelBlast from "@/components/effects/PixelBlast";
+import dynamic from "next/dynamic";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useCssColor } from "@/hooks/use-css-color";
+
+const PixelBlast = dynamic(() => import("@/components/effects/PixelBlast"), {
+  ssr: false,
+});
 
 export function Background() {
+  const reducedMotion = useReducedMotion();
+  const color = useCssColor("--primary", "#7f22fe");
+
   return (
     <div
       style={{
@@ -12,20 +21,22 @@ export function Background() {
         overflow: "hidden",
       }}
     >
-      <PixelBlast
-        variant="diamond"
-        pixelSize={4}
-        color="#7f22fe"
-        patternScale={2}
-        patternDensity={1}
-        enableRipples
-        rippleSpeed={0.3}
-        rippleThickness={0.1}
-        rippleIntensityScale={1}
-        speed={0.5}
-        transparent
-        edgeFade={0.25}
-      />
+      {!reducedMotion && (
+        <PixelBlast
+          variant="diamond"
+          pixelSize={4}
+          color={color}
+          patternScale={2}
+          patternDensity={1}
+          enableRipples
+          rippleSpeed={0.3}
+          rippleThickness={0.1}
+          rippleIntensityScale={1}
+          speed={0.5}
+          transparent
+          edgeFade={0.25}
+        />
+      )}
     </div>
   );
 }

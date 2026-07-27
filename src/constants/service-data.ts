@@ -8,31 +8,35 @@ import {
   Terminal,
 } from "lucide-react";
 
-export interface BentoItem {
+export interface ServiceItem {
   titleKey: string;
   descriptionKey: string;
   labelKey?: string;
   icon: React.ElementType;
+  primary?: boolean;
 }
 
-export const services: BentoItem[] = [
+export const services: ServiceItem[] = [
   {
     titleKey: "services.data.frontendDevelopment.title",
     labelKey: "services.data.frontendDevelopment.label",
     descriptionKey: "services.data.frontendDevelopment.description",
     icon: LayoutDashboard,
+    primary: true,
   },
   {
     titleKey: "services.data.backendIntegration.title",
     labelKey: "services.data.backendIntegration.label",
     descriptionKey: "services.data.backendIntegration.description",
     icon: Database,
+    primary: true,
   },
   {
     titleKey: "services.data.projectsFullstack.title",
     labelKey: "services.data.projectsFullstack.label",
     descriptionKey: "services.data.projectsFullstack.description",
     icon: Layers,
+    primary: true,
   },
   {
     titleKey: "services.data.methodology.title",

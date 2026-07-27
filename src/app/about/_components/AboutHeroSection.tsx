@@ -6,6 +6,7 @@ import {
   CodeHeader,
 } from "@/components/animate-ui/components/animate/code";
 import { TextAnimate } from "@/components/effects/text-animate";
+import { BlurFade } from "@/components/effects/blur-fade";
 import { GlassCard } from "@/components/ui/glass-card";
 import { developerCode } from "@/constants/developer-code";
 import { TypeScriptIcon } from "@/icons/TypeScriptIcon";
@@ -16,46 +17,52 @@ export function AboutHeroSection() {
 
   const locale = i18n.language.startsWith("pt") ? "pt" : "en";
   const language = i18n.language;
-  const Highlight = <span className="text-primary font-semibold" />;
+  const Highlight = <span className="text-primary dark:text-chart-2 font-semibold" />;
 
   return (
-    <section className="grid lg:grid-cols-2 w-full py-14 md:py-20 items-center gap-12 min-h-[80vh]">
+    <section className="grid grid-cols-1 lg:grid-cols-2 w-full py-14 md:py-20 items-center gap-12 min-h-[80vh]">
       {/* LEFT — TEXTO */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 min-w-0">
         <TextAnimate
           key={i18n.language}
           as="h1"
           animation="blurInUp"
           by="word"
           once
-          className="text-3xl md:text-4xl xl:text-5xl font-bold font-heading"
+          className="text-[clamp(2rem,3.5vw+1rem,3.25rem)] font-bold font-heading"
         >
           {t("about.title")}
         </TextAnimate>
 
         <GlassCard className="flex flex-col gap-2">
-          {(["part1", "part2", "part3"] as const).map((key) => (
-            <p key={key} className="text-lg leading-relaxed">
-              <Trans
-                key={language}
-                i18nKey={`about.text.${key}`}
-                ns="translation"
-                components={{ strong: Highlight }}
-              />
-            </p>
-          ))}
+          <BlurFade inView delay={0.15}>
+            <div className="flex flex-col gap-2">
+              {(["part1", "part2", "part3"] as const).map((key) => (
+                <p key={key} className="text-lg leading-relaxed">
+                  <Trans
+                    key={language}
+                    i18nKey={`about.text.${key}`}
+                    ns="translation"
+                    components={{ strong: Highlight }}
+                  />
+                </p>
+              ))}
+            </div>
+          </BlurFade>
         </GlassCard>
       </div>
 
       {/* RIGHT — TERMINAL */}
-      <Code
-        className="w-full h-128.5 transition-all duration-300 ease-out hover:border-primary shadow-md hover:shadow-primary"
-        code={developerCode[locale]}
-      >
-        <CodeHeader icon={TypeScriptIcon}>developer.ts</CodeHeader>
+      <BlurFade inView delay={0.2} direction="left">
+        <Code
+          className="w-full h-128.5 transition-all duration-300 ease-out hover:border-primary shadow-md hover:shadow-primary"
+          code={developerCode[locale]}
+        >
+          <CodeHeader icon={TypeScriptIcon}>developer.ts</CodeHeader>
 
-        <CodeBlock lang="ts" />
-      </Code>
+          <CodeBlock lang="ts" />
+        </Code>
+      </BlurFade>
     </section>
   );
 }

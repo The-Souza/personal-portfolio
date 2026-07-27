@@ -1,16 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import { SectionHeader } from "@/components/section/SectionHeader";
 import { ProjectCard } from "@/components/projects/ProjectCard";
-import { FeaturedProjectModal } from "./FeaturedProjectModal";
 import { projects } from "@/constants/projects";
 import { useTranslation } from "react-i18next";
-import { Project } from "@/constants/projects/types";
+import { BlurFade } from "@/components/effects/blur-fade";
 
 export function FeaturedProjectsSection() {
   const { t } = useTranslation();
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const featuredProjects = projects.filter((project) => project.featured);
 
   return (
@@ -21,20 +18,12 @@ export function FeaturedProjectsSection() {
       />
 
       <div className="grid w-full justify-center gap-4 md:grid-cols-2">
-        {featuredProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            onSelect={() => setSelectedProject(project)}
-          />
+        {featuredProjects.map((project, i) => (
+          <BlurFade key={project.id} inView delay={0.1 + i * 0.1} className="h-full">
+            <ProjectCard project={project} />
+          </BlurFade>
         ))}
       </div>
-
-      <FeaturedProjectModal
-        project={selectedProject}
-        open={!!selectedProject}
-        onOpenChange={(open) => !open && setSelectedProject(null)}
-      />
     </section>
   );
 }

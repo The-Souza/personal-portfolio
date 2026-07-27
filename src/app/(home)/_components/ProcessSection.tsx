@@ -1,15 +1,10 @@
 "use client";
 
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "@/components/ui/card";
+import { BlurFade } from "@/components/effects/blur-fade";
 import { SectionHeader } from "@/components/section/SectionHeader";
-import { useTranslation } from "react-i18next";
+import { GlassCard } from "@/components/ui/glass-card";
 import { processSteps } from "@/constants/process-data";
+import { useTranslation } from "react-i18next";
 
 export function ProcessSection() {
   const { t } = useTranslation();
@@ -21,31 +16,45 @@ export function ProcessSection() {
         subtitle={t("process.subtitle")}
       />
 
-      <div className="grid w-full justify-center gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {processSteps.map((step) => (
-          <Card
-            key={step.step}
-            className="z-1 h-64 flex flex-col justify-between lg:justify-normal transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary shadow-md hover:shadow-primary"
+      <GlassCard className="p-6">
+        <ol className="relative w-full max-w-5xl flex flex-col lg:flex-row gap-10 lg:gap-6">
+          <BlurFade
+            aria-hidden="true"
+            inView
+            delay={0.1}
+            className="absolute left-7 top-2 bottom-2 w-px lg:left-0 lg:right-0 lg:top-7 lg:bottom-auto lg:h-px lg:w-auto"
           >
-            <CardHeader className="gap-3">
-              <CardTitle className="flex items-center gap-3">
-                <step.icon className="w-6 h-6 text-primary" />
+            <div className="w-full h-full bg-primary" />
+          </BlurFade>
 
-                <span className="font-semibold text-primary">{step.step}</span>
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col gap-2">
-              <CardTitle className="text-lg font-heading">
-                {t(step.titleKey)}
-              </CardTitle>
+          {processSteps.map((step, i) => (
+            <BlurFade
+              key={step.step}
+              inView
+              delay={0.1 + i * 0.1}
+              className="relative flex-1"
+            >
+              <li className="flex flex-row lg:flex-col items-start lg:items-center gap-4 lg:text-center">
+                <div className="relative z-1 shrink-0 flex items-center justify-center size-14 rounded-full bg-background border-2 border-primary dark:border-chart-2 text-primary dark:text-chart-2">
+                  <step.icon className="w-6 h-6" />
+                </div>
 
-              <CardDescription className="text-xs lg:text-sm leading-relaxed">
-                {t(step.descriptionKey)}
-              </CardDescription>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+                <div className="flex flex-col gap-1">
+                  <span className="text-xs font-semibold text-primary dark:text-chart-2 tracking-wide">
+                    {step.step}
+                  </span>
+                  <h3 className="font-heading text-lg font-semibold">
+                    {t(step.titleKey)}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t(step.descriptionKey)}
+                  </p>
+                </div>
+              </li>
+            </BlurFade>
+          ))}
+        </ol>
+      </GlassCard>
     </section>
   );
 }

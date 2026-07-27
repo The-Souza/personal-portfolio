@@ -4,14 +4,22 @@
     "projects": "Projetos",
     "about": "Sobre",
     "contact": "Contato",
-    "button": "Voltar para a página inicial"
+    "button": "Voltar para a página inicial",
+    "sidebarMenu": "Menu"
   },
   "actions": {
-    "downloadCv": "Baixar CV"
+    "downloadCv": "Baixar CV",
+    "openMenu": "Abrir menu",
+    "switchLanguage": "{{lang}} — Alternar idioma",
+    "toggleTheme": "Alternar tema",
+    "loadingPortfolio": "Carregando portfólio"
   },
   "viewCv": "Ver CV",
   "viewProjects": "Ver Projetos",
   "previewProject": "Visualizar",
+  "intro": {
+    "skip": "Pular"
+  },
   "home": {
     "head": "Desenvolvedor Frontend",
     "description": {
@@ -98,6 +106,11 @@
     "techStack": "Tecnologias Utilizadas",
     "technicalDecisions": "Decisões Técnicas",
     "keyFeatures": "Funcionalidades Principais",
+    "role": {
+      "Frontend": "Frontend",
+      "Fullstack": "Fullstack",
+      "Desktop": "Desktop"
+    },
     "navigation": {
       "label": {
         "nav": "Navegação de Projetos",
@@ -202,8 +215,7 @@
           "python": "Python",
           "desktop": "App Desktop",
           "ocr": "Tesseract OCR",
-          "excel": "Exportação Excel",
-          "completed": "Concluído"
+          "excel": "Exportação Excel"
         },
         "features": {
           "login": "Login automático com e-mail e senha, sem abertura de browser",
@@ -322,6 +334,7 @@
     "toast": {
       "success": "Mensagem enviada com sucesso!",
       "error": "Erro ao enviar a mensagem.",
+      "errorFallback": "Me escreva direto em",
       "loading": "Carregando..."
     },
     "buttons": {
