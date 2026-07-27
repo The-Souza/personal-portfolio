@@ -40,11 +40,11 @@ export function MobileSidebar() {
       <SidebarHeader>
         {/* Actions */}
         <div className="items-center justify-center gap-2 flex">
-          <ToggleTheme />
+          <ToggleTheme variant="hover" />
 
           <Button
             size="icon"
-            variant="outline"
+            variant="hover"
             aria-label={t("actions.switchLanguage", {
               lang: language?.toUpperCase(),
             })}
