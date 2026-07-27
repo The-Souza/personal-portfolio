@@ -4,7 +4,8 @@
     "projects": "Projetos",
     "about": "Sobre",
     "contact": "Contato",
-    "button": "Voltar para a página inicial"
+    "button": "Voltar para a página inicial",
+    "sidebarMenu": "Menu"
   },
   "actions": {
     "downloadCv": "Baixar CV",

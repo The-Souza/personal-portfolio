@@ -4,7 +4,8 @@
     "projects": "Projects",
     "about": "About",
     "contact": "Contact",
-    "button": "Go to homepage"
+    "button": "Go to homepage",
+    "sidebarMenu": "Menu"
   },
   "actions": {
     "downloadCv": "Download CV",
