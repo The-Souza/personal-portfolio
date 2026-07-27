@@ -52,7 +52,7 @@ export function ServicesSection() {
         </GlassCard>
 
         {secondaryServices.length > 0 && (
-          <GlassCard className="p-4 sm:p-5 border border-border">
+          <GlassCard className="p-4 sm:p-5 border border-primary/25">
             <BlurFade inView delay={0.1 + primaryServices.length * 0.05}>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {secondaryServices.map((service) => (
