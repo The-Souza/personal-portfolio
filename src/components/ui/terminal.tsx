@@ -203,6 +203,7 @@ interface TerminalProps {
   sequence?: boolean;
   startOnView?: boolean;
   onSequenceComplete?: () => void;
+  "aria-label"?: string;
 }
 
 export const Terminal = ({
@@ -211,6 +212,7 @@ export const Terminal = ({
   sequence = true,
   startOnView = true,
   onSequenceComplete: onComplete,
+  "aria-label": ariaLabel,
 }: TerminalProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(containerRef as React.RefObject<Element>, {
@@ -261,6 +263,8 @@ export const Terminal = ({
   const content = (
     <div
       ref={containerRef}
+      role="status"
+      aria-label={ariaLabel}
       className={cn(
         "border-border bg-background z-0 h-full max-h-100 w-full max-w-lg rounded-xl border",
         className,

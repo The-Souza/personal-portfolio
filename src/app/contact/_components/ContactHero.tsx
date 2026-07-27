@@ -1,6 +1,7 @@
 "use client"
 
 import { TextAnimate } from "@/components/effects/text-animate";
+import { BlurFade } from "@/components/effects/blur-fade";
 import { GlassCard } from "@/components/ui/glass-card";
 import { useTranslation } from "react-i18next";
 
@@ -15,15 +16,17 @@ export function ContactHero() {
         animation="blurInUp"
         by="word"
         once
-        className="text-4xl md:text-5xl font-bold font-heading"
+        className="text-[clamp(2rem,3.5vw+1rem,3.25rem)] font-bold font-heading"
       >
         {t("contact.title")}
       </TextAnimate>
 
       <GlassCard>
-        <p className="text-lg leading-relaxed">
-          {t("contact.text")}
-        </p>
+        <BlurFade inView delay={0.15}>
+          <p className="text-lg leading-relaxed">
+            {t("contact.text")}
+          </p>
+        </BlurFade>
       </GlassCard>
     </div>
   );

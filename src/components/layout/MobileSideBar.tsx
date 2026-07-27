@@ -1,54 +1,60 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
   Sidebar,
   SidebarContent,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarHeader,
   SidebarFooter,
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
   SidebarSeparator,
   useSidebar,
 } from "@/components/ui/sidebar";
+import { ToggleTheme } from "@/components/ui/toggle-theme";
+import { menuItems } from "@/constants/menu-items";
+import { socialLinks } from "@/constants/social-links";
+import { useCvPath } from "@/hooks/use-cv-path";
+import { useLanguage } from "@/hooks/use-language";
+import { isNavItemActive } from "@/lib/utils";
 import { FileDown, FileText, Github, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
-import { ToggleTheme } from "@/components/ui/themeToggle";
-import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
-import { menuItems } from "@/constants/menu-items";
-import { useLanguage } from "@/hooks/use-language";
-import { useCvPath } from "@/hooks/use-cv-path";
-import { socialLinks } from "@/constants/social-links";
+import { useTranslation } from "react-i18next";
 
 export function MobileSidebar() {
   const { t } = useTranslation();
-  const { toggleSidebar } = useSidebar();
+  const { toggleSidebar, isMobile } = useSidebar();
   const pathname = usePathname();
   const { language, toggleLanguage } = useLanguage();
   const cvPath = useCvPath();
+
+  if (!isMobile) return null;
 
   return (
     <Sidebar>
       <SidebarHeader>
         {/* Actions */}
         <div className="items-center justify-center gap-2 flex">
-          <ToggleTheme />
+          <ToggleTheme variant="hover" />
 
-          <Button size="icon" variant="outline" onClick={toggleLanguage}>
+          <Button
+            size="icon"
+            variant="hover"
+            aria-label={t("actions.switchLanguage", {
+              lang: language?.toUpperCase(),
+            })}
+            onClick={toggleLanguage}
+          >
             {language?.toUpperCase()}
           </Button>
 
           <Button asChild>
-            <Link
-              href={cvPath}
-              prefetch={false}
-              download
-            >
+            <Link href={cvPath} prefetch={false} download>
               <FileDown className="w-4 h-4" />
               {t("actions.downloadCv")}
             </Link>
@@ -58,7 +64,7 @@ export function MobileSidebar() {
       <SidebarSeparator />
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Menu</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("navigation.sidebarMenu")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
@@ -66,7 +72,7 @@ export function MobileSidebar() {
                   <SidebarMenuButton
                     asChild
                     className="min-h-11 transition-colors duration-150"
-                    isActive={pathname === item.url}
+                    isActive={isNavItemActive(pathname, item.url)}
                     onClick={() => {
                       toggleSidebar();
                     }}
@@ -88,7 +94,8 @@ export function MobileSidebar() {
           <Link
             href={socialLinks.github}
             target="_blank"
-            className="flex items-center gap-2 hover:text-primary"
+            rel="noopener noreferrer"
+            className="relative flex items-center gap-2 hover:text-primary before:absolute before:-inset-y-3 before:-inset-x-1 before:content-['']"
           >
             <Github className="w-4 h-4" />
             GitHub
@@ -97,7 +104,8 @@ export function MobileSidebar() {
           <Link
             href={socialLinks.linkedin}
             target="_blank"
-            className="flex items-center gap-2 hover:text-primary"
+            rel="noopener noreferrer"
+            className="relative flex items-center gap-2 hover:text-primary before:absolute before:-inset-y-3 before:-inset-x-1 before:content-['']"
           >
             <LinkedinIcon className="w-4 h-4" />
             LinkedIn
@@ -108,7 +116,7 @@ export function MobileSidebar() {
             target="_blank"
             prefetch={false}
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-primary"
+            className="relative flex items-center gap-2 hover:text-primary before:absolute before:-inset-y-3 before:-inset-x-1 before:content-['']"
           >
             <FileText className="w-4 h-4" />
             {t("viewCv")}

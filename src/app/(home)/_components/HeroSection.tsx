@@ -5,18 +5,16 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { TextAnimate } from "@/components/effects/text-animate";
-import { Github, Linkedin, FileText, Briefcase } from "lucide-react";
+import { Github, Linkedin, Briefcase, Mail } from "lucide-react";
 import { BlurFade } from "@/components/effects/blur-fade";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Trans, useTranslation } from "react-i18next";
-import { useCvPath } from "@/hooks/use-cv-path";
 import { socialLinks } from "@/constants/social-links";
 import { STACKS } from "@/constants/stacks";
 
 export function HeroSection() {
   const { t, i18n } = useTranslation();
-  const cvPath = useCvPath();
-  const Highlight = <span className="text-primary font-semibold" />;
+  const Highlight = <span className="text-primary dark:text-chart-2 font-semibold" />;
 
   return (
     <section className="min-h-[60vh] sm:min-h-[65vh] xl:min-h-[80vh] w-full flex flex-col-reverse xl:flex-row items-center justify-between py-14 md:py-20 gap-6 sm:gap-12">
@@ -28,95 +26,98 @@ export function HeroSection() {
           animation="blurInUp"
           by="word"
           once
-          className="text-4xl md:text-5xl font-bold font-heading"
+          className="text-[clamp(2rem,3.5vw+1rem,3.25rem)] font-bold font-heading"
         >
           {t("home.head")}
         </TextAnimate>
 
         {/* STACKS */}
-        <div className="flex flex-wrap justify-center xl:justify-start gap-2">
-          {[
-            STACKS.frontend.nextjs.name,
-            STACKS.frontend.react.name,
-            STACKS.frontend.typescript.name,
-            STACKS.frontend.tailwind.name,
-            STACKS.backend.prisma.name,
-            STACKS.database.supabase.name,
-          ].map((tech) => (
-            <Badge
-              key={tech}
-              variant="outline"
-              className="z-1 transition-colors border-border hover:border-primary hover:text-primary py-1 px-3 bg-sidebar"
-            >
-              {tech}
-            </Badge>
-          ))}
-        </div>
+        <BlurFade inView delay={0.05} duration={0.25} blur="3px" offset={4}>
+          <div className="flex flex-wrap justify-center xl:justify-start gap-2">
+            {[
+              STACKS.frontend.nextjs.name,
+              STACKS.frontend.react.name,
+              STACKS.frontend.typescript.name,
+              STACKS.frontend.tailwind.name,
+              STACKS.backend.prisma.name,
+              STACKS.database.supabase.name,
+            ].map((tech) => (
+              <Badge
+                key={tech}
+                variant="outline"
+                className="z-1 transition-colors border-border hover:border-primary hover:text-primary dark:hover:border-chart-2 dark:hover:text-chart-2 py-1 px-3 bg-sidebar"
+              >
+                {tech}
+              </Badge>
+            ))}
+          </div>
+        </BlurFade>
 
         {/* DESCRIPTION */}
         <GlassCard>
-          <div className="flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed text-lg">
-            <p>{t("home.description.part1")}</p>
+          <BlurFade inView delay={0.15}>
+            <div className="flex flex-col gap-2 max-w-xl mx-auto xl:mx-0 leading-relaxed text-lg">
+              <p>{t("home.description.part1")}</p>
 
-            <p>
-              <Trans
-                key={i18n.language}
-                i18nKey="home.description.part2"
-                components={{ strong: Highlight }}
-              />
-            </p>
-          </div>
+              <p>
+                <Trans
+                  key={i18n.language}
+                  i18nKey="home.description.part2"
+                  components={{ strong: Highlight }}
+                />
+              </p>
+            </div>
+          </BlurFade>
         </GlassCard>
 
         {/* CTA BUTTONS */}
-        <div className="flex flex-wrap justify-center xl:justify-start gap-4 pt-4">
-          <Button asChild>
-            <Link
-              href={socialLinks.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
-            >
-              <Linkedin className="h-4 w-4" />
-              LinkedIn
-            </Link>
-          </Button>
+        <BlurFade inView delay={0.2}>
+          <div className="flex flex-wrap justify-center xl:justify-start gap-4 pt-4">
+            <Button asChild>
+              <Link
+                href="/contact"
+                className="z-1"
+              >
+                <Mail className="h-4 w-4" />
+                {t("navigation.contact")}
+              </Link>
+            </Button>
 
-          <Button asChild>
-            <Link
-              href={socialLinks.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
-            >
-              <Github className="h-4 w-4" />
-              GitHub
-            </Link>
-          </Button>
+            <Button asChild>
+              <Link
+                href="/projects"
+                className="z-1"
+              >
+                <Briefcase className="h-4 w-4" />
+                {t("viewProjects")}
+              </Link>
+            </Button>
 
-          <Button asChild variant="secondary">
-            <Link
-              href="/projects"
-              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
-            >
-              <Briefcase className="h-4 w-4" />
-              {t("viewProjects")}
-            </Link>
-          </Button>
+            <Button asChild variant="outline">
+              <Link
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="z-1"
+              >
+                <Linkedin className="h-4 w-4" />
+                LinkedIn
+              </Link>
+            </Button>
 
-          <Button asChild variant="secondary">
-            <Link
-              href={cvPath}
-              prefetch={false}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:scale-105 transition-transform active:scale-[0.97] z-1"
-            >
-              <FileText className="h-4 w-4" />
-              {t("viewCv")}
-            </Link>
-          </Button>
-        </div>
+            <Button asChild variant="outline">
+              <Link
+                href={socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="z-1"
+              >
+                <Github className="h-4 w-4" />
+                GitHub
+              </Link>
+            </Button>
+          </div>
+        </BlurFade>
       </div>
 
       {/* RIGHT — AVATAR */}

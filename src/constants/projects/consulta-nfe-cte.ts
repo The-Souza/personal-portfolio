@@ -23,7 +23,6 @@ export const consultaNfeCteProject: Project = {
     "projects.data.consulta-nfe-cte.highlights.desktop",
     "projects.data.consulta-nfe-cte.highlights.ocr",
     "projects.data.consulta-nfe-cte.highlights.excel",
-    "projects.data.consulta-nfe-cte.highlights.completed",
   ],
 
   techs: ["Python", "CustomTkinter", "Tesseract OCR", "PyInstaller", "keyring"],

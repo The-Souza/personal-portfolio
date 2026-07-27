@@ -27,7 +27,7 @@ export function ProjectNavigation({
             <Link
               aria-label={`${t("projects.navigation.label.link.previous")} ${t(navigation.previous.titleKey)}`}
               href={`/projects/${navigation.previous.id}`}
-              className="text-lg underline z-1 flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
+              className="relative text-lg underline z-1 flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97] before:absolute before:-inset-2 before:content-['']"
             >
               <ChevronsLeft className="w-7 h-7" />
 
@@ -47,7 +47,7 @@ export function ProjectNavigation({
             <Link
               aria-label={`${t("projects.navigation.label.link.next")} ${t(navigation.next.titleKey)}`}
               href={`/projects/${navigation.next.id}`}
-              className="text-lg underline z-1 flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97]"
+              className="relative text-lg underline z-1 flex items-center gap-2 font-semibold hover:scale-105 transition-transform hover:text-primary active:scale-[0.97] before:absolute before:-inset-2 before:content-['']"
             >
               <span className="inline md:hidden">
                 {t("projects.navigation.next")}
