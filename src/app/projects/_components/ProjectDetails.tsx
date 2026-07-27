@@ -1,9 +1,9 @@
 "use client";
 
+import { BlurFade } from "@/components/effects/blur-fade";
+import { GlassCard } from "@/components/ui/glass-card";
 import { Project } from "@/constants/projects/types";
 import { useTranslation } from "react-i18next";
-import { GlassCard } from "@/components/ui/glass-card";
-import { BlurFade } from "@/components/effects/blur-fade";
 
 interface ProjectDetailsProps {
   project: Project;
@@ -14,7 +14,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
 
   return (
     <section className="w-full flex flex-col gap-6 items-center">
-      <div className="flex flex-col sm:flex-row justify-between gap-6 w-full">
+      <div className="flex flex-col gap-6 w-full">
         {/* Features */}
         {project.features && (
           <div className="flex flex-col gap-2">
@@ -25,7 +25,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
             </BlurFade>
             <GlassCard>
               <BlurFade inView delay={0.1}>
-                <ul className="list-disc pl-4 flex flex-col gap-1 text-lg">
+                <ul className="list-disc pl-4 grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg">
                   {project.features.map((feature) => (
                     <li key={feature}>{t(feature)}</li>
                   ))}
@@ -45,7 +45,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
             </BlurFade>
             <GlassCard>
               <BlurFade inView delay={0.2}>
-                <ul className="list-disc pl-4 flex flex-col gap-1 text-lg">
+                <ul className="list-disc pl-4 grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg">
                   {project.architecture.map((item) => (
                     <li key={item}>{t(item)}</li>
                   ))}

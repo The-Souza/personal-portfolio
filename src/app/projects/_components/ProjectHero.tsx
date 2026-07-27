@@ -1,13 +1,13 @@
 "use client";
 
-import { Project } from "@/constants/projects/types";
+import { BlurFade } from "@/components/effects/blur-fade";
+import { TextAnimate } from "@/components/effects/text-animate";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
-import { TextAnimate } from "@/components/effects/text-animate";
-import { BlurFade } from "@/components/effects/blur-fade";
 import { GlassCard } from "@/components/ui/glass-card";
+import { Project } from "@/constants/projects/types";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 interface ProjectHeroProps {
   project: Project;

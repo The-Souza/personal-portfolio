@@ -1,9 +1,9 @@
 "use client";
 
+import { BlurFade } from "@/components/effects/blur-fade";
+import { GlassCard } from "@/components/ui/glass-card";
 import { Project } from "@/constants/projects/types";
 import { useTranslation } from "react-i18next";
-import { GlassCard } from "@/components/ui/glass-card";
-import { BlurFade } from "@/components/effects/blur-fade";
 
 interface ProjectOutcomeProps {
   project: Project;
@@ -24,7 +24,7 @@ export function ProjectOutcome({ project }: ProjectOutcomeProps) {
         </BlurFade>
         <GlassCard>
           <BlurFade inView delay={0.1}>
-            <p className="text-lg leading-relaxed max-w-prose">
+            <p className="text-lg leading-relaxed">
               {t(project.outcome.context)}
             </p>
           </BlurFade>
@@ -39,7 +39,7 @@ export function ProjectOutcome({ project }: ProjectOutcomeProps) {
         </BlurFade>
         <GlassCard>
           <BlurFade inView delay={0.2}>
-            <p className="text-lg leading-relaxed max-w-prose">
+            <p className="text-lg leading-relaxed">
               {t(project.outcome.solution)}
             </p>
           </BlurFade>
@@ -54,7 +54,9 @@ export function ProjectOutcome({ project }: ProjectOutcomeProps) {
         </BlurFade>
         <GlassCard>
           <BlurFade inView delay={0.3}>
-            <p className="text-lg leading-relaxed max-w-prose">{t(project.outcome.result)}</p>
+            <p className="text-lg leading-relaxed">
+              {t(project.outcome.result)}
+            </p>
           </BlurFade>
         </GlassCard>
       </div>
