@@ -9,7 +9,7 @@
   "actions": {
     "downloadCv": "Baixar CV",
     "openMenu": "Abrir menu",
-    "switchLanguage": "Alternar idioma",
+    "switchLanguage": "{{lang}} — Alternar idioma",
     "toggleTheme": "Alternar tema",
     "loadingPortfolio": "Carregando portfólio"
   },

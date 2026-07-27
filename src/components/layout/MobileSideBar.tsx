@@ -45,7 +45,9 @@ export function MobileSidebar() {
           <Button
             size="icon"
             variant="outline"
-            aria-label={t("actions.switchLanguage")}
+            aria-label={t("actions.switchLanguage", {
+              lang: language?.toUpperCase(),
+            })}
             onClick={toggleLanguage}
           >
             {language?.toUpperCase()}

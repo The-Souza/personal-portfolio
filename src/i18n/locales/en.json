@@ -9,7 +9,7 @@
   "actions": {
     "downloadCv": "Download CV",
     "openMenu": "Open menu",
-    "switchLanguage": "Switch language",
+    "switchLanguage": "{{lang}} — Switch language",
     "toggleTheme": "Toggle theme",
     "loadingPortfolio": "Loading portfolio"
   },
