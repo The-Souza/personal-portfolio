@@ -1,18 +1,23 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button, type buttonVariants } from "@/components/ui/button";
+import type { VariantProps } from "class-variance-authority";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useTranslation } from "react-i18next";
 
-export function ToggleTheme() {
+type ToggleThemeProps = {
+  variant?: VariantProps<typeof buttonVariants>["variant"];
+};
+
+export function ToggleTheme({ variant = "ghost" }: ToggleThemeProps) {
   const { t } = useTranslation();
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
 
   return (
     <Button
-      variant="ghost"
+      variant={variant}
       size="icon"
       aria-label={t("actions.toggleTheme")}
       onClick={() => setTheme(isDark ? "light" : "dark")}

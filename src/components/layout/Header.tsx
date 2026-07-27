@@ -48,10 +48,7 @@ export function Header() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button asChild variant="hover">
-                <Link
-                  href="/"
-                  className="flex items-center gap-2 font-semibold hover:text-primary"
-                >
+                <Link href="/" className="flex items-center gap-2 font-semibold">
                   <CodeXml className="w-5 h-5 opacity-80" />
                   Guilherme Campos
                 </Link>
@@ -98,12 +95,14 @@ export function Header() {
         {/* Actions */}
         <div className="items-center gap-2 hidden sm:flex">
           <div className="flex items-center gap-1">
-            <ToggleTheme />
+            <ToggleTheme variant="hover" />
 
             <Button
               size="icon"
-              variant="ghost"
-              aria-label={t("actions.switchLanguage")}
+              variant="hover"
+              aria-label={t("actions.switchLanguage", {
+                lang: language?.toUpperCase(),
+              })}
               onClick={toggleLanguage}
             >
               {language?.toUpperCase()}
