@@ -26,7 +26,8 @@ export function ProjectCard({ project, titleAs = "h3" }: ProjectCardProps) {
   const statusLabel = project.status
     ? t(`projects.data.${project.id}.status.${project.status}`)
     : null;
-  const accessibleName = [t(project.titleKey), project.role, statusLabel]
+  const roleLabel = project.role ? t(`projects.role.${project.role}`) : null;
+  const accessibleName = [t(project.titleKey), roleLabel, statusLabel]
     .filter(Boolean)
     .join(" — ");
 
@@ -58,9 +59,9 @@ export function ProjectCard({ project, titleAs = "h3" }: ProjectCardProps) {
           <CardTitle as={titleAs} className="font-heading">
             {t(project.titleKey)}
           </CardTitle>
-          {project.role && (
+          {roleLabel && (
             <Badge variant="outline" className="border-border py-1 px-3">
-              {project.role}
+              {roleLabel}
             </Badge>
           )}
         </div>

@@ -105,6 +105,11 @@
     "techStack": "Tech Stack",
     "technicalDecisions": "Technical Decisions",
     "keyFeatures": "Key Features",
+    "role": {
+      "Frontend": "Frontend",
+      "Fullstack": "Fullstack",
+      "Desktop": "Desktop"
+    },
     "navigation": {
       "label": {
         "nav": "Project navigation",

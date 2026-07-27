@@ -105,6 +105,11 @@
     "techStack": "Tecnologias Utilizadas",
     "technicalDecisions": "Decisões Técnicas",
     "keyFeatures": "Funcionalidades Principais",
+    "role": {
+      "Frontend": "Frontend",
+      "Fullstack": "Fullstack",
+      "Desktop": "Desktop"
+    },
     "navigation": {
       "label": {
         "nav": "Navegação de Projetos",
