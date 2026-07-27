@@ -214,8 +214,7 @@
           "python": "Python",
           "desktop": "Desktop App",
           "ocr": "Tesseract OCR",
-          "excel": "Excel Export",
-          "completed": "Completed"
+          "excel": "Excel Export"
         },
         "features": {
           "login": "Automatic login with email and password, no browser required",
