@@ -52,13 +52,13 @@ export function ServicesSection() {
         </GlassCard>
 
         {secondaryServices.length > 0 && (
-          <GlassCard className="p-4 sm:p-5 border border-primary/25">
+          <GlassCard className="p-4 sm:p-5 border border-border">
             <BlurFade inView delay={0.1 + primaryServices.length * 0.05}>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {secondaryServices.map((service) => (
                   <li
                     key={service.titleKey}
-                    className="group flex items-start gap-3"
+                    className="group flex items-start gap-3 p-3"
                   >
                     <service.icon className="w-5 h-5 shrink-0 mt-0.5 text-primary transition-transform duration-300 group-hover:scale-110" />
                     <div className="flex flex-col gap-0.5">
