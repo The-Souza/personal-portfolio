@@ -1,8 +1,8 @@
 "use client";
 
-import { SectionHeader } from "@/components/section/SectionHeader";
 import { BlurFade } from "@/components/effects/blur-fade";
-import { GlassCard } from "@/components/ui/glass-card";
+import { SectionHeader } from "@/components/section/SectionHeader";
+import { Card } from "@/components/ui/card";
 import { CATEGORY_META } from "@/constants/stack-category";
 import { STACKS } from "@/constants/stacks";
 import { useTranslation } from "react-i18next";
@@ -24,7 +24,7 @@ export function AboutStackSection() {
           const meta = CATEGORY_META[category];
 
           return (
-            <GlassCard key={category} className="p-4 sm:p-5">
+            <Card key={category} className="p-4 sm:p-5 flex z-1">
               <BlurFade
                 inView
                 delay={0.1 + i * 0.1}
@@ -35,11 +35,11 @@ export function AboutStackSection() {
                   {t(meta.labelKey)}
                 </h3>
 
-                <ul className="flex flex-wrap gap-2">
+                <ul className="flex flex-wrap gap-4">
                   {Object.values(stacks).map(({ name, icon: Icon }) => (
                     <li
                       key={`${category}-${name}`}
-                      className="inline-flex items-center gap-1.5 rounded-md border border-border bg-sidebar px-2.5 py-1 text-sm transition-colors hover:border-primary hover:text-primary dark:hover:border-chart-2 dark:hover:text-chart-2"
+                      className="inline-flex items-center gap-1.5 rounded-md text-sm"
                     >
                       <Icon className="w-4 h-4" />
                       {name}
@@ -47,7 +47,7 @@ export function AboutStackSection() {
                   ))}
                 </ul>
               </BlurFade>
-            </GlassCard>
+            </Card>
           );
         })}
       </div>
